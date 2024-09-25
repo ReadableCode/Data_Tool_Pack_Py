@@ -715,10 +715,9 @@ dict_file_deployments_detailed = {
             ["na-faba", "src", "utils", "CDP_impala_tools.py"],
         ],
     },
-    "Data_Tool_Pack/src/utils/databricks_photon_tools.py": {
-        "ls_src_path": ["Data_Tool_Pack", "src", "utils", "databricks_photon_tools.py"],
+    "na-finops/src/utils/databricks_photon_tools.py": {
+        "ls_src_path": ["na-finops", "src", "utils", "databricks_photon_tools.py"],
         "ls_deployment_dests": [
-            ["Project_Template", "src", "utils", "databricks_photon_tools.py"],
             [
                 "na-fin-data-streamlit",
                 "apps",
@@ -751,7 +750,6 @@ dict_file_deployments_detailed = {
                 "utils",
                 "databricks_photon_tools.py",
             ],
-            ["na-finops", "src", "utils", "databricks_photon_tools.py"],
             ["na-faba", "src", "utils", "databricks_photon_tools.py"],
         ],
     },
@@ -766,9 +764,9 @@ dict_file_deployments_detailed = {
             ["Our_Cash", "src", "utils", "doc_tools.py"],
         ],
     },
-    "Data_Tool_Pack/src/utils/domo_tools.py": {
-        "ls_src_path": ["Data_Tool_Pack", "src", "utils", "domo_tools.py"],
-        "ls_deployment_dests": [["Project_Template", "src", "utils", "domo_tools.py"]],
+    "na-finops/src/utils/domo_tools.py": {
+        "ls_src_path": ["na-finops", "src", "utils", "domo_tools.py"],
+        "ls_deployment_dests": [["na-faba", "src", "utils", "domo_tools.py"]],
     },
     "Data_Tool_Pack/src/utils/google_doc_tools.py": {
         "ls_src_path": ["Data_Tool_Pack", "src", "utils", "google_doc_tools.py"],
@@ -957,10 +955,9 @@ dict_file_deployments_detailed = {
             ["CrownCentral", "src", "utils", "python_import_mapper.py"],
         ],
     },
-    "Data_Tool_Pack/src/utils/s3_connector.py": {
-        "ls_src_path": ["Data_Tool_Pack", "src", "utils", "s3_connector.py"],
+    "na-finops/src/utils/s3_connector.py": {
+        "ls_src_path": ["na-finops", "src", "utils", "s3_connector.py"],
         "ls_deployment_dests": [
-            ["Project_Template", "src", "utils", "s3_connector.py"],
             [
                 "na-fin-data-streamlit",
                 "apps",
@@ -994,7 +991,6 @@ dict_file_deployments_detailed = {
                 "utils",
                 "s3_connector.py",
             ],
-            ["na-finops", "src", "utils", "s3_connector.py"],
             ["na-faba", "src", "utils", "s3_connector.py"],
         ],
     },
@@ -1038,10 +1034,9 @@ dict_file_deployments_detailed = {
             ["na-faba", "src", "utils", "slack_tools.py"],
         ],
     },
-    "Data_Tool_Pack/src/utils/snowflake_tools.py": {
-        "ls_src_path": ["Data_Tool_Pack", "src", "utils", "snowflake_tools.py"],
+    "na-finops/src/utils/snowflake_tools.py": {
+        "ls_src_path": ["na-finops", "src", "utils", "snowflake_tools.py"],
         "ls_deployment_dests": [
-            ["Project_Template", "src", "utils", "snowflake_tools.py"],
             [
                 "na-fin-data-streamlit",
                 "apps",
@@ -1082,7 +1077,6 @@ dict_file_deployments_detailed = {
                 "utils",
                 "snowflake_tools.py",
             ],
-            ["na-finops", "src", "utils", "snowflake_tools.py"],
             ["na-faba", "src", "utils", "snowflake_tools.py"],
         ],
     },
