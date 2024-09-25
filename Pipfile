@@ -1,0 +1,40 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pygsheets = "*"
+numpy = "*"
+requests = "*"
+datetime = "*"
+pandas = "*"
+matplotlib = "*"
+ipykernel = "*"
+tabulate = "*"
+impyla = "*"
+openpyxl = "*"
+pydrive = "*"
+looker-sdk = "*"
+snowflake-connector-python = "*"
+pyarrow = "*"
+jaydebeapi = "*"
+imageio = {extras = ["ffmpeg"], version = "*"}
+pytest = "*"
+python-dotenv = "*"
+databricks-cli = "*"
+databricks-sql-connector = "*"
+tqdm = "*"
+streamlit = "*"
+pytesseract = "*"
+tabula = "*"
+fitz = "*"
+black = "*"
+isort = "*"
+flake8 = "*"
+geopy = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"
