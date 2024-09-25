@@ -1,14 +1,14 @@
 dict_file_deployments_detailed = {
-    "Data_Tool_Pack/src/utils/android_tools.py": {
-        "ls_src_path": ["Data_Tool_Pack", "src", "utils", "android_tools.py"],
+    "Data_Tool_Pack_Py/src/utils/android_tools.py": {
+        "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "android_tools.py"],
         "ls_deployment_dests": [
             ["dotfiles", "src", "utils", "android_tools.py"],
             ["Project_Template", "src", "utils", "android_tools.py"],
             ["Sync_Plex", "src", "utils", "android_tools.py"],
         ],
     },
-    "Data_Tool_Pack/src/utils/config_utils.py": {
-        "ls_src_path": ["Data_Tool_Pack", "src", "utils", "config_utils.py"],
+    "Data_Tool_Pack_Py/src/utils/config_utils.py": {
+        "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "config_utils.py"],
         "ls_deployment_dests": [
             ["dotfiles", "src", "utils", "config_utils.py"],
             ["Project_Template", "src", "utils", "config_utils.py"],
@@ -51,8 +51,8 @@ dict_file_deployments_detailed = {
             ["Terminal_To_Do", "src", "utils", "config_utils.py"],
         ],
     },
-    "Data_Tool_Pack/src/utils/date_tools.py": {
-        "ls_src_path": ["Data_Tool_Pack", "src", "utils", "date_tools.py"],
+    "Data_Tool_Pack_Py/src/utils/date_tools.py": {
+        "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "date_tools.py"],
         "ls_deployment_dests": [
             ["dotfiles", "src", "utils", "date_tools.py"],
             ["Project_Template", "src", "utils", "date_tools.py"],
@@ -98,8 +98,8 @@ dict_file_deployments_detailed = {
             ["OSINT", "src", "utils", "date_tools.py"],
         ],
     },
-    "Data_Tool_Pack/src/utils/df_days.csv": {
-        "ls_src_path": ["Data_Tool_Pack", "src", "utils", "df_days.csv"],
+    "Data_Tool_Pack_Py/src/utils/df_days.csv": {
+        "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "df_days.csv"],
         "ls_deployment_dests": [
             ["dotfiles", "src", "utils", "df_days.csv"],
             ["Project_Template", "src", "utils", "df_days.csv"],
@@ -145,8 +145,8 @@ dict_file_deployments_detailed = {
             ["OSINT", "src", "utils", "df_days.csv"],
         ],
     },
-    "Data_Tool_Pack/src/utils/df_scm_weeks.csv": {
-        "ls_src_path": ["Data_Tool_Pack", "src", "utils", "df_scm_weeks.csv"],
+    "Data_Tool_Pack_Py/src/utils/df_scm_weeks.csv": {
+        "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "df_scm_weeks.csv"],
         "ls_deployment_dests": [
             ["dotfiles", "src", "utils", "df_scm_weeks.csv"],
             ["Project_Template", "src", "utils", "df_scm_weeks.csv"],
@@ -199,8 +199,8 @@ dict_file_deployments_detailed = {
             ["OSINT", "src", "utils", "df_scm_weeks.csv"],
         ],
     },
-    "Data_Tool_Pack/src/utils/df_weeks.csv": {
-        "ls_src_path": ["Data_Tool_Pack", "src", "utils", "df_weeks.csv"],
+    "Data_Tool_Pack_Py/src/utils/df_weeks.csv": {
+        "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "df_weeks.csv"],
         "ls_deployment_dests": [
             ["dotfiles", "src", "utils", "df_weeks.csv"],
             ["Project_Template", "src", "utils", "df_weeks.csv"],
@@ -246,8 +246,8 @@ dict_file_deployments_detailed = {
             ["OSINT", "src", "utils", "df_weeks.csv"],
         ],
     },
-    "Data_Tool_Pack/src/utils/display_tools.py": {
-        "ls_src_path": ["Data_Tool_Pack", "src", "utils", "display_tools.py"],
+    "Data_Tool_Pack_Py/src/utils/display_tools.py": {
+        "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "display_tools.py"],
         "ls_deployment_dests": [
             ["dotfiles", "src", "utils", "display_tools.py"],
             ["Project_Template", "src", "utils", "display_tools.py"],
@@ -305,8 +305,8 @@ dict_file_deployments_detailed = {
             ["Terminal_To_Do", "src", "utils", "display_tools.py"],
         ],
     },
-    "Data_Tool_Pack/src/utils/gmail_tools.py": {
-        "ls_src_path": ["Data_Tool_Pack", "src", "utils", "gmail_tools.py"],
+    "Data_Tool_Pack_Py/src/utils/gmail_tools.py": {
+        "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "gmail_tools.py"],
         "ls_deployment_dests": [
             ["dotfiles", "src", "utils", "gmail_tools.py"],
             ["Project_Template", "src", "utils", "gmail_tools.py"],
@@ -317,8 +317,8 @@ dict_file_deployments_detailed = {
             ["OSINT", "src", "utils", "gmail_tools.py"],
         ],
     },
-    "Data_Tool_Pack/src/utils/google_drive_tools.py": {
-        "ls_src_path": ["Data_Tool_Pack", "src", "utils", "google_drive_tools.py"],
+    "Data_Tool_Pack_Py/src/utils/google_drive_tools.py": {
+        "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "google_drive_tools.py"],
         "ls_deployment_dests": [
             ["dotfiles", "src", "utils", "google_drive_tools.py"],
             ["Project_Template", "src", "utils", "google_drive_tools.py"],
@@ -372,8 +372,8 @@ dict_file_deployments_detailed = {
             ["OSINT", "src", "utils", "google_drive_tools.py"],
         ],
     },
-    "Data_Tool_Pack/src/utils/google_tools.py": {
-        "ls_src_path": ["Data_Tool_Pack", "src", "utils", "google_tools.py"],
+    "Data_Tool_Pack_Py/src/utils/google_tools.py": {
+        "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "google_tools.py"],
         "ls_deployment_dests": [
             ["dotfiles", "src", "utils", "google_tools.py"],
             ["Project_Template", "src", "utils", "google_tools.py"],
@@ -420,8 +420,8 @@ dict_file_deployments_detailed = {
             ["OSINT", "src", "utils", "google_tools.py"],
         ],
     },
-    "Data_Tool_Pack/src/utils/host_tools.py": {
-        "ls_src_path": ["Data_Tool_Pack", "src", "utils", "host_tools.py"],
+    "Data_Tool_Pack_Py/src/utils/host_tools.py": {
+        "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "host_tools.py"],
         "ls_deployment_dests": [
             ["dotfiles", "src", "utils", "host_tools.py"],
             ["Project_Template", "src", "utils", "host_tools.py"],
@@ -432,8 +432,8 @@ dict_file_deployments_detailed = {
             ["Our_Cash", "src", "utils", "host_tools.py"],
         ],
     },
-    "Data_Tool_Pack/src/utils/__init__.py": {
-        "ls_src_path": ["Data_Tool_Pack", "src", "utils", "__init__.py"],
+    "Data_Tool_Pack_Py/src/utils/__init__.py": {
+        "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "__init__.py"],
         "ls_deployment_dests": [
             ["dotfiles", "src", "utils", "__init__.py"],
             ["Project_Template", "src", "utils", "__init__.py"],
@@ -483,9 +483,9 @@ dict_file_deployments_detailed = {
             ["Terminal_To_Do", "src", "utils", "__init__.py"],
         ],
     },
-    "Data_Tool_Pack/tests/test_utils/config_test_utils.py": {
+    "Data_Tool_Pack_Py/tests/test_utils/config_test_utils.py": {
         "ls_src_path": [
-            "Data_Tool_Pack",
+            "Data_Tool_Pack_Py",
             "tests",
             "test_utils",
             "config_test_utils.py",
@@ -507,8 +507,13 @@ dict_file_deployments_detailed = {
             ["OSINT", "tests", "test_utils", "config_test_utils.py"],
         ],
     },
-    "Data_Tool_Pack/tests/test_utils/test_date_tools.py": {
-        "ls_src_path": ["Data_Tool_Pack", "tests", "test_utils", "test_date_tools.py"],
+    "Data_Tool_Pack_Py/tests/test_utils/test_date_tools.py": {
+        "ls_src_path": [
+            "Data_Tool_Pack_Py",
+            "tests",
+            "test_utils",
+            "test_date_tools.py",
+        ],
         "ls_deployment_dests": [
             ["dotfiles", "tests", "test_utils", "test_date_tools.py"],
             ["na-finops", "tests", "test_utils", "test_date_tools.py"],
@@ -516,8 +521,13 @@ dict_file_deployments_detailed = {
             ["OSINT", "tests", "test_utils", "test_date_tools.py"],
         ],
     },
-    "Data_Tool_Pack/tests/test_utils/test_gmail_tools.py": {
-        "ls_src_path": ["Data_Tool_Pack", "tests", "test_utils", "test_gmail_tools.py"],
+    "Data_Tool_Pack_Py/tests/test_utils/test_gmail_tools.py": {
+        "ls_src_path": [
+            "Data_Tool_Pack_Py",
+            "tests",
+            "test_utils",
+            "test_gmail_tools.py",
+        ],
         "ls_deployment_dests": [
             ["dotfiles", "tests", "test_utils", "test_gmail_tools.py"],
             ["na-finops", "tests", "test_utils", "test_gmail_tools.py"],
@@ -526,9 +536,9 @@ dict_file_deployments_detailed = {
             ["OSINT", "tests", "test_utils", "test_gmail_tools.py"],
         ],
     },
-    "Data_Tool_Pack/tests/test_utils/test_google_tools.py": {
+    "Data_Tool_Pack_Py/tests/test_utils/test_google_tools.py": {
         "ls_src_path": [
-            "Data_Tool_Pack",
+            "Data_Tool_Pack_Py",
             "tests",
             "test_utils",
             "test_google_tools.py",
@@ -553,7 +563,7 @@ dict_file_deployments_detailed = {
         "ls_src_path": ["personal_credentials", "personal.env"],
         "ls_deployment_dests": [
             ["dotfiles", ".env"],
-            ["Data_Tool_Pack", ".env"],
+            ["Data_Tool_Pack_Py", ".env"],
             ["Data_Tool_Pack_GO", ".env"],
             ["Data_Tool_Pack_RS", ".env"],
             ["Project_Template", ".env"],
@@ -571,7 +581,7 @@ dict_file_deployments_detailed = {
     "dotfiles/scripts/aws_credential_extractor_kube.sh": {
         "ls_src_path": ["dotfiles", "scripts", "aws_credential_extractor_kube.sh"],
         "ls_deployment_dests": [
-            ["Data_Tool_Pack", "scripts", "aws_credential_extractor_kube.sh"],
+            ["Data_Tool_Pack_Py", "scripts", "aws_credential_extractor_kube.sh"],
             ["na-finops", "scripts", "aws_credential_extractor_kube.sh"],
             ["na-faba", "scripts", "aws_credential_extractor_kube.sh"],
         ],
@@ -579,7 +589,7 @@ dict_file_deployments_detailed = {
     "dotfiles/scripts/aws_credential_extractor_s3.sh": {
         "ls_src_path": ["dotfiles", "scripts", "aws_credential_extractor_s3.sh"],
         "ls_deployment_dests": [
-            ["Data_Tool_Pack", "scripts", "aws_credential_extractor_s3.sh"],
+            ["Data_Tool_Pack_Py", "scripts", "aws_credential_extractor_s3.sh"],
             ["na-finops", "scripts", "aws_credential_extractor_s3.sh"],
             ["na-faba", "scripts", "aws_credential_extractor_s3.sh"],
         ],
@@ -587,7 +597,7 @@ dict_file_deployments_detailed = {
     "dotfiles/scripts/aws_credential_extractor_s3_mac.sh": {
         "ls_src_path": ["dotfiles", "scripts", "aws_credential_extractor_s3_mac.sh"],
         "ls_deployment_dests": [
-            ["Data_Tool_Pack", "scripts", "aws_credential_extractor_s3_mac.sh"],
+            ["Data_Tool_Pack_Py", "scripts", "aws_credential_extractor_s3_mac.sh"],
             ["na-finops", "scripts", "aws_credential_extractor_s3_mac.sh"],
             ["na-faba", "scripts", "aws_credential_extractor_s3_mac.sh"],
         ],
@@ -595,7 +605,7 @@ dict_file_deployments_detailed = {
     "dotfiles/scripts/clasp_puller.sh": {
         "ls_src_path": ["dotfiles", "scripts", "clasp_puller.sh"],
         "ls_deployment_dests": [
-            ["Data_Tool_Pack", "scripts", "clasp_puller.sh"],
+            ["Data_Tool_Pack_Py", "scripts", "clasp_puller.sh"],
             ["Project_Template", "scripts", "clasp_puller.sh"],
             ["na-finops", "scripts", "clasp_puller.sh"],
             ["na-faba", "scripts", "clasp_puller.sh"],
@@ -604,7 +614,7 @@ dict_file_deployments_detailed = {
     "dotfiles/scripts/config_scripts.py": {
         "ls_src_path": ["dotfiles", "scripts", "config_scripts.py"],
         "ls_deployment_dests": [
-            ["Data_Tool_Pack", "scripts", "config_scripts.py"],
+            ["Data_Tool_Pack_Py", "scripts", "config_scripts.py"],
             ["Project_Template", "scripts", "config_scripts.py"],
             ["na-finops", "scripts", "config_scripts.py"],
             ["Cash_Flow_Commander", "scripts", "config_scripts.py"],
@@ -614,7 +624,7 @@ dict_file_deployments_detailed = {
     "dotfiles/scripts/crontab_extractor.sh": {
         "ls_src_path": ["dotfiles", "scripts", "crontab_extractor.sh"],
         "ls_deployment_dests": [
-            ["Data_Tool_Pack", "scripts", "crontab_extractor.sh"],
+            ["Data_Tool_Pack_Py", "scripts", "crontab_extractor.sh"],
             ["Project_Template", "scripts", "crontab_extractor.sh"],
             ["na-faba", "scripts", "crontab_extractor.sh"],
         ],
@@ -622,14 +632,14 @@ dict_file_deployments_detailed = {
     "dotfiles/scripts/generate_mkdocs_stubs.py": {
         "ls_src_path": ["dotfiles", "scripts", "generate_mkdocs_stubs.py"],
         "ls_deployment_dests": [
-            ["Data_Tool_Pack", "scripts", "generate_mkdocs_stubs.py"],
+            ["Data_Tool_Pack_Py", "scripts", "generate_mkdocs_stubs.py"],
             ["na-finops", "scripts", "generate_mkdocs_stubs.py"],
         ],
     },
     "dotfiles/scripts/rotate_logs.py": {
         "ls_src_path": ["dotfiles", "scripts", "rotate_logs.py"],
         "ls_deployment_dests": [
-            ["Data_Tool_Pack", "scripts", "rotate_logs.py"],
+            ["Data_Tool_Pack_Py", "scripts", "rotate_logs.py"],
             ["Project_Template", "scripts", "rotate_logs.py"],
             ["na-finops", "scripts", "rotate_logs.py"],
             ["Cash_Flow_Commander", "scripts", "rotate_logs.py"],
@@ -639,7 +649,7 @@ dict_file_deployments_detailed = {
     "dotfiles/docs/setup_docker.md": {
         "ls_src_path": ["dotfiles", "docs", "setup_docker.md"],
         "ls_deployment_dests": [
-            ["Data_Tool_Pack", "docs", "setup_docker.md"],
+            ["Data_Tool_Pack_Py", "docs", "setup_docker.md"],
             ["Project_Template", "docs", "setup_docker.md"],
             ["na-finops", "docs", "setup_docker.md"],
             ["na-faba", "docs", "setup_docker.md"],
@@ -648,7 +658,7 @@ dict_file_deployments_detailed = {
     "dotfiles/docs/setup_git.md": {
         "ls_src_path": ["dotfiles", "docs", "setup_git.md"],
         "ls_deployment_dests": [
-            ["Data_Tool_Pack", "docs", "setup_git.md"],
+            ["Data_Tool_Pack_Py", "docs", "setup_git.md"],
             ["Project_Template", "docs", "setup_git.md"],
             ["na-finops", "docs", "setup_git.md"],
             ["na-faba", "docs", "setup_git.md"],
@@ -657,7 +667,7 @@ dict_file_deployments_detailed = {
     "dotfiles/docs/setup_python.md": {
         "ls_src_path": ["dotfiles", "docs", "setup_python.md"],
         "ls_deployment_dests": [
-            ["Data_Tool_Pack", "docs", "setup_python.md"],
+            ["Data_Tool_Pack_Py", "docs", "setup_python.md"],
             ["Project_Template", "docs", "setup_python.md"],
             ["na-finops", "docs", "setup_python.md"],
             ["na-faba", "docs", "setup_python.md"],
@@ -666,7 +676,7 @@ dict_file_deployments_detailed = {
     "dotfiles/docs/setup_vscode.md": {
         "ls_src_path": ["dotfiles", "docs", "setup_vscode.md"],
         "ls_deployment_dests": [
-            ["Data_Tool_Pack", "docs", "setup_vscode.md"],
+            ["Data_Tool_Pack_Py", "docs", "setup_vscode.md"],
             ["Project_Template", "docs", "setup_vscode.md"],
             ["na-finops", "docs", "setup_vscode.md"],
             ["na-faba", "docs", "setup_vscode.md"],
@@ -675,7 +685,7 @@ dict_file_deployments_detailed = {
     "dotfiles/docs/setup_windows_chocolatey.md": {
         "ls_src_path": ["dotfiles", "docs", "setup_windows_chocolatey.md"],
         "ls_deployment_dests": [
-            ["Data_Tool_Pack", "docs", "setup_windows_chocolatey.md"],
+            ["Data_Tool_Pack_Py", "docs", "setup_windows_chocolatey.md"],
             ["Project_Template", "docs", "setup_windows_chocolatey.md"],
             ["na-finops", "docs", "setup_windows_chocolatey.md"],
             ["na-faba", "docs", "setup_windows_chocolatey.md"],
@@ -700,7 +710,7 @@ dict_file_deployments_detailed = {
         ],
     },
     "Data_Tool_Pack/src/utils/bodega_impala_tools.py": {
-        "ls_src_path": ["Data_Tool_Pack", "src", "utils", "bodega_impala_tools.py"],
+        "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "bodega_impala_tools.py"],
         "ls_deployment_dests": [
             ["Project_Template", "src", "utils", "bodega_impala_tools.py"],
             ["na-finops", "src", "utils", "bodega_impala_tools.py"],
@@ -708,7 +718,7 @@ dict_file_deployments_detailed = {
         ],
     },
     "Data_Tool_Pack/src/utils/CDP_impala_tools.py": {
-        "ls_src_path": ["Data_Tool_Pack", "src", "utils", "CDP_impala_tools.py"],
+        "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "CDP_impala_tools.py"],
         "ls_deployment_dests": [
             ["Project_Template", "src", "utils", "CDP_impala_tools.py"],
             ["na-finops", "src", "utils", "CDP_impala_tools.py"],
@@ -754,7 +764,7 @@ dict_file_deployments_detailed = {
         ],
     },
     "Data_Tool_Pack/src/utils/doc_tools.py": {
-        "ls_src_path": ["Data_Tool_Pack", "src", "utils", "doc_tools.py"],
+        "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "doc_tools.py"],
         "ls_deployment_dests": [
             ["Project_Template", "src", "utils", "doc_tools.py"],
             ["na-finops", "src", "utils", "doc_tools.py"],
@@ -769,7 +779,7 @@ dict_file_deployments_detailed = {
         "ls_deployment_dests": [["na-faba", "src", "utils", "domo_tools.py"]],
     },
     "Data_Tool_Pack/src/utils/google_doc_tools.py": {
-        "ls_src_path": ["Data_Tool_Pack", "src", "utils", "google_doc_tools.py"],
+        "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "google_doc_tools.py"],
         "ls_deployment_dests": [
             ["Project_Template", "src", "utils", "google_doc_tools.py"],
             ["na-finops", "src", "utils", "google_doc_tools.py"],
@@ -780,7 +790,7 @@ dict_file_deployments_detailed = {
         ],
     },
     "Data_Tool_Pack/src/utils/ImpalaJDBC41.jar": {
-        "ls_src_path": ["Data_Tool_Pack", "src", "utils", "ImpalaJDBC41.jar"],
+        "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "ImpalaJDBC41.jar"],
         "ls_deployment_dests": [
             ["Project_Template", "src", "utils", "ImpalaJDBC41.jar"],
             ["na-finops", "src", "utils", "ImpalaJDBC41.jar"],
@@ -788,7 +798,7 @@ dict_file_deployments_detailed = {
         ],
     },
     "Data_Tool_Pack/src/utils/location_tools.py": {
-        "ls_src_path": ["Data_Tool_Pack", "src", "utils", "location_tools.py"],
+        "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "location_tools.py"],
         "ls_deployment_dests": [
             ["Project_Template", "src", "utils", "location_tools.py"],
             [
@@ -805,13 +815,13 @@ dict_file_deployments_detailed = {
         ],
     },
     "Data_Tool_Pack/src/utils/looker_tools.py": {
-        "ls_src_path": ["Data_Tool_Pack", "src", "utils", "looker_tools.py"],
+        "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "looker_tools.py"],
         "ls_deployment_dests": [
             ["Project_Template", "src", "utils", "looker_tools.py"]
         ],
     },
     "Data_Tool_Pack/src/utils/math_tools.py": {
-        "ls_src_path": ["Data_Tool_Pack", "src", "utils", "math_tools.py"],
+        "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "math_tools.py"],
         "ls_deployment_dests": [
             ["Project_Template", "src", "utils", "math_tools.py"],
             ["na-finops", "src", "utils", "math_tools.py"],
@@ -822,7 +832,7 @@ dict_file_deployments_detailed = {
         ],
     },
     "Data_Tool_Pack/src/utils/number_tools.py": {
-        "ls_src_path": ["Data_Tool_Pack", "src", "utils", "number_tools.py"],
+        "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "number_tools.py"],
         "ls_deployment_dests": [
             ["Project_Template", "src", "utils", "number_tools.py"],
             [
@@ -863,7 +873,7 @@ dict_file_deployments_detailed = {
         ],
     },
     "Data_Tool_Pack/src/utils/pandas_tools.py": {
-        "ls_src_path": ["Data_Tool_Pack", "src", "utils", "pandas_tools.py"],
+        "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "pandas_tools.py"],
         "ls_deployment_dests": [
             ["Project_Template", "src", "utils", "pandas_tools.py"],
             [
@@ -907,7 +917,7 @@ dict_file_deployments_detailed = {
         ],
     },
     "Data_Tool_Pack/src/utils/pdf_tools.py": {
-        "ls_src_path": ["Data_Tool_Pack", "src", "utils", "pdf_tools.py"],
+        "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "pdf_tools.py"],
         "ls_deployment_dests": [
             ["Project_Template", "src", "utils", "pdf_tools.py"],
             [
@@ -947,7 +957,7 @@ dict_file_deployments_detailed = {
         ],
     },
     "Data_Tool_Pack/src/utils/python_import_mapper.py": {
-        "ls_src_path": ["Data_Tool_Pack", "src", "utils", "python_import_mapper.py"],
+        "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "python_import_mapper.py"],
         "ls_deployment_dests": [
             ["Project_Template", "src", "utils", "python_import_mapper.py"],
             ["na-finops", "src", "utils", "python_import_mapper.py"],
@@ -995,7 +1005,7 @@ dict_file_deployments_detailed = {
         ],
     },
     "Data_Tool_Pack/src/utils/slack_tools.py": {
-        "ls_src_path": ["Data_Tool_Pack", "src", "utils", "slack_tools.py"],
+        "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "slack_tools.py"],
         "ls_deployment_dests": [
             ["Project_Template", "src", "utils", "slack_tools.py"],
             [
@@ -1081,7 +1091,7 @@ dict_file_deployments_detailed = {
         ],
     },
     "Data_Tool_Pack/src/utils/url_encoding.py": {
-        "ls_src_path": ["Data_Tool_Pack", "src", "utils", "url_encoding.py"],
+        "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "url_encoding.py"],
         "ls_deployment_dests": [
             ["Project_Template", "src", "utils", "url_encoding.py"],
             ["na-finops", "src", "utils", "url_encoding.py"],
@@ -1090,7 +1100,7 @@ dict_file_deployments_detailed = {
         ],
     },
     "Data_Tool_Pack/src/utils/vault_tools.py": {
-        "ls_src_path": ["Data_Tool_Pack", "src", "utils", "vault_tools.py"],
+        "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "vault_tools.py"],
         "ls_deployment_dests": [
             ["Project_Template", "src", "utils", "vault_tools.py"],
             ["na-finops", "src", "utils", "vault_tools.py"],
@@ -1098,7 +1108,7 @@ dict_file_deployments_detailed = {
         ],
     },
     "Data_Tool_Pack/src/utils/vpn_tools.py": {
-        "ls_src_path": ["Data_Tool_Pack", "src", "utils", "vpn_tools.py"],
+        "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "vpn_tools.py"],
         "ls_deployment_dests": [
             ["Project_Template", "src", "utils", "vpn_tools.py"],
             ["na-faba", "src", "utils", "vpn_tools.py"],
@@ -1175,7 +1185,7 @@ dict_file_deployments_detailed = {
         ],
     },
     "Data_Tool_Pack/tests/config_tests.py": {
-        "ls_src_path": ["Data_Tool_Pack", "tests", "config_tests.py"],
+        "ls_src_path": ["Data_Tool_Pack_Py", "tests", "config_tests.py"],
         "ls_deployment_dests": [
             [
                 "na-fin-data-streamlit",
@@ -1188,7 +1198,7 @@ dict_file_deployments_detailed = {
         ],
     },
     "Data_Tool_Pack/tests/test_tools.py": {
-        "ls_src_path": ["Data_Tool_Pack", "tests", "test_tools.py"],
+        "ls_src_path": ["Data_Tool_Pack_Py", "tests", "test_tools.py"],
         "ls_deployment_dests": [
             [
                 "na-fin-data-streamlit",
@@ -1201,14 +1211,14 @@ dict_file_deployments_detailed = {
         ],
     },
     "Data_Tool_Pack/tests/__init__.py": {
-        "ls_src_path": ["Data_Tool_Pack", "tests", "__init__.py"],
+        "ls_src_path": ["Data_Tool_Pack_Py", "tests", "__init__.py"],
         "ls_deployment_dests": [
             ["na-fin-data-streamlit", "apps", "top-variances", "tests", "__init__.py"],
             ["na-finops", "tests", "__init__.py"],
         ],
     },
     "Data_Tool_Pack/tests/test_utils/__init__.py": {
-        "ls_src_path": ["Data_Tool_Pack", "tests", "test_utils", "__init__.py"],
+        "ls_src_path": ["Data_Tool_Pack_Py", "tests", "test_utils", "__init__.py"],
         "ls_deployment_dests": [
             ["na-fin-data-streamlit", "apps", "top-variances", "tests", "__init__.py"],
             [
