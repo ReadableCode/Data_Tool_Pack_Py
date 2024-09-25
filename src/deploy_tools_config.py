@@ -627,6 +627,7 @@ dict_file_deployments_detailed = {
             ["Data_Tool_Pack_Py", "scripts", "crontab_extractor.sh"],
             ["Project_Template", "scripts", "crontab_extractor.sh"],
             ["na-faba", "scripts", "crontab_extractor.sh"],
+            ["na-finops", "scripts", "crontab_extractor.sh"],
         ],
     },
     "dotfiles/scripts/generate_mkdocs_stubs.py": {
