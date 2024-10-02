@@ -252,7 +252,9 @@ def generate_schema_from_df(df, save_path=None):
         else:
             col_dtype = str(col_dtype)
         col_lowered = col_name.lower()
-        col_lowered = col_lowered.replace(".", "_")
+        col_lowered = (
+            col_lowered.replace(".", "_").replace(" - ", "_").replace(" ", "_")
+        )
 
         dict_schema[col_lowered] = {
             "ls_rename_cols": list(set([col_name, col_name.lower(), col_name.upper()])),
