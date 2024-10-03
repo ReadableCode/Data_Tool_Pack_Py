@@ -62,7 +62,7 @@ def deploy_file_with_diff_and_conf(src_file, dest_file, dry_run=True):
             return
 
     # if file path is not in ls_diff_and_backup_file_types, skip diffing and just copy
-    ls_diff_and_backup_file_types = [".env"]
+    ls_diff_and_backup_file_types = [".env", ".dev"]
     if all(
         not dest_file.endswith(file_type) for file_type in ls_diff_and_backup_file_types
     ):
@@ -155,6 +155,7 @@ if __name__ == "__main__":
         "na-finops",
         "na-fin-data-streamlit",
         "na-faba",
+        "snowflake-db-finops-debit",
     ]
     if os.path.exists(os.path.join(great_grandparent_dir, "Our_Cash")):
         ls_project_types_to_run = ["personal"]

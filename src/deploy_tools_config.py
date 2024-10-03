@@ -1316,6 +1316,12 @@ dict_file_deployments_detailed = {
             ["na-faba", ".env"],
         ],
     },
+    "hellofresh_credentials/snowflake_db_finops-debit.env.dev": {
+        "ls_src_path": ["hellofresh_credentials", "snowflake_db_finops-debit.env.dev"],
+        "ls_deployment_dests": [
+            ["snowflake-db-finops-debit", ".env.dev"],
+        ],
+    },
     "na-finops/docs/setup_git_access_hellofresh.md": {
         "ls_src_path": ["na-finops", "docs", "setup_git_access_hellofresh.md"],
         "ls_deployment_dests": [
