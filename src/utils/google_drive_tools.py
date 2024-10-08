@@ -171,7 +171,7 @@ def get_drive_file_id_from_folder_id_path(folder_id, ls_file_path, is_folder=Fal
         )
     else:
         query = (
-            f"name='{filename}' and '{curr_dir_id}' in parents and trashed=false"
+            f"name='{filename}' and '{curr_dir_id}' in parents and trashed=false "
             "and mimeType!='application/vnd.google-apps.folder'"
         )
     results = (
