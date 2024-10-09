@@ -332,28 +332,28 @@ def download_and_get_drive_file_path(
         os.path.join(drive_download_cache_dir_to_use, root_folder_id, *ls_file_path)
     )
     if dest_file_path in ls_files_downloaded_this_run:
-        print_logger(f"File already downloaded this run: {ls_file_path}")
+        print_logger(f"File already downloaded this run: {dest_file_path}")
         return dest_file_path
-    print_logger(f"dest_file_path: {dest_file_path}")
 
-    if not os.path.exists(dest_file_path) or force_download:
-        print_logger(f"Downloading file: {ls_file_path}")
-        drive_file_id = get_drive_file_id_from_folder_id_path(
-            root_folder_id, ls_file_path
+    if (not force_download) and (os.path.exists(dest_file_path)):
+        print_logger(
+            f"File already exists and force_download is false: {dest_file_path}"
         )
+        return dest_file_path
 
-        # make dest dirs if they dont exist
-        dest_dir = os.path.dirname(dest_file_path)
-        print_logger(f"dest_dir: {dest_dir}")
-        if not os.path.exists(dest_dir):
-            print_logger(f"Making dir: {dest_dir}")
-            os.makedirs(dest_dir)
+    print_logger(f"Downloading file: {ls_file_path}")
+    drive_file_id = get_drive_file_id_from_folder_id_path(root_folder_id, ls_file_path)
 
-        # download the file from google drive
-        download_file_by_id(drive_file_id, dest_file_path)
-        print_logger(f"Downloaded file: {ls_file_path}")
-    else:
-        print_logger(f"File already exists: {ls_file_path}")
+    # make dest dirs if they dont exist
+    dest_dir = os.path.dirname(dest_file_path)
+    print_logger(f"dest_dir: {dest_dir}")
+    if not os.path.exists(dest_dir):
+        print_logger(f"Making dir: {dest_dir}")
+        os.makedirs(dest_dir)
+
+    # download the file from google drive
+    download_file_by_id(drive_file_id, dest_file_path)
+    print_logger(f"Downloaded file: {ls_file_path}")
 
     return dest_file_path
 
