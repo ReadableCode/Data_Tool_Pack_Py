@@ -50,8 +50,9 @@ def remove_percent_from_val_no_div(value):
         pass
     return value
 
+
 def force_to_number(value):
-    if value in ["", "#VALUE!", " ", None, np.nan]:
+    if value in ["", "#VALUE!", " "]:
         return 0
     try:
         value = value.replace(",", "").replace("$", "")
