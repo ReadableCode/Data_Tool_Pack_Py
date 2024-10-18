@@ -2,6 +2,7 @@
 # Imports #
 
 import json
+import math
 import os
 import sys
 
@@ -145,6 +146,29 @@ def read_csv_with_decode_error_handling(
         )
 
     return df
+
+
+def list_to_df_columns(ls_values, number_of_columns, total_rows=None):
+    # If total_rows is specified, pad the list to match the desired row count
+    if total_rows:
+        padded_values = ls_values + [""] * (total_rows - len(ls_values))
+    else:
+        padded_values = ls_values
+
+    # Calculate the total length and items per column
+    total_length = len(padded_values)
+    items_per_column = math.ceil(total_length / number_of_columns)
+
+    # Split the padded list into the required number of columns
+    columns = [
+        padded_values[i : i + items_per_column]
+        for i in range(0, total_length, items_per_column)
+    ]
+
+    # Transpose the columns into rows to create a DataFrame
+    df_columns = pd.DataFrame(columns).transpose()
+    df_columns = df_columns.fillna("")
+    return df_columns
 
 
 # %%

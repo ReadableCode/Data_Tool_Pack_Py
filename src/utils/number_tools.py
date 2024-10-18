@@ -2,6 +2,7 @@
 # Imports #
 
 import numpy as np
+import pandas as pd
 
 # %%
 # Repair and Convert Functions #
@@ -70,6 +71,30 @@ def divide_blank(x, y):
         return 0
     else:
         return x / y
+
+
+def format_number(value):
+    """Format a number into a compact string with two decimal places."""
+    try:
+        value = float(value)  # Convert value to float if it's not already
+    except (ValueError, TypeError):
+        return "-"  # Return "-" if conversion fails
+
+    if pd.isna(value) or value == 0:
+        return "-"
+    elif value >= 1_000_000:
+        return f"${value / 1_000_000:.1f}M"
+    elif value >= 1_000:
+        return f"${value / 1_000:.1f}k"
+    else:
+        return f"${value:.2f}"
+
+
+def format_percentage(value):
+    """Format percentage with 1 decimal place."""
+    if pd.isna(value) or value == 0:
+        return "0%"
+    return f"{value:.1f}%"
 
 
 # %%
