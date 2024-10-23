@@ -53,10 +53,11 @@ def remove_percent_from_val_no_div(value):
 
 
 def force_to_number(value):
-    if value in ["", "#VALUE!", " ", None, np.nan]:
+    # Check for NaN using pd.isna or np.isnan
+    if pd.isna(value) or value in ["", "#VALUE!", " ", None, "nan"]:
         return 0
     try:
-        value = value.replace(",", "").replace("$", "")
+        value = str(value).replace(",", "").replace("$", "")
     except Exception:
         pass
     try:
