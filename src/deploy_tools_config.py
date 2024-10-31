@@ -1256,6 +1256,18 @@ dict_file_deployments_detailed = {
             ["CrownCentral", "tests", "test_utils", "__init__.py"],
         ],
     },
+    "na-finops/schemas/employee_reporting.json": {
+        "ls_src_path": ["na-finops", "schemas", "employee_reporting.json"],
+        "ls_deployment_dests": [
+            [
+                "na-fin-data-streamlit",
+                "apps",
+                "debit-testing",
+                "schemas",
+                "employee_reporting.json",
+            ]
+        ],
+    },
     "na-finops/src/brand_tools.py": {
         "ls_src_path": ["na-finops", "src", "brand_tools.py"],
         "ls_deployment_dests": [
