@@ -1097,7 +1097,6 @@ dict_file_deployments_detailed = {
         "ls_deployment_dests": [
             ["na-fin-data-streamlit", "apps", "top-variances", "src", "config.py"],
             ["na-fin-data-streamlit", "apps", "breakout", "src", "config.py"],
-            ["na-fin-data-streamlit", "apps", "debit-testing", "src", "config.py"],
         ],
     },
     "na-finops/src/__init__.py": {
