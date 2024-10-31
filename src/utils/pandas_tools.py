@@ -151,6 +151,7 @@ def read_csv_with_decode_error_handling(
 def list_to_df_columns(ls_values, number_of_columns, total_rows=None):
     # If total_rows is specified, pad the list to match the desired row count
     if total_rows:
+        ls_values = ls_values[:total_rows]
         padded_values = ls_values + [""] * (total_rows - len(ls_values))
     else:
         padded_values = ls_values

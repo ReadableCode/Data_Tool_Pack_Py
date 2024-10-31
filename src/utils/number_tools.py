@@ -88,7 +88,7 @@ def format_number(value):
     elif value >= 1_000:
         return f"${value / 1_000:.1f}k"
     else:
-        return f"${value:.2f}"
+        return f"${value:.0f}"
 
 
 def format_percentage(value):
