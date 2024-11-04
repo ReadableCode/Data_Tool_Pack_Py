@@ -13,7 +13,7 @@ if __name__ == "__main__":
 
 
 import utils.config_utils  # noqa: F401
-from utils.display_tools import pprint_df, print_logger
+from utils.display_tools import pprint_df, print_logger  # noqa F401
 
 # %%
 # Functions #
@@ -36,6 +36,9 @@ def generate_password_and_hash_for_user(email_address):
     password_hash = generate_password_hash(password)
 
     user_first_name = email_address.split(".")[0].capitalize()
+
+    print("Add the following to password dictionary:")
+    print(f'"{email_address}": "{password_hash}",')
 
     print("Add this to secrets file:")
     print(f'{user_first_name.upper()}_PASSWORD ="{password}"')
