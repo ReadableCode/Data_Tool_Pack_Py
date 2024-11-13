@@ -115,4 +115,25 @@ def convert_password_storage(
     return dict_return
 
 
+def generate_messgaes(file_path):
+    link = "https://us-finance-tedd.dwh-k8s.hellofresh.io/"
+    message_text = f"""
+    Hi TEDD User,
+    Please click on this Whisper link and sign into the Tedd app and save your password within the next week. Used in conjunction  with HelloFresh VPN (ZScaler), these credentials will allow you to browse your team's transactions in the TEDD App at {link}.
+
+    Here is your whisper link, it will expire in one week: 
+    """  # noqa E501
+    dict_password_hashes_username = json.load(open(file_path))
+    pprint_dict(dict_password_hashes_username)
+
+    for username, password_dict in dict_password_hashes_username.items():
+        if password_dict["whisper_link"] == "":
+            continue
+        print("-" * 50)
+        print(message_text)
+        print(f"link: {link}")
+        print(f"username: {username}")
+        print(f"whisper_link: {password_dict['whisper_link']}")
+
+
 # %%
