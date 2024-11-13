@@ -41,9 +41,16 @@ def generate_password_and_hash_for_user(email_address):
     print("Add the following to password dictionary:")
     print(f'"{email_address}": "{password_hash}",')
 
-    print("Add this to secrets file:")
-    print(f'{user_first_name.upper()}_PASSWORD ="{password}"')
-    print(f'{user_first_name.upper()}_PASSWORD_HASH ="{password_hash}"')
+    print()
+
+    print("Add this to passwords json")
+    dict_to_add = {
+        "password": password,
+        "password_hash": password_hash,
+        "whisper_link": "",
+    }
+    print(f'"{email_address}": {dict_to_add},')
+    print()
 
     print("Add this to passord manager:")
     print(f"{user_first_name}")
@@ -52,88 +59,26 @@ def generate_password_and_hash_for_user(email_address):
     print(f"password_hash: {password_hash}")
 
 
-def convert_password_storage(
-    input_file_path,
-    output_file_path,
-    output_file_path_json,
-    dict_password_hashes_username,
-):
-    dict_return = {}
-    with open(input_file_path, "r") as file:
-        username = ""
-        password = ""
-        password_hash = ""
-
-        for line in file:
-            print("-" * 50)
-            if line.strip() == "":
-                print("blank line, ending file read")
-                break
-
-            print(line)
-            key, value = line.split("=", 1)
-
-            # if line contains "password" then save as password
-            if "password" in key.lower() and "hash" not in key.lower():
-                print("password found")
-                password = value.strip()[1:-1]
-            # if line contains "password_hash" then save as password_hash
-            elif "hash" in key.lower():
-                print("hash found")
-                password_hash = value.strip()[1:-1]
-                username = dict_password_hashes_username[password_hash]
-                print(f"username: {username}")
-
-            if (username != "") and (password != "") and (password_hash != ""):
-                print("saving")
-                dict_return[username] = {}
-                dict_return[username]["password"] = password
-                dict_return[username]["password_hash"] = password_hash
-
-                # reset
-                username = ""
-                password = ""
-                password_hash = ""
-            else:
-                print("error: username, password, or password_hash not found")
-                print(f"username: {username}")
-                print(f"password: {password}")
-                print(f"password_hash: {password_hash}")
-
-    pprint_dict(dict_return)
-
-    with open(output_file_path, "w") as file:
-        for username, password_dict in dict_return.items():
-            file.write(f'{username.upper()}_PASSWORD="{password_dict["password"]}"\n')
-            file.write(
-                f'{username.upper()}_PASSWORD_HASH="{password_dict["password_hash"]}"\n'
-            )
-
-    json.dump(dict_return, open(output_file_path_json, "w"), indent=4)
-
-    print("Conversion complete")
-    return dict_return
-
-
-def generate_messgaes(file_path):
-    link = "https://us-finance-tedd.dwh-k8s.hellofresh.io/"
-    message_text = f"""
-    Hi TEDD User,
-    Please click on this Whisper link and sign into the Tedd app and save your password within the next week. Used in conjunction  with HelloFresh VPN (ZScaler), these credentials will allow you to browse your team's transactions in the TEDD App at {link}.
-
-    Here is your whisper link, it will expire in one week: 
-    """  # noqa E501
+def generate_messages(file_path, link="", message_text="", whisper_gen_mode=False):
     dict_password_hashes_username = json.load(open(file_path))
     pprint_dict(dict_password_hashes_username)
 
     for username, password_dict in dict_password_hashes_username.items():
-        if password_dict["whisper_link"] == "":
-            continue
-        print("-" * 50)
-        print(message_text)
-        print(f"link: {link}")
-        print(f"username: {username}")
-        print(f"whisper_link: {password_dict['whisper_link']}")
+        if whisper_gen_mode:
+            if password_dict["whisper_link"] == "":
+                # print what we want to encode in whisper
+                print("-" * 50)
+                print(f"Link: {link}")
+                print(f"Username: {username}")
+                print(f"Password: {password_dict['password']}")
+        else:
+            if password_dict["whisper_link"] == "":
+                continue
+            print("-" * 50)
+            print(message_text)
+            print(f"link: {link}")
+            print(f"username: {username}")
+            print(f"whisper_link: {password_dict['whisper_link']}")
 
 
 # %%
