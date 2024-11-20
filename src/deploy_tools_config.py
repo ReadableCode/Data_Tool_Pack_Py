@@ -1267,6 +1267,18 @@ dict_file_deployments_detailed = {
             ["na-fin-data-streamlit", "apps", "breakout", "src", "config.py"],
         ],
     },
+    "na-finops/src/config.py": {
+        "ls_src_path": ["na-finops", "src", "streamlit_cache_manager.py"],
+        "ls_deployment_dests": [
+            [
+                "na-fin-data-streamlit",
+                "apps",
+                "top-variances",
+                "src",
+                "streamlit_cache_manager.py",
+            ],
+        ],
+    },
     "na-finops/src/__init__.py": {
         "ls_src_path": ["na-finops", "src", "__init__.py"],
         "ls_deployment_dests": [
