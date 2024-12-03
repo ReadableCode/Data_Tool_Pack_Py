@@ -1235,6 +1235,36 @@ dict_file_deployments_detailed = {
             ["na-faba", "src", "utils", "snowflake_tools.py"],
         ],
     },
+    "na-finops/src/utils/rds_tools.py": {
+        "ls_src_path": ["na-finops", "src", "utils", "rds_tools.py"],
+        "ls_deployment_dests": [
+            [
+                "na-fin-data-streamlit",
+                "apps",
+                "gor",
+                "src",
+                "utils",
+                "rds_tools.py",
+            ],
+            [
+                "na-fin-data-streamlit",
+                "apps",
+                "breakout",
+                "src",
+                "utils",
+                "rds_tools.py",
+            ],
+            [
+                "na-fin-data-streamlit",
+                "apps",
+                "factor-invoices",
+                "src",
+                "utils",
+                "rds_tools.py",
+            ],
+            ["na-faba", "src", "utils", "rds_tools.py"],
+        ],
+    },
     "Data_Tool_Pack/src/utils/url_encoding.py": {
         "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "url_encoding.py"],
         "ls_deployment_dests": [
