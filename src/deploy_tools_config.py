@@ -1532,6 +1532,25 @@ dict_file_deployments_detailed = {
             ],
         ],
     },
+    "na-finops/schemas/employee_reporting.yml": {
+        "ls_src_path": ["na-finops", "schemas", "employee_reporting.yml"],
+        "ls_deployment_dests": [
+            [
+                "na-fin-data-streamlit",
+                "apps",
+                "debit-testing",
+                "schemas",
+                "employee_reporting.yml",
+            ],
+            [
+                "na-fin-data-streamlit",
+                "apps",
+                "tedd",
+                "schemas",
+                "employee_reporting.yml",
+            ],
+        ],
+    },
     "na-finops/src/brand_tools.py": {
         "ls_src_path": ["na-finops", "src", "brand_tools.py"],
         "ls_deployment_dests": [
