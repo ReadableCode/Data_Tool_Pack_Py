@@ -1,10 +1,17 @@
 # %%
 
 import os
+import sys
 
 import requests
-from config import grandparent_dir
 from dotenv import load_dotenv
+
+# append grandparent
+if __name__ == "__main__":
+    sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from utils.config_utils import data_dir, grandparent_dir, temp_upload_dir
+from utils.display_tools import pprint_dict, print_logger
 
 # %%
 # source .env file
