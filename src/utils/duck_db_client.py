@@ -1,6 +1,7 @@
 # %%
 # Imports #
 
+import datetime
 import json
 import os
 import sys
@@ -67,12 +68,19 @@ def insert_data(table_name, data):
     return authenticated_request("POST", "/insert/", json=payload)
 
 
-def query_data(query=None, table_name=None):
+def query_data(query, table_name=None):
     """
     Query data from the database.
     """
     params = {"query": query, "table_name": table_name}
-    return authenticated_request("GET", "/query/", params=params)
+    json_data = authenticated_request("GET", "/query/", params=params)
+
+    if json_data is None:
+        return pd.DataFrame()
+
+    df = pd.DataFrame(json_data)
+
+    return df
 
 
 def upload_data(table_name, file_path):
@@ -103,6 +111,42 @@ def list_tables():
     return response
 
 
+def ensure_heartbeat_table():
+    """
+    Ensure the heartbeat table exists with columns for datetime and notes.
+    """
+    table_name = "heartbeat"
+    columns = "timestamp DATETIME, notes TEXT"
+    params = {"table_name": table_name, "columns": columns}
+
+    # Call the API with query parameters
+    response = authenticated_request("POST", "/create_table/", params=params)
+
+    if response:
+        print(f"Heartbeat table ensured: {response}")
+    else:
+        print(f"Failed to ensure heartbeat table.")
+
+
+def add_heartbeat(note=""):
+    """
+    Add a heartbeat entry with the current timestamp and a note.
+    """
+    table_name = "heartbeat"
+    timestamp = datetime.datetime.now().isoformat()  # Current timestamp
+    data = {"timestamp": timestamp, "notes": note}
+    response = insert_data(table_name, data)
+    if response:
+        print(f"Heartbeat added: {response}")
+
+
+def get_heartbeat_table():
+    """
+    Return the contents of the heartbeat table.
+    """
+    return query_data(query="SELECT * FROM heartbeat", table_name="heartbeat")
+
+
 # %%
 # Main #
 
@@ -122,6 +166,19 @@ if __name__ == "__main__":
     # Query Data
     table_name = "test_table"
     pprint_df(query_data(query=f"SELECT * FROM {table_name}", table_name=table_name))
+
+    print("Managing Heartbeat Table")
+
+    # Ensure the heartbeat table exists
+    ensure_heartbeat_table()
+
+    # Add a new heartbeat with a note
+    add_heartbeat(note="heartbeat note")
+
+    # Retrieve and display the heartbeat table
+    print("Heartbeat Table:")
+    heartbeat_df = get_heartbeat_table()
+    pprint_df(heartbeat_df)
 
 
 # %%
