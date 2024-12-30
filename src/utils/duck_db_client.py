@@ -1,6 +1,7 @@
 # %%
 # Imports #
 
+import json
 import os
 import sys
 
@@ -35,24 +36,71 @@ if USERNAME == "" or PASSWORD == "":
 
 
 # %%
-# Functinos #
+# Functions #
 
 
-def query_api(table_name):
-    url = f"{BASE_URL}/query/"
-    query = {"query": f"SELECT * FROM {table_name}"}
-    # Make a GET request with authentication
-    response = requests.get(url, params=query, auth=(USERNAME, PASSWORD))
+def authenticated_request(method, endpoint, **kwargs):
+    url = f"{BASE_URL}{endpoint}"
+    response = requests.request(method, url, auth=(USERNAME, PASSWORD), **kwargs)
 
-    # Check the response
     if response.status_code != 200:
         print(
             f"Failed with status code: {response.status_code}, Message: {response.text}"
         )
         return None
+    return response.json()
 
-    df = pd.DataFrame(response.json())
-    return df
+
+def create_table(table_name, columns):
+    """
+    Create a table dynamically.
+    """
+    data = {"table_name": table_name, "columns": columns}
+    return authenticated_request("POST", "/create_table/", json=data)
+
+
+def insert_data(table_name, data):
+    """
+    Insert data into a specified table.
+    """
+    payload = {"table_name": table_name, "data": data}
+    return authenticated_request("POST", "/insert/", json=payload)
+
+
+def query_data(query=None, table_name=None):
+    """
+    Query data from the database.
+    """
+    params = {"query": query, "table_name": table_name}
+    return authenticated_request("GET", "/query/", params=params)
+
+
+def upload_data(table_name, file_path):
+    """
+    Upload CSV or Parquet data to a specified table.
+    """
+    with open(file_path, "rb") as file:
+        files = {"file": file}
+        params = {"table_name": table_name}
+        return authenticated_request("POST", "/upload/", params=params, files=files)
+
+
+def health_check():
+    """
+    Perform a health check of the API.
+    """
+    return authenticated_request("GET", "/")
+
+
+def list_tables():
+    """
+    List all tables in the DuckDB database.
+    """
+    query = (
+        "SELECT table_name FROM information_schema.tables WHERE table_schema='main';"
+    )
+    response = query_data(query=query)
+    return response
 
 
 # %%
@@ -61,8 +109,19 @@ def query_api(table_name):
 
 if __name__ == "__main__":
     print("Querying API")
+
+    # Health Check
+    print("Health Check")
+    pprint_dict(health_check())
+
+    # List Tables
+    print("List Tables")
+    tables = list_tables()
+    pprint_dict(tables)
+
+    # Query Data
     table_name = "test_table"
-    pprint_df(query_api(table_name))
+    pprint_df(query_data(query=f"SELECT * FROM {table_name}", table_name=table_name))
 
 
 # %%
