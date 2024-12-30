@@ -108,7 +108,13 @@ def list_tables():
         "SELECT table_name FROM information_schema.tables WHERE table_schema='main';"
     )
     response = query_data(query=query)
-    return response
+
+    if response.empty:
+        return None
+
+    df_tables = pd.DataFrame(response)
+
+    return df_tables
 
 
 def ensure_heartbeat_table():
@@ -160,8 +166,8 @@ if __name__ == "__main__":
 
     # List Tables
     print("List Tables")
-    tables = list_tables()
-    pprint_dict(tables)
+    df_tables = list_tables()
+    pprint_df(df_tables)
 
     # Query Data
     table_name = "test_table"
