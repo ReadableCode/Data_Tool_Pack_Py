@@ -10,8 +10,8 @@ from dotenv import load_dotenv
 if __name__ == "__main__":
     sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from utils.config_utils import data_dir, grandparent_dir, temp_upload_dir
-from utils.display_tools import pprint_dict, print_logger
+from utils.config_utils import data_dir, grandparent_dir, temp_upload_dir  # noqa: F401
+from utils.display_tools import pprint_dict, print_logger  # noqa: F401
 
 # %%
 # source .env file
@@ -27,6 +27,10 @@ print(url)
 # credentials
 username = os.getenv("ht_auth_username")
 password = os.getenv("ht_auth_password")
+
+if not username or not password:
+    print("Please set the username and password in the .env file")
+    raise ValueError("Please set the username and password in the .env file")
 
 
 # %%
