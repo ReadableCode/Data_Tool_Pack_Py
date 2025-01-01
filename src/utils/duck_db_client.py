@@ -36,7 +36,7 @@ if USERNAME == "" or PASSWORD == "":
 
 
 # %%
-# Functions #
+# Functions: Testing #
 
 
 def health_check():
@@ -52,38 +52,6 @@ def health_check():
         )
         return None
     return response.json()
-
-
-def raw_query(query, params=None):
-    """
-    Execute a raw SQL query.
-    """
-    url = f"{BASE_URL}/raw_query/"
-    payload = {"query": query, "params": params or []}
-    response = requests.post(url, json=payload, auth=(USERNAME, PASSWORD))
-
-    if response.status_code != 200:
-        print(
-            f"Failed with status code: {response.status_code}, Message: {response.text}"
-        )
-        return None
-    return response.json()
-
-
-def list_tables():
-    """
-    List all tables in the DuckDB database.
-    """
-    query = (
-        "SELECT table_name FROM information_schema.tables WHERE table_schema='main';"
-    )
-    json_data = raw_query(query=query)
-
-    if not json_data or not json_data.get("data"):
-        return None
-
-    df_tables = pd.DataFrame(json_data["data"])
-    return df_tables
 
 
 def ensure_heartbeat_table():
@@ -124,6 +92,42 @@ def get_heartbeat_table():
 
     df = pd.DataFrame(json_data["data"])
     return df
+
+
+# %%
+# Functions #
+
+
+def raw_query(query, params=None):
+    """
+    Execute a raw SQL query.
+    """
+    url = f"{BASE_URL}/raw_query/"
+    payload = {"query": query, "params": params or []}
+    response = requests.post(url, json=payload, auth=(USERNAME, PASSWORD))
+
+    if response.status_code != 200:
+        print(
+            f"Failed with status code: {response.status_code}, Message: {response.text}"
+        )
+        return None
+    return response.json()
+
+
+def list_tables():
+    """
+    List all tables in the DuckDB database.
+    """
+    query = (
+        "SELECT table_name FROM information_schema.tables WHERE table_schema='main';"
+    )
+    json_data = raw_query(query=query)
+
+    if not json_data or not json_data.get("data"):
+        return None
+
+    df_tables = pd.DataFrame(json_data["data"])
+    return df_tables
 
 
 # %%
