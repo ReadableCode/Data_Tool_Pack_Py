@@ -130,34 +130,27 @@ def get_heartbeat_table():
 # Main #
 
 if __name__ == "__main__":
-    print("Querying API")
-
     # Health Check
-    print("Health Check")
+    print_logger("Health Check", as_break=True)
     pprint_dict(health_check())
 
     # List Tables
-    print("List Tables")
+    print_logger("List Tables", as_break=True)
     df_tables = list_tables()
     pprint_df(df_tables)
 
     # Query Data
+    print_logger("Query Data", as_break=True)
     table_name = "test_table"
     query = f"SELECT * FROM {table_name};"
     result = raw_query(query=query)
     if result and "data" in result:
         pprint_df(pd.DataFrame(result["data"]))
 
-    print("Managing Heartbeat Table")
-
-    # Ensure the heartbeat table exists
+    # Manage Heartbeat Table
+    print_logger("Managing Heartbeat Table", as_break=True)
     ensure_heartbeat_table()
-
-    # Add a new heartbeat with a note
     add_heartbeat(note="heartbeat note")
-
-    # Retrieve and display the heartbeat table
-    print("Heartbeat Table:")
     heartbeat_df = get_heartbeat_table()
     pprint_df(heartbeat_df)
 
