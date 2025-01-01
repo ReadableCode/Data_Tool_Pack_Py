@@ -2,7 +2,6 @@
 # Imports #
 
 import datetime
-import json
 import os
 import sys
 
@@ -40,9 +39,12 @@ if USERNAME == "" or PASSWORD == "":
 # Functions #
 
 
-def authenticated_request(method, endpoint, **kwargs):
-    url = f"{BASE_URL}{endpoint}"
-    response = requests.request(method, url, auth=(USERNAME, PASSWORD), **kwargs)
+def health_check():
+    """
+    Perform a health check of the API.
+    """
+    url = f"{BASE_URL}/"
+    response = requests.get(url, auth=(USERNAME, PASSWORD))
 
     if response.status_code != 200:
         print(
@@ -52,52 +54,20 @@ def authenticated_request(method, endpoint, **kwargs):
     return response.json()
 
 
-def create_table(table_name, columns):
+def raw_query(query, params=None):
     """
-    Create a table dynamically.
+    Execute a raw SQL query.
     """
-    data = {"table_name": table_name, "columns": columns}
-    return authenticated_request("POST", "/create_table/", json=data)
+    url = f"{BASE_URL}/raw_query/"
+    payload = {"query": query, "params": params or []}
+    response = requests.post(url, json=payload, auth=(USERNAME, PASSWORD))
 
-
-def insert_data(table_name, data):
-    """
-    Insert data into a specified table.
-    """
-    payload = {"table_name": table_name, "data": data}
-    return authenticated_request("POST", "/insert/", json=payload)
-
-
-def query_data(query, table_name=None):
-    """
-    Query data from the database.
-    """
-    params = {"query": query, "table_name": table_name}
-    json_data = authenticated_request("GET", "/query/", params=params)
-
-    if json_data is None:
-        return pd.DataFrame()
-
-    df = pd.DataFrame(json_data)
-
-    return df
-
-
-def upload_data(table_name, file_path):
-    """
-    Upload CSV or Parquet data to a specified table.
-    """
-    with open(file_path, "rb") as file:
-        files = {"file": file}
-        params = {"table_name": table_name}
-        return authenticated_request("POST", "/upload/", params=params, files=files)
-
-
-def health_check():
-    """
-    Perform a health check of the API.
-    """
-    return authenticated_request("GET", "/")
+    if response.status_code != 200:
+        print(
+            f"Failed with status code: {response.status_code}, Message: {response.text}"
+        )
+        return None
+    return response.json()
 
 
 def list_tables():
@@ -107,13 +77,12 @@ def list_tables():
     query = (
         "SELECT table_name FROM information_schema.tables WHERE table_schema='main';"
     )
-    response = query_data(query=query)
+    json_data = raw_query(query=query)
 
-    if response.empty:
+    if not json_data or not json_data.get("data"):
         return None
 
-    df_tables = pd.DataFrame(response)
-
+    df_tables = pd.DataFrame(json_data["data"])
     return df_tables
 
 
@@ -121,41 +90,44 @@ def ensure_heartbeat_table():
     """
     Ensure the heartbeat table exists with columns for datetime and notes.
     """
-    table_name = "heartbeat"
-    columns = "timestamp DATETIME, notes TEXT"
-    params = {"table_name": table_name, "columns": columns}
-
-    # Call the API with query parameters
-    response = authenticated_request("POST", "/create_table/", params=params)
+    query = "CREATE TABLE IF NOT EXISTS heartbeat (timestamp DATETIME, notes TEXT);"
+    response = raw_query(query=query)
 
     if response:
-        print(f"Heartbeat table ensured: {response}")
+        print("Heartbeat table ensured.")
     else:
-        print(f"Failed to ensure heartbeat table.")
+        print("Failed to ensure heartbeat table.")
 
 
 def add_heartbeat(note=""):
     """
     Add a heartbeat entry with the current timestamp and a note.
     """
-    table_name = "heartbeat"
     timestamp = datetime.datetime.now().isoformat()  # Current timestamp
-    data = {"timestamp": timestamp, "notes": note}
-    response = insert_data(table_name, data)
+    query = "INSERT INTO heartbeat (timestamp, notes) VALUES (?, ?);"
+    params = [timestamp, note]
+    response = raw_query(query=query, params=params)
+
     if response:
-        print(f"Heartbeat added: {response}")
+        print("Heartbeat added.")
 
 
 def get_heartbeat_table():
     """
     Return the contents of the heartbeat table.
     """
-    return query_data(query="SELECT * FROM heartbeat", table_name="heartbeat")
+    query = "SELECT * FROM heartbeat;"
+    json_data = raw_query(query=query)
+
+    if not json_data or not json_data.get("data"):
+        return pd.DataFrame()
+
+    df = pd.DataFrame(json_data["data"])
+    return df
 
 
 # %%
 # Main #
-
 
 if __name__ == "__main__":
     print("Querying API")
@@ -171,7 +143,10 @@ if __name__ == "__main__":
 
     # Query Data
     table_name = "test_table"
-    pprint_df(query_data(query=f"SELECT * FROM {table_name}", table_name=table_name))
+    query = f"SELECT * FROM {table_name};"
+    result = raw_query(query=query)
+    if result and "data" in result:
+        pprint_df(pd.DataFrame(result["data"]))
 
     print("Managing Heartbeat Table")
 
@@ -185,6 +160,5 @@ if __name__ == "__main__":
     print("Heartbeat Table:")
     heartbeat_df = get_heartbeat_table()
     pprint_df(heartbeat_df)
-
 
 # %%
