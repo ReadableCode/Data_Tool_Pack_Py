@@ -217,7 +217,7 @@ def print_schema_yaml_datasets_format(dict_schema):
 
     for key, value in dict_schema.items():
         if value["col_type"] == "float64":
-            type_to_print = "float"
+            type_to_print = "double"
         elif value["col_type"] == "bool":
             type_to_print = "boolean"
         elif value["col_type"] == "int64":
@@ -243,7 +243,7 @@ def print_schema_yaml_limesync_format(dict_schema, save_path=None):
     print("schema:")
     for key, value in dict_schema.items():
         if value["col_type"] == "float64":
-            type_to_print = "float"
+            type_to_print = "double"
         elif value["col_type"] == "bool":
             type_to_print = "boolean"
         elif value["col_type"] == "int64":
@@ -257,7 +257,7 @@ def print_schema_yaml_limesync_format(dict_schema, save_path=None):
             f.write("schema:\n")
             for key, value in dict_schema.items():
                 if value["col_type"] == "float64":
-                    type_to_print = "float"
+                    type_to_print = "double"
                 elif value["col_type"] == "bool":
                     type_to_print = "boolean"
                 elif value["col_type"] == "int64":
@@ -339,8 +339,6 @@ def apply_schema(df, dict_schema):
             df[col] = df[col].apply(force_to_number)
         elif col_type == "string":
             df = sanitize_string_column(df, col)
-        elif col_type == "double":
-            df[col] = df[col].round(2)
         df[col] = df[col].astype(col_type)
     return df[dict_schema.keys()]
 
