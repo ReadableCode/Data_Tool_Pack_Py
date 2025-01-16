@@ -1663,6 +1663,12 @@ dict_file_deployments_detailed = {
             ["na-fin-data-streamlit", "apps", "tedd", "src", "te_reporting.py"],
         ],
     },
+    "na-finops/src/super_users.txt": {
+        "ls_src_path": ["na-finops", "src", "super_users.txt"],
+        "ls_deployment_dests": [
+            ["na-fin-data-streamlit", "apps", "tedd", "src", "super_users.txt"],
+        ],
+    },
     "na-finops/src/employee_mapping.py": {
         "ls_src_path": ["na-finops", "src", "employee_mapping.py"],
         "ls_deployment_dests": [
