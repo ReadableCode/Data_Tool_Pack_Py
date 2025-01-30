@@ -1681,6 +1681,19 @@ dict_file_deployments_detailed = {
             ],
         ],
     },
+    "na-finops/src/utils/limesync_validation.py": {
+        "ls_src_path": ["na-finops", "src", "utils", "limesync_validation.py"],
+        "ls_deployment_dests": [
+            [
+                "na-fin-data-streamlit",
+                "apps",
+                "tedd",
+                "src",
+                "utils",
+                "limesync_validation.py",
+            ],
+        ],
+    },
     "hellofresh_credentials/na_finops.env": {
         "ls_src_path": ["hellofresh_credentials", "na_finops.env"],
         "ls_deployment_dests": [
