@@ -64,6 +64,7 @@ dict_file_deployments_detailed = {
             ["OSINT", "src", "utils", "config_utils.py"],
             ["Sync_Plex", "src", "utils", "config_utils.py"],
             ["Terminal_To_Do", "src", "utils", "config_utils.py"],
+            ["Health_Data_Parser", "src", "utils", "config_utils.py"],
         ],
     },
     "Data_Tool_Pack_Py/src/utils/date_tools.py": {
@@ -361,6 +362,7 @@ dict_file_deployments_detailed = {
             ["OSINT", "src", "utils", "display_tools.py"],
             ["Sync_Plex", "src", "utils", "display_tools.py"],
             ["Terminal_To_Do", "src", "utils", "display_tools.py"],
+            ["Health_Data_Parser", "src", "utils", "display_tools.py"],
         ],
     },
     "Data_Tool_Pack_Py/src/utils/gmail_tools.py": {
