@@ -53,17 +53,32 @@ def remove_percent_from_val_no_div(value):
 
 
 def force_to_number(value):
-    # Check for NaN using pd.isna or np.isnan
-    if pd.isna(value) or value in ["", "#VALUE!", " ", None, "nan"]:
+    """
+    Converts a value to a numeric type, replacing invalid values and infinities with 0.
+
+    Args:
+        value: Input value to convert.
+
+    Returns:
+        float: A numeric value or 0 for invalid entries.
+    """
+    # Check for NaN, empty strings, specific invalid values
+    if pd.isna(value) or value in ["", "#VALUE!", " ", None, "nan", "ERROR", "N/A"]:
         return 0
     try:
+        # Remove formatting characters like commas and dollar signs
         value = str(value).replace(",", "").replace("$", "")
     except Exception:
         pass
     try:
+        # Convert to float
         value = float(value)
-    except Exception:
-        pass
+    except ValueError:
+        return 0  # Return 0 if conversion fails
+
+    # Check for infinity after conversion to float
+    if np.isinf(value):
+        return 0
     return value
 
 
