@@ -101,7 +101,10 @@ def get_snowflake_credentials(account_type, role_type, warehouse=""):
 
     cred_env_key = dict_account_types[account_type]
 
-    creds = json.loads(os.getenv(cred_env_key), strict=False)
+    cred_env_value = os.getenv(cred_env_key)
+    if cred_env_value is None:
+        raise ValueError(f"Environment variable {cred_env_key} is not set.")
+    creds = json.loads(cred_env_value, strict=False)
 
     if warehouse == "":
         warehouse = creds["warehouse"]
