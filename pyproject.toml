@@ -16,6 +16,7 @@ dependencies = [
     "ipykernel>=6.29.5",
     "isort>=5.13.2",
     "jaydebeapi>=1.2.3",
+    "jira>=3.8.0",
     "looker-sdk>=24.20.0",
     "matplotlib>=3.10.0",
     "numpy>=2.2.1",
