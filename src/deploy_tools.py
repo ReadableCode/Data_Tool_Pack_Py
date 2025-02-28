@@ -52,10 +52,21 @@ def deploy_file_with_diff_and_conf(src_file, dest_file, dry_run=True):
         synchronize_file_with_confirmation("/path/to/source/file.txt", "/path/to/dest/file.txt", dry_run=False)
     """
     if not os.path.exists(os.path.dirname(dest_file)):
+        # create it
         print_logger(
-            f"{' '*4}Destination directory for file: {dest_file} does not exist. Skipping."
+            f"{' '*4}Destination directory {os.path.dirname(dest_file)} does not exist."
         )
-        return
+        if dry_run:
+            print_logger(
+                f"{' '*4}Would create directory {os.path.dirname(dest_file)} and copy {src_file} to {dest_file}"
+            )
+            return
+        else:
+            print_logger(
+                f"{' '*4}Creating directory {os.path.dirname(dest_file)} and copying {src_file} to {dest_file}"
+            )
+            os.makedirs(os.path.dirname(dest_file), exist_ok=True)
+            shutil.copy(src_file, dest_file)
 
     if not os.path.exists(dest_file):
         print_logger(f"{' '*4}Destination file {dest_file} does not exist.")
