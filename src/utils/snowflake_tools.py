@@ -32,62 +32,17 @@ if os.path.exists(user_dotenv_path):
 
 
 # %%
-# Roles #
-
-dict_roles = {
-    "people_insights_user": "US_PEOPLE_INSIGHTS_USER",
-    "people_insights_python_role": "SRV_US_PEOPLE_INSIGHTS_PYTHON_ROLE",
-    "prodtech": "US_PRODTECH_USER",
-    "scm_user": "SCM_DATA_USER",
-    "ops_analytics": "US_OPS_ANALYTICS_USER",
-    "fin_ops": "SRV_FINANCE_FIN_OPS_COST_REPORTING_SA_ROLE",
-    "fin_ops_owned": "FINOPS_DEBIT_SA_NONSENSITIVE",
-}
-
-
-def get_role(role_type_or_role_name):
-    """
-    Retrieves the role associated with a given role type or role name.
-
-    If the provided `role_type_or_role_name` is found in the `dict_roles` dictionary,
-    the corresponding role is returned. Otherwise, the input value is returned as is.
-
-    Args:
-        role_type_or_role_name (str): The role type or role name to look up.
-
-    Returns:
-        str: The corresponding role if found in `dict_roles`, otherwise the input value.
-    """
-    if role_type_or_role_name in dict_roles.keys():
-        return dict_roles[role_type_or_role_name]
-    else:
-        return role_type_or_role_name
-
-
-# %%
 # User Password Auth #
 
-dict_account_types = {
-    "personal": "SNOWFLAKE_CREDS_USER",
-    "people_insights_service_account": (
-        "SNOWFLAKE_CREDS_PEOPLE_INSIGHTS_SERVICE_ACCOUNT"
-    ),
-    "prod_tech_service_account": ("SNOWFLAKE_CREDS_PROD_TECH_SERVICE_ACCOUNT"),
-    "fin_ops_service_account": (
-        "SNOWFLAKE_CREDS_FIN_OPS_COST_REPORTING_SERVICE_ACCOUNT"
-    ),
-    "fin_ops_owned_service_account": "SNOWFLAKE_CREDS_FIN_OPS_OWNED_SERVICE_ACCOUNT",
-}
 
-
-def get_snowflake_credentials(account_type, role_type, warehouse=""):
+def get_snowflake_credentials(cred_env_key, role, warehouse=""):
     """
     Retrieves Snowflake credentials and establishes a connection based on
         the account type, role type, and optional warehouse.
 
     Args:
-        account_type (str): The type of Snowflake account.
-        role_type (str): The role type to use for the connection.
+        cred_env_key (str): The type of Snowflake account.
+        role (str): The role type to use for the connection.
         warehouse (str, optional): The Snowflake warehouse to use. Defaults to an empty string.
 
     Returns:
@@ -97,10 +52,6 @@ def get_snowflake_credentials(account_type, role_type, warehouse=""):
         KeyError: If the provided account type or role type does not exist in the predefined dictionaries.
         ValueError: If the Snowflake connection fails due to invalid credentials or other connection issues.
     """
-    role_to_use = get_role(role_type)
-
-    cred_env_key = dict_account_types[account_type]
-
     cred_env_value = os.getenv(cred_env_key)
     if cred_env_value is None:
         raise ValueError(f"Environment variable {cred_env_key} is not set.")
@@ -114,16 +65,16 @@ def get_snowflake_credentials(account_type, role_type, warehouse=""):
         f"User: {creds['user']}\n"
         f"Account: {creds['account']}\n"
         f"Warehouse: {creds['warehouse']}\n"
-        f"Role: {role_to_use}",
+        f"Role: {role}",
         level="info",
     )
 
-    if account_type == "personal":
+    if cred_env_key == "SNOWFLAKE_CREDS_USER":
         ctx = snowflake.connector.connect(
             user=creds["user"],
             account=creds["account"],
             warehouse=warehouse,
-            role=role_to_use,
+            role=role,
             authenticator="externalbrowser",
         )
     elif "private_key" in creds.keys():
@@ -148,7 +99,7 @@ def get_snowflake_credentials(account_type, role_type, warehouse=""):
             user=creds["user"],
             account=creds["account"],
             warehouse=warehouse,
-            role=role_to_use,
+            role=role,
             private_key=der_private_key,
         )
     else:
@@ -157,7 +108,7 @@ def get_snowflake_credentials(account_type, role_type, warehouse=""):
             password=creds["password"],
             account=creds["account"],
             warehouse=warehouse,
-            role=role_to_use,
+            role=role,
         )
 
     print_logger(
@@ -165,7 +116,7 @@ def get_snowflake_credentials(account_type, role_type, warehouse=""):
         f"User: {creds['user']}\n"
         f"Account: {creds['account']}\n"
         f"Warehouse:{warehouse}\n"
-        f"Role: {role_to_use}",
+        f"Role: {role}",
         level="info",
     )
 
@@ -176,13 +127,13 @@ def get_snowflake_credentials(account_type, role_type, warehouse=""):
 # Get Raw Data from Snowflake #
 
 
-def list_tables(account_type, role_type, limit=10000):
+def list_tables(cred_env_key, role, limit=10000):
     """
     Retrieves a list of tables from the specified Snowflake account and role.
 
     Args:
-        account_type (str): The type of Snowflake account.
-        role_type (str): The role type to use for the connection.
+        cred_env_key (str): The type of Snowflake account.
+        role (str): The role type to use for the connection.
 
     Returns:
         list: A list of tuples, each containing information about a table in the Snowflake account.
@@ -191,9 +142,7 @@ def list_tables(account_type, role_type, limit=10000):
         KeyError: If the provided account type or role type does not exist in the predefined dictionaries.
         ValueError: If the Snowflake connection fails due to invalid credentials or other connection issues.
     """
-    role_to_use = get_role(role_type)
-
-    ctx = get_snowflake_credentials(account_type, role_to_use)
+    ctx = get_snowflake_credentials(cred_env_key, role)
 
     cs = ctx.cursor()
 
@@ -209,8 +158,8 @@ def list_tables(account_type, role_type, limit=10000):
 
 
 def query_snowflake(
-    account_type: str,
-    role_type: str,
+    cred_env_key: str,
+    role: str,
     query_to_run: str,
     warehouse: str = "",
     max_retries: int = 5,
@@ -219,8 +168,8 @@ def query_snowflake(
     Executes a query on Snowflake and retrieves the results, with retry logic for handling failures.
 
     Args:
-        account_type (str): The type of Snowflake account.
-        role_type (str): The role type to use for the connection.
+        cred_env_key (str): The type of Snowflake account.
+        role (str): The role type to use for the connection.
         query_to_run (str): The SQL query to execute.
         warehouse (str, optional): The Snowflake warehouse to use. Defaults to an empty string.
         max_retries (int, optional): The maximum number of retries in case of query failure. Defaults to 5.
@@ -238,7 +187,7 @@ def query_snowflake(
     delay = 60  # Start with a 1-minute delay
 
     while attempt <= max_retries:
-        ctx = get_snowflake_credentials(account_type, role_type, warehouse=warehouse)
+        ctx = get_snowflake_credentials(cred_env_key, role, warehouse=warehouse)
         if ctx is None:
             raise Exception("Failed to establish Snowflake connection.")
 
@@ -277,8 +226,8 @@ def query_snowflake(
 
 
 def executeScriptsFromFile(
-    account_type,
-    role_type,
+    cred_env_key,
+    role,
     filename,
     multi_part=False,
 ):
@@ -286,8 +235,8 @@ def executeScriptsFromFile(
     Executes SQL commands from a file on Snowflake.
 
     Args:
-        account_type (str): The type of Snowflake account.
-        role_type (str): The role type to use for the connection.
+        cred_env_key (str): The type of Snowflake account.
+        role (str): The role type to use for the connection.
         filename (str): The name of the file containing SQL commands.
         multi_part (bool, optional): If True, the file is treated
             as containing multiple SQL commands separated by ';'. Defaults to False.
@@ -311,7 +260,7 @@ def executeScriptsFromFile(
 
     # Execute every command from the input file
     for command in sqlCommands:
-        result = query_snowflake(account_type, role_type, command)
+        result = query_snowflake(cred_env_key, role, command)
 
     return result
 
