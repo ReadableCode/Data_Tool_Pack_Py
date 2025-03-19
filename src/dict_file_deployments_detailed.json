@@ -55,6 +55,14 @@
       [
         "na-fin-data-streamlit",
         "apps",
+        "ledger-fresh-hq",
+        "src",
+        "utils",
+        "config_utils.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
         "tedd",
         "src",
         "utils",
@@ -340,6 +348,14 @@
       [
         "na-fin-data-streamlit",
         "apps",
+        "ledger-fresh-hq",
+        "src",
+        "utils",
+        "display_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
         "tedd",
         "src",
         "utils",
@@ -492,6 +508,14 @@
         "utils",
         "google_tools.py"
       ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "ledger-fresh-hq",
+        "src",
+        "utils",
+        "google_tools.py"
+      ],
       ["na-finops", "src", "utils", "google_tools.py"],
       ["na-faba", "src", "utils", "google_tools.py"],
       ["Cash_Flow_Commander", "src", "utils", "google_tools.py"],
@@ -555,6 +579,14 @@
         "na-fin-data-streamlit",
         "apps",
         "factor-invoices",
+        "src",
+        "utils",
+        "__init__.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "ledger-fresh-hq",
         "src",
         "utils",
         "__init__.py"
@@ -852,7 +884,47 @@
         "utils",
         "databricks_photon_tools.py"
       ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "ledger-fresh-hq",
+        "src",
+        "utils",
+        "databricks_photon_tools.py"
+      ],
       ["na-faba", "src", "utils", "databricks_photon_tools.py"]
+    ]
+  },
+  "na-fin-data-streamlit/apps/tedd/src/streamlit_utils.py": {
+    "ls_src_path": [
+      "na-fin-data-streamlit",
+      "apps",
+      "tedd",
+      "src",
+      "streamlit_utils.py"
+    ],
+    "ls_deployment_dests": [
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "ledger-fresh-hq",
+        "src",
+        "streamlit_utils.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "factor-invoices",
+        "src",
+        "streamlit_utils.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps_local_testing",
+        "test",
+        "src",
+        "streamlit_utils.py"
+      ]
     ]
   },
   "Data_Tool_Pack/src/utils/doc_tools.py": {
@@ -987,6 +1059,14 @@
       [
         "na-fin-data-streamlit",
         "apps",
+        "ledger-fresh-hq",
+        "src",
+        "utils",
+        "number_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
         "tedd",
         "src",
         "utils",
@@ -1051,6 +1131,14 @@
       [
         "na-fin-data-streamlit",
         "apps",
+        "ledger-fresh-hq",
+        "src",
+        "utils",
+        "pandas_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
         "tedd",
         "src",
         "utils",
@@ -1103,6 +1191,14 @@
         "na-fin-data-streamlit",
         "apps",
         "factor-invoices",
+        "src",
+        "utils",
+        "pdf_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "ledger-fresh-hq",
         "src",
         "utils",
         "pdf_tools.py"
@@ -1172,6 +1268,14 @@
         "na-fin-data-streamlit",
         "apps",
         "factor-invoices",
+        "src",
+        "utils",
+        "s3_connector.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "ledger-fresh-hq",
         "src",
         "utils",
         "s3_connector.py"
@@ -1270,6 +1374,14 @@
         "utils",
         "snowflake_tools.py"
       ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "ledger-fresh-hq",
+        "src",
+        "utils",
+        "snowflake_tools.py"
+      ],
       ["na-faba", "src", "utils", "snowflake_tools.py"]
     ]
   },
@@ -1289,6 +1401,14 @@
         "na-fin-data-streamlit",
         "apps",
         "factor-invoices",
+        "src",
+        "utils",
+        "rds_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "ledger-fresh-hq",
         "src",
         "utils",
         "rds_tools.py"
@@ -1325,6 +1445,8 @@
     "ls_src_path": ["na-finops", "src", "config.py"],
     "ls_deployment_dests": [
       ["na-fin-data-streamlit", "apps", "top-variances", "src", "config.py"],
+      ["na-fin-data-streamlit", "apps", "tedd", "src", "config.py"],
+      ["na-fin-data-streamlit", "apps", "ledger-fresh-hq", "src", "config.py"],
       ["na-fin-data-streamlit", "apps", "breakout", "src", "config.py"]
     ]
   },
@@ -1353,6 +1475,13 @@
         "src",
         "__init__.py"
       ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "ledger-fresh-hq",
+        "src",
+        "__init__.py"
+      ],
       ["na-fin-data-streamlit", "apps", "tedd", "src", "__init__.py"]
     ]
   },
@@ -1366,6 +1495,13 @@
         "na-fin-data-streamlit",
         "apps",
         "factor-invoices",
+        "src",
+        "__init__.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "ledger-fresh-hq",
         "src",
         "__init__.py"
       ],
@@ -1395,6 +1531,38 @@
         "na-fin-data-streamlit",
         "apps",
         "breakout",
+        "src",
+        "utils",
+        "sheet_ids.yaml"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "gor",
+        "src",
+        "utils",
+        "sheet_ids.yaml"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "debit-testing",
+        "src",
+        "utils",
+        "sheet_ids.yaml"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "factor-invoices",
+        "src",
+        "utils",
+        "sheet_ids.yaml"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "ledger-fresh-hq",
         "src",
         "utils",
         "sheet_ids.yaml"
@@ -1433,8 +1601,16 @@
         "tests",
         "config_tests.py"
       ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "ledger-fresh-hq",
+        "tests",
+        "config_tests.py"
+      ],
       ["na-fin-data-streamlit", "apps", "tedd", "tests", "config_tests.py"],
-      ["na-finops", "tests", "config_tests.py"]
+      ["na-finops", "tests", "config_tests.py"],
+      ["na-faba", "tests", "config_tests.py"]
     ]
   },
   "Data_Tool_Pack/tests/test_tools.py": {
@@ -1452,6 +1628,13 @@
         "na-fin-data-streamlit",
         "apps",
         "factor-invoices",
+        "tests",
+        "test_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "ledger-fresh-hq",
         "tests",
         "test_tools.py"
       ],
@@ -1498,6 +1681,13 @@
         "tests",
         "__init__.py"
       ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "ledger-fresh-hq",
+        "tests",
+        "__init__.py"
+      ],
       ["na-fin-data-streamlit", "apps", "tedd", "tests", "__init__.py"],
       ["na-finops", "tests", "__init__.py"]
     ]
@@ -1523,6 +1713,13 @@
         "na-fin-data-streamlit",
         "apps",
         "factor-invoices",
+        "tests",
+        "test_s3_connections.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "ledger-fresh-hq",
         "tests",
         "test_s3_connections.py"
       ],
@@ -1557,41 +1754,34 @@
       ["na-faba", "tests", "test_s3_connections.py"]
     ]
   },
-  "na-finops/schemas/employee_reporting.json": {
-    "ls_src_path": ["na-finops", "schemas", "employee_reporting.json"],
+  "na-finops/schemas/employee_mapping.json": {
+    "ls_src_path": ["na-finops", "schemas", "employee_mapping.json"],
     "ls_deployment_dests": [
       [
         "na-fin-data-streamlit",
         "apps",
         "debit-testing",
         "schemas",
-        "employee_reporting.json"
+        "employee_mapping.json"
       ],
       [
         "na-fin-data-streamlit",
         "apps",
         "tedd",
         "schemas",
-        "employee_reporting.json"
+        "employee_mapping.json"
       ]
     ]
   },
-  "na-finops/schemas/employee_reporting.yml": {
-    "ls_src_path": ["na-finops", "schemas", "employee_reporting.yml"],
+  "na-finops/schemas/employee_mapping.yml": {
+    "ls_src_path": ["na-finops", "schemas", "employee_mapping.yml"],
     "ls_deployment_dests": [
-      [
-        "na-fin-data-streamlit",
-        "apps",
-        "debit-testing",
-        "schemas",
-        "employee_reporting.yml"
-      ],
       [
         "na-fin-data-streamlit",
         "apps",
         "tedd",
         "schemas",
-        "employee_reporting.yml"
+        "employee_mapping.yml"
       ]
     ]
   },
@@ -1631,6 +1821,18 @@
       ["na-fin-data-streamlit", "apps", "tedd", "src", "te_reporting.py"]
     ]
   },
+  "na-finops/src/location_table_generator.py": {
+    "ls_src_path": ["na-finops", "src", "location_table_generator.py"],
+    "ls_deployment_dests": [
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "tedd",
+        "src",
+        "location_table_generator.py"
+      ]
+    ]
+  },
   "na-finops/src/super_users.txt": {
     "ls_src_path": ["na-finops", "src", "super_users.txt"],
     "ls_deployment_dests": [
@@ -1656,6 +1858,16 @@
       ]
     ]
   },
+  "na-fin-data-streamlit/apps/ledger-fresh-hq/src/gl_queries.py": {
+    "ls_src_path": [
+      "na-fin-data-streamlit",
+      "apps",
+      "ledger-fresh-hq",
+      "src",
+      "gl_queries.py"
+    ],
+    "ls_deployment_dests": [["na-finops", "src", "gl_queries.py"]]
+  },
   "hellofresh_credentials/na_finops.env": {
     "ls_src_path": ["hellofresh_credentials", "na_finops.env"],
     "ls_deployment_dests": [
@@ -1664,6 +1876,7 @@
       ["na-fin-data-streamlit", "apps", "breakout", ".env"],
       ["na-fin-data-streamlit", "apps", "debit-testing", ".env"],
       ["na-fin-data-streamlit", "apps", "factor-invoices", ".env"],
+      ["na-fin-data-streamlit", "apps", "ledger-fresh-hq", ".env"],
       ["na-fin-data-streamlit", "apps", "tedd", ".env"],
       ["na-fin-data-streamlit", "apps", "top-variances", ".env"],
       ["na-finops", ".env"],
