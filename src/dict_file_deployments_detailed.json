@@ -1,0 +1,1755 @@
+{
+  "Data_Tool_Pack_Py/src/utils/android_tools.py": {
+    "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "android_tools.py"],
+    "ls_deployment_dests": [
+      ["dotfiles", "src", "utils", "android_tools.py"],
+      ["Project_Template", "src", "utils", "android_tools.py"],
+      ["Sync_Plex", "src", "utils", "android_tools.py"]
+    ]
+  },
+  "Data_Tool_Pack_Py/src/utils/config_utils.py": {
+    "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "config_utils.py"],
+    "ls_deployment_dests": [
+      ["dotfiles", "src", "utils", "config_utils.py"],
+      ["Project_Template", "src", "utils", "config_utils.py"],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "file-upload",
+        "src",
+        "utils",
+        "config_utils.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "gor",
+        "src",
+        "utils",
+        "config_utils.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "breakout",
+        "src",
+        "utils",
+        "config_utils.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "debit-testing",
+        "src",
+        "utils",
+        "config_utils.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "factor-invoices",
+        "src",
+        "utils",
+        "config_utils.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "tedd",
+        "src",
+        "utils",
+        "config_utils.py"
+      ],
+      ["na-finops", "src", "utils", "config_utils.py"],
+      ["na-faba", "src", "utils", "config_utils.py"],
+      ["Cash_Flow_Commander", "src", "utils", "config_utils.py"],
+      ["CrownCentral", "src", "utils", "config_utils.py"],
+      ["Scan_Sorter", "src", "utils", "config_utils.py"],
+      ["Assistant", "src", "utils", "config_utils.py"],
+      ["Our_Cash", "src", "utils", "config_utils.py"],
+      ["Gmail_Extractor", "src", "utils", "config_utils.py"],
+      ["OSINT", "src", "utils", "config_utils.py"],
+      ["Sync_Plex", "src", "utils", "config_utils.py"],
+      ["Terminal_To_Do", "src", "utils", "config_utils.py"],
+      ["Health_Data_Parser", "src", "utils", "config_utils.py"],
+      ["Book-Bot", "src", "utils", "config_utils.py"]
+    ]
+  },
+  "Data_Tool_Pack_Py/src/utils/date_tools.py": {
+    "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "date_tools.py"],
+    "ls_deployment_dests": [
+      ["dotfiles", "src", "utils", "date_tools.py"],
+      ["Project_Template", "src", "utils", "date_tools.py"],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "top-variances",
+        "src",
+        "utils",
+        "date_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "file-upload",
+        "src",
+        "utils",
+        "date_tools.py"
+      ],
+      ["na-fin-data-streamlit", "apps", "gor", "src", "utils", "date_tools.py"],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "breakout",
+        "src",
+        "utils",
+        "date_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "debit-testing",
+        "src",
+        "utils",
+        "date_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "tedd",
+        "src",
+        "utils",
+        "date_tools.py"
+      ],
+      ["na-finops", "src", "utils", "date_tools.py"],
+      ["na-faba", "src", "utils", "date_tools.py"],
+      ["Cash_Flow_Commander", "src", "utils", "date_tools.py"],
+      ["CrownCentral", "src", "utils", "date_tools.py"],
+      ["Assistant", "src", "utils", "date_tools.py"],
+      ["OSINT", "src", "utils", "date_tools.py"]
+    ]
+  },
+  "Data_Tool_Pack_Py/src/utils/df_days.csv": {
+    "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "df_days.csv"],
+    "ls_deployment_dests": [
+      ["dotfiles", "src", "utils", "df_days.csv"],
+      ["Project_Template", "src", "utils", "df_days.csv"],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "top-variances",
+        "src",
+        "utils",
+        "df_days.csv"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "file-upload",
+        "src",
+        "utils",
+        "df_days.csv"
+      ],
+      ["na-fin-data-streamlit", "apps", "gor", "src", "utils", "df_days.csv"],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "breakout",
+        "src",
+        "utils",
+        "df_days.csv"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "debit-testing",
+        "src",
+        "utils",
+        "df_days.csv"
+      ],
+      ["na-fin-data-streamlit", "apps", "tedd", "src", "utils", "df_days.csv"],
+      ["na-finops", "src", "utils", "df_days.csv"],
+      ["na-faba", "src", "utils", "df_days.csv"],
+      ["Cash_Flow_Commander", "src", "utils", "df_days.csv"],
+      ["CrownCentral", "src", "utils", "df_days.csv"],
+      ["Assistant", "src", "utils", "df_days.csv"],
+      ["OSINT", "src", "utils", "df_days.csv"]
+    ]
+  },
+  "Data_Tool_Pack_Py/src/utils/df_scm_weeks.csv": {
+    "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "df_scm_weeks.csv"],
+    "ls_deployment_dests": [
+      ["dotfiles", "src", "utils", "df_scm_weeks.csv"],
+      ["Project_Template", "src", "utils", "df_scm_weeks.csv"],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "top-variances",
+        "src",
+        "utils",
+        "df_scm_weeks.csv"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "file-upload",
+        "src",
+        "utils",
+        "df_scm_weeks.csv"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "gor",
+        "src",
+        "utils",
+        "df_scm_weeks.csv"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "breakout",
+        "src",
+        "utils",
+        "df_scm_weeks.csv"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "debit-testing",
+        "src",
+        "utils",
+        "df_scm_weeks.csv"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "tedd",
+        "src",
+        "utils",
+        "df_scm_weeks.csv"
+      ],
+      ["na-finops", "src", "utils", "df_scm_weeks.csv"],
+      ["na-faba", "src", "utils", "df_scm_weeks.csv"],
+      ["Cash_Flow_Commander", "src", "utils", "df_scm_weeks.csv"],
+      ["CrownCentral", "src", "utils", "df_scm_weeks.csv"],
+      ["Assistant", "src", "utils", "df_scm_weeks.csv"],
+      ["OSINT", "src", "utils", "df_scm_weeks.csv"]
+    ]
+  },
+  "Data_Tool_Pack_Py/src/utils/df_weeks.csv": {
+    "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "df_weeks.csv"],
+    "ls_deployment_dests": [
+      ["dotfiles", "src", "utils", "df_weeks.csv"],
+      ["Project_Template", "src", "utils", "df_weeks.csv"],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "top-variances",
+        "src",
+        "utils",
+        "df_weeks.csv"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "file-upload",
+        "src",
+        "utils",
+        "df_weeks.csv"
+      ],
+      ["na-fin-data-streamlit", "apps", "gor", "src", "utils", "df_weeks.csv"],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "breakout",
+        "src",
+        "utils",
+        "df_weeks.csv"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "debit-testing",
+        "src",
+        "utils",
+        "df_weeks.csv"
+      ],
+      ["na-fin-data-streamlit", "apps", "tedd", "src", "utils", "df_weeks.csv"],
+      ["na-finops", "src", "utils", "df_weeks.csv"],
+      ["na-faba", "src", "utils", "df_weeks.csv"],
+      ["Cash_Flow_Commander", "src", "utils", "df_weeks.csv"],
+      ["CrownCentral", "src", "utils", "df_weeks.csv"],
+      ["Assistant", "src", "utils", "df_weeks.csv"],
+      ["OSINT", "src", "utils", "df_weeks.csv"]
+    ]
+  },
+  "Data_Tool_Pack_Py/src/utils/display_tools.py": {
+    "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "display_tools.py"],
+    "ls_deployment_dests": [
+      ["dotfiles", "src", "utils", "display_tools.py"],
+      ["Project_Template", "src", "utils", "display_tools.py"],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "top-variances",
+        "src",
+        "utils",
+        "display_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "file-upload",
+        "src",
+        "utils",
+        "display_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "gor",
+        "src",
+        "utils",
+        "display_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "breakout",
+        "src",
+        "utils",
+        "display_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "debit-testing",
+        "src",
+        "utils",
+        "display_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "factor-invoices",
+        "src",
+        "utils",
+        "display_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "tedd",
+        "src",
+        "utils",
+        "display_tools.py"
+      ],
+      ["na-finops", "src", "utils", "display_tools.py"],
+      ["na-faba", "src", "utils", "display_tools.py"],
+      ["Cash_Flow_Commander", "src", "utils", "display_tools.py"],
+      ["CrownCentral", "src", "utils", "display_tools.py"],
+      ["Scan_Sorter", "src", "utils", "display_tools.py"],
+      ["Assistant", "src", "utils", "display_tools.py"],
+      ["Our_Cash", "src", "utils", "display_tools.py"],
+      ["Gmail_Extractor", "src", "utils", "display_tools.py"],
+      ["OSINT", "src", "utils", "display_tools.py"],
+      ["Sync_Plex", "src", "utils", "display_tools.py"],
+      ["Terminal_To_Do", "src", "utils", "display_tools.py"],
+      ["Health_Data_Parser", "src", "utils", "display_tools.py"],
+      ["Book-Bot", "src", "utils", "display_tools.py"]
+    ]
+  },
+  "Data_Tool_Pack_Py/src/utils/gmail_tools.py": {
+    "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "gmail_tools.py"],
+    "ls_deployment_dests": [
+      ["dotfiles", "src", "utils", "gmail_tools.py"],
+      ["Project_Template", "src", "utils", "gmail_tools.py"],
+      ["na-finops", "src", "utils", "gmail_tools.py"],
+      ["na-faba", "src", "utils", "gmail_tools.py"],
+      ["Assistant", "src", "utils", "gmail_tools.py"],
+      ["Gmail_Extractor", "src", "utils", "gmail_tools.py"],
+      ["OSINT", "src", "utils", "gmail_tools.py"]
+    ]
+  },
+  "Data_Tool_Pack_Py/src/utils/google_drive_tools.py": {
+    "ls_src_path": [
+      "Data_Tool_Pack_Py",
+      "src",
+      "utils",
+      "google_drive_tools.py"
+    ],
+    "ls_deployment_dests": [
+      ["dotfiles", "src", "utils", "google_drive_tools.py"],
+      ["Project_Template", "src", "utils", "google_drive_tools.py"],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "top-variances",
+        "src",
+        "utils",
+        "google_drive_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "file-upload",
+        "src",
+        "utils",
+        "google_drive_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "gor",
+        "src",
+        "utils",
+        "google_drive_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "breakout",
+        "src",
+        "utils",
+        "google_drive_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "debit-testing",
+        "src",
+        "utils",
+        "google_drive_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "tedd",
+        "src",
+        "utils",
+        "google_drive_tools.py"
+      ],
+      ["na-finops", "src", "utils", "google_drive_tools.py"],
+      ["na-faba", "src", "utils", "google_drive_tools.py"],
+      ["Cash_Flow_Commander", "src", "utils", "google_drive_tools.py"],
+      ["CrownCentral", "src", "utils", "google_drive_tools.py"],
+      ["Assistant", "src", "utils", "google_drive_tools.py"],
+      ["Our_Cash", "src", "utils", "google_drive_tools.py"],
+      ["OSINT", "src", "utils", "google_drive_tools.py"]
+    ]
+  },
+  "Data_Tool_Pack_Py/src/utils/google_tools.py": {
+    "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "google_tools.py"],
+    "ls_deployment_dests": [
+      ["dotfiles", "src", "utils", "google_tools.py"],
+      ["Project_Template", "src", "utils", "google_tools.py"],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "top-variances",
+        "src",
+        "utils",
+        "google_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "file-upload",
+        "src",
+        "utils",
+        "google_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "gor",
+        "src",
+        "utils",
+        "google_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "breakout",
+        "src",
+        "utils",
+        "google_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "debit-testing",
+        "src",
+        "utils",
+        "google_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "tedd",
+        "src",
+        "utils",
+        "google_tools.py"
+      ],
+      ["na-finops", "src", "utils", "google_tools.py"],
+      ["na-faba", "src", "utils", "google_tools.py"],
+      ["Cash_Flow_Commander", "src", "utils", "google_tools.py"],
+      ["CrownCentral", "src", "utils", "google_tools.py"],
+      ["Assistant", "src", "utils", "google_tools.py"],
+      ["Our_Cash", "src", "utils", "google_tools.py"],
+      ["OSINT", "src", "utils", "google_tools.py"]
+    ]
+  },
+  "Data_Tool_Pack_Py/src/utils/host_tools.py": {
+    "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "host_tools.py"],
+    "ls_deployment_dests": [
+      ["dotfiles", "src", "utils", "host_tools.py"],
+      ["Project_Template", "src", "utils", "host_tools.py"],
+      ["na-finops", "src", "utils", "host_tools.py"],
+      ["na-faba", "src", "utils", "host_tools.py"],
+      ["CrownCentral", "src", "utils", "host_tools.py"],
+      ["Assistant", "src", "utils", "host_tools.py"],
+      ["Our_Cash", "src", "utils", "host_tools.py"]
+    ]
+  },
+  "Data_Tool_Pack_Py/src/utils/__init__.py": {
+    "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "__init__.py"],
+    "ls_deployment_dests": [
+      ["dotfiles", "src", "utils", "__init__.py"],
+      ["Project_Template", "src", "utils", "__init__.py"],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "top-variances",
+        "src",
+        "utils",
+        "__init__.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "file-upload",
+        "src",
+        "utils",
+        "__init__.py"
+      ],
+      ["na-fin-data-streamlit", "apps", "gor", "src", "utils", "__init__.py"],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "breakout",
+        "src",
+        "utils",
+        "__init__.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "debit-testing",
+        "src",
+        "utils",
+        "__init__.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "factor-invoices",
+        "src",
+        "utils",
+        "__init__.py"
+      ],
+      ["na-fin-data-streamlit", "apps", "tedd", "src", "utils", "__init__.py"],
+      ["na-finops", "src", "utils", "__init__.py"],
+      ["na-faba", "src", "utils", "__init__.py"],
+      ["Cash_Flow_Commander", "src", "utils", "__init__.py"],
+      ["CrownCentral", "src", "utils", "__init__.py"],
+      ["Assistant", "src", "utils", "__init__.py"],
+      ["Our_Cash", "src", "utils", "__init__.py"],
+      ["Gmail_Extractor", "src", "utils", "__init__.py"],
+      ["OSINT", "src", "utils", "__init__.py"],
+      ["Sync_Plex", "src", "utils", "__init__.py"],
+      ["Terminal_To_Do", "src", "utils", "__init__.py"]
+    ]
+  },
+  "Data_Tool_Pack_Py/tests/test_utils/config_test_utils.py": {
+    "ls_src_path": [
+      "Data_Tool_Pack_Py",
+      "tests",
+      "test_utils",
+      "config_test_utils.py"
+    ],
+    "ls_deployment_dests": [
+      ["dotfiles", "tests", "test_utils", "config_test_utils.py"],
+      ["na-finops", "tests", "test_utils", "config_test_utils.py"],
+      ["Cash_Flow_Commander", "tests", "test_utils", "config_test_utils.py"],
+      ["CrownCentral", "tests", "test_utils", "config_test_utils.py"],
+      ["Assistant", "tests", "test_utils", "config_test_utils.py"],
+      ["Our_Cash", "tests", "test_utils", "config_test_utils.py"],
+      ["Gmail_Extractor", "tests", "test_utils", "config_test_utils.py"],
+      ["OSINT", "tests", "test_utils", "config_test_utils.py"]
+    ]
+  },
+  "Data_Tool_Pack_Py/tests/test_utils/test_date_tools.py": {
+    "ls_src_path": [
+      "Data_Tool_Pack_Py",
+      "tests",
+      "test_utils",
+      "test_date_tools.py"
+    ],
+    "ls_deployment_dests": [
+      ["dotfiles", "tests", "test_utils", "test_date_tools.py"],
+      ["na-finops", "tests", "test_utils", "test_date_tools.py"],
+      ["Assistant", "tests", "test_utils", "test_date_tools.py"],
+      ["OSINT", "tests", "test_utils", "test_date_tools.py"]
+    ]
+  },
+  "Data_Tool_Pack_Py/tests/test_utils/test_gmail_tools.py": {
+    "ls_src_path": [
+      "Data_Tool_Pack_Py",
+      "tests",
+      "test_utils",
+      "test_gmail_tools.py"
+    ],
+    "ls_deployment_dests": [
+      ["dotfiles", "tests", "test_utils", "test_gmail_tools.py"],
+      ["na-finops", "tests", "test_utils", "test_gmail_tools.py"],
+      ["Assistant", "tests", "test_utils", "test_gmail_tools.py"],
+      ["Gmail_Extractor", "tests", "test_utils", "test_gmail_tools.py"],
+      ["OSINT", "tests", "test_utils", "test_gmail_tools.py"]
+    ]
+  },
+  "Data_Tool_Pack_Py/tests/test_utils/test_google_tools.py": {
+    "ls_src_path": [
+      "Data_Tool_Pack_Py",
+      "tests",
+      "test_utils",
+      "test_google_tools.py"
+    ],
+    "ls_deployment_dests": [
+      ["dotfiles", "tests", "test_utils", "test_google_tools.py"],
+      ["na-finops", "tests", "test_utils", "test_google_tools.py"],
+      ["Cash_Flow_Commander", "tests", "test_utils", "test_google_tools.py"],
+      ["CrownCentral", "tests", "test_utils", "test_google_tools.py"],
+      ["Assistant", "tests", "test_utils", "test_google_tools.py"],
+      ["Our_Cash", "tests", "test_utils", "test_google_tools.py"],
+      ["OSINT", "tests", "test_utils", "test_google_tools.py"]
+    ]
+  },
+  "personal_credentials/personal.env": {
+    "ls_src_path": ["personal_credentials", "personal.env"],
+    "ls_deployment_dests": [
+      ["dotfiles", ".env"],
+      ["Data_Tool_Pack_Py", ".env"],
+      ["Data_Tool_Pack_GO", ".env"],
+      ["Data_Tool_Pack_RS", ".env"],
+      ["Project_Template", ".env"],
+      ["Cash_Flow_Commander", ".env"],
+      ["Scan_Sorter", ".env"],
+      ["Assistant", ".env"],
+      ["Our_Cash", ".env"],
+      ["Gmail_Extractor", ".env"],
+      ["OSINT", ".env"],
+      ["Sync_Plex", ".env"],
+      ["Terminal_To_Do", ".env"]
+    ]
+  },
+  "dotfiles/scripts/aws_credential_extractor_kube.sh": {
+    "ls_src_path": ["dotfiles", "scripts", "aws_credential_extractor_kube.sh"],
+    "ls_deployment_dests": [
+      ["Data_Tool_Pack_Py", "scripts", "aws_credential_extractor_kube.sh"],
+      ["na-finops", "scripts", "aws_credential_extractor_kube.sh"],
+      ["na-faba", "scripts", "aws_credential_extractor_kube.sh"]
+    ]
+  },
+  "dotfiles/scripts/aws_credential_extractor_s3.sh": {
+    "ls_src_path": ["dotfiles", "scripts", "aws_credential_extractor_s3.sh"],
+    "ls_deployment_dests": [
+      ["Data_Tool_Pack_Py", "scripts", "aws_credential_extractor_s3.sh"],
+      ["na-finops", "scripts", "aws_credential_extractor_s3.sh"],
+      ["na-faba", "scripts", "aws_credential_extractor_s3.sh"]
+    ]
+  },
+  "dotfiles/scripts/aws_credential_extractor_s3_mac.sh": {
+    "ls_src_path": [
+      "dotfiles",
+      "scripts",
+      "aws_credential_extractor_s3_mac.sh"
+    ],
+    "ls_deployment_dests": [
+      ["Data_Tool_Pack_Py", "scripts", "aws_credential_extractor_s3_mac.sh"],
+      ["na-finops", "scripts", "aws_credential_extractor_s3_mac.sh"],
+      ["na-faba", "scripts", "aws_credential_extractor_s3_mac.sh"]
+    ]
+  },
+  "dotfiles/scripts/clasp_puller.sh": {
+    "ls_src_path": ["dotfiles", "scripts", "clasp_puller.sh"],
+    "ls_deployment_dests": [
+      ["Data_Tool_Pack_Py", "scripts", "clasp_puller.sh"],
+      ["Project_Template", "scripts", "clasp_puller.sh"],
+      ["na-finops", "scripts", "clasp_puller.sh"],
+      ["na-faba", "scripts", "clasp_puller.sh"]
+    ]
+  },
+  "dotfiles/scripts/config_scripts.py": {
+    "ls_src_path": ["dotfiles", "scripts", "config_scripts.py"],
+    "ls_deployment_dests": [
+      ["Data_Tool_Pack_Py", "scripts", "config_scripts.py"],
+      ["Project_Template", "scripts", "config_scripts.py"],
+      ["na-finops", "scripts", "config_scripts.py"],
+      ["Cash_Flow_Commander", "scripts", "config_scripts.py"]
+    ]
+  },
+  "dotfiles/scripts/crontab_extractor.sh": {
+    "ls_src_path": ["dotfiles", "scripts", "crontab_extractor.sh"],
+    "ls_deployment_dests": [
+      ["Data_Tool_Pack_Py", "scripts", "crontab_extractor.sh"],
+      ["Project_Template", "scripts", "crontab_extractor.sh"],
+      ["na-faba", "scripts", "crontab_extractor.sh"],
+      ["na-finops", "scripts", "crontab_extractor.sh"]
+    ]
+  },
+  "dotfiles/scripts/generate_mkdocs_stubs.py": {
+    "ls_src_path": ["dotfiles", "scripts", "generate_mkdocs_stubs.py"],
+    "ls_deployment_dests": [
+      ["Data_Tool_Pack_Py", "scripts", "generate_mkdocs_stubs.py"],
+      ["na-finops", "scripts", "generate_mkdocs_stubs.py"]
+    ]
+  },
+  "dotfiles/scripts/rotate_logs.py": {
+    "ls_src_path": ["dotfiles", "scripts", "rotate_logs.py"],
+    "ls_deployment_dests": [
+      ["Data_Tool_Pack_Py", "scripts", "rotate_logs.py"],
+      ["Project_Template", "scripts", "rotate_logs.py"],
+      ["na-finops", "scripts", "rotate_logs.py"],
+      ["Cash_Flow_Commander", "scripts", "rotate_logs.py"]
+    ]
+  },
+  "dotfiles/docs/setup_docker.md": {
+    "ls_src_path": ["dotfiles", "docs", "setup_docker.md"],
+    "ls_deployment_dests": [
+      ["Data_Tool_Pack_Py", "docs", "setup_docker.md"],
+      ["Project_Template", "docs", "setup_docker.md"],
+      ["na-finops", "docs", "setup_docker.md"],
+      ["na-faba", "docs", "setup_docker.md"]
+    ]
+  },
+  "dotfiles/docs/setup_git.md": {
+    "ls_src_path": ["dotfiles", "docs", "setup_git.md"],
+    "ls_deployment_dests": [
+      ["Data_Tool_Pack_Py", "docs", "setup_git.md"],
+      ["Project_Template", "docs", "setup_git.md"],
+      ["na-finops", "docs", "setup_git.md"],
+      ["na-faba", "docs", "setup_git.md"]
+    ]
+  },
+  "dotfiles/docs/setup_python.md": {
+    "ls_src_path": ["dotfiles", "docs", "setup_python.md"],
+    "ls_deployment_dests": [
+      ["Data_Tool_Pack_Py", "docs", "setup_python.md"],
+      ["Project_Template", "docs", "setup_python.md"],
+      ["na-finops", "docs", "setup_python.md"],
+      ["na-faba", "docs", "setup_python.md"]
+    ]
+  },
+  "dotfiles/docs/setup_vscode.md": {
+    "ls_src_path": ["dotfiles", "docs", "setup_vscode.md"],
+    "ls_deployment_dests": [
+      ["Data_Tool_Pack_Py", "docs", "setup_vscode.md"],
+      ["Project_Template", "docs", "setup_vscode.md"],
+      ["na-finops", "docs", "setup_vscode.md"],
+      ["na-faba", "docs", "setup_vscode.md"]
+    ]
+  },
+  "dotfiles/docs/setup_windows_chocolatey.md": {
+    "ls_src_path": ["dotfiles", "docs", "setup_windows_chocolatey.md"],
+    "ls_deployment_dests": [
+      ["Data_Tool_Pack_Py", "docs", "setup_windows_chocolatey.md"],
+      ["Project_Template", "docs", "setup_windows_chocolatey.md"],
+      ["na-finops", "docs", "setup_windows_chocolatey.md"],
+      ["na-faba", "docs", "setup_windows_chocolatey.md"]
+    ]
+  },
+  "dotfiles/docs/setup_go.md": {
+    "ls_src_path": ["dotfiles", "docs", "setup_go.md"],
+    "ls_deployment_dests": [["Data_Tool_Pack_GO", "docs", "setup_go.md"]]
+  },
+  "dotfiles/docs/setup_rust.md": {
+    "ls_src_path": ["dotfiles", "docs", "setup_rust.md"],
+    "ls_deployment_dests": [
+      ["Data_Tool_Pack_RS", "docs", "setup_rust.md"],
+      ["Rust_Tutorial", "docs", "setup_rust.md"]
+    ]
+  },
+  "dotfiles/scripts/sheets.ahk": {
+    "ls_src_path": ["dotfiles", "scripts", "sheets.ahk"],
+    "ls_deployment_dests": [
+      ["AHK_Sheet_ID_Shortcut", "scripts", "sheets.ahk"],
+      ["na-faba", "scripts", "sheets.ahk"]
+    ]
+  },
+  "Data_Tool_Pack/src/utils/bodega_impala_tools.py": {
+    "ls_src_path": [
+      "Data_Tool_Pack_Py",
+      "src",
+      "utils",
+      "bodega_impala_tools.py"
+    ],
+    "ls_deployment_dests": [
+      ["Project_Template", "src", "utils", "bodega_impala_tools.py"],
+      ["na-finops", "src", "utils", "bodega_impala_tools.py"],
+      ["na-faba", "src", "utils", "bodega_impala_tools.py"]
+    ]
+  },
+  "Data_Tool_Pack/src/utils/CDP_impala_tools.py": {
+    "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "CDP_impala_tools.py"],
+    "ls_deployment_dests": [
+      ["Project_Template", "src", "utils", "CDP_impala_tools.py"],
+      ["na-finops", "src", "utils", "CDP_impala_tools.py"],
+      ["na-faba", "src", "utils", "CDP_impala_tools.py"]
+    ]
+  },
+  "na-finops/src/utils/databricks_photon_tools.py": {
+    "ls_src_path": ["na-finops", "src", "utils", "databricks_photon_tools.py"],
+    "ls_deployment_dests": [
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "top-variances",
+        "src",
+        "utils",
+        "databricks_photon_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "file-upload",
+        "src",
+        "utils",
+        "databricks_photon_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "breakout",
+        "src",
+        "utils",
+        "databricks_photon_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "debit-testing",
+        "src",
+        "utils",
+        "databricks_photon_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "tedd",
+        "src",
+        "utils",
+        "databricks_photon_tools.py"
+      ],
+      ["na-faba", "src", "utils", "databricks_photon_tools.py"]
+    ]
+  },
+  "Data_Tool_Pack/src/utils/doc_tools.py": {
+    "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "doc_tools.py"],
+    "ls_deployment_dests": [
+      ["Project_Template", "src", "utils", "doc_tools.py"],
+      ["na-finops", "src", "utils", "doc_tools.py"],
+      ["na-faba", "src", "utils", "doc_tools.py"],
+      ["CrownCentral", "src", "utils", "doc_tools.py"],
+      ["Assistant", "src", "utils", "doc_tools.py"],
+      ["Our_Cash", "src", "utils", "doc_tools.py"]
+    ]
+  },
+  "na-finops/src/utils/domo_tools.py": {
+    "ls_src_path": ["na-finops", "src", "utils", "domo_tools.py"],
+    "ls_deployment_dests": [["na-faba", "src", "utils", "domo_tools.py"]]
+  },
+  "Data_Tool_Pack/src/utils/google_doc_tools.py": {
+    "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "google_doc_tools.py"],
+    "ls_deployment_dests": [
+      ["Project_Template", "src", "utils", "google_doc_tools.py"],
+      ["na-finops", "src", "utils", "google_doc_tools.py"],
+      ["na-faba", "src", "utils", "google_doc_tools.py"],
+      ["CrownCentral", "src", "utils", "google_doc_tools.py"],
+      ["Assistant", "src", "utils", "google_doc_tools.py"],
+      ["Our_Cash", "src", "utils", "google_doc_tools.py"]
+    ]
+  },
+  "Data_Tool_Pack/src/utils/ImpalaJDBC41.jar": {
+    "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "ImpalaJDBC41.jar"],
+    "ls_deployment_dests": [
+      ["Project_Template", "src", "utils", "ImpalaJDBC41.jar"],
+      ["na-finops", "src", "utils", "ImpalaJDBC41.jar"],
+      ["na-faba", "src", "utils", "ImpalaJDBC41.jar"]
+    ]
+  },
+  "Data_Tool_Pack/src/utils/location_tools.py": {
+    "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "location_tools.py"],
+    "ls_deployment_dests": [
+      ["Project_Template", "src", "utils", "location_tools.py"],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "debit-testing",
+        "src",
+        "utils",
+        "location_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "tedd",
+        "src",
+        "utils",
+        "location_tools.py"
+      ],
+      ["na-finops", "src", "utils", "location_tools.py"],
+      ["na-faba", "src", "utils", "location_tools.py"],
+      ["CrownCentral", "src", "utils", "location_tools.py"]
+    ]
+  },
+  "Data_Tool_Pack/src/utils/looker_tools.py": {
+    "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "looker_tools.py"],
+    "ls_deployment_dests": [
+      ["Project_Template", "src", "utils", "looker_tools.py"]
+    ]
+  },
+  "Data_Tool_Pack/src/utils/math_tools.py": {
+    "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "math_tools.py"],
+    "ls_deployment_dests": [
+      ["Project_Template", "src", "utils", "math_tools.py"],
+      ["na-finops", "src", "utils", "math_tools.py"],
+      ["na-faba", "src", "utils", "math_tools.py"],
+      ["CrownCentral", "src", "utils", "math_tools.py"],
+      ["Assistant", "src", "utils", "math_tools.py"],
+      ["Our_Cash", "src", "utils", "math_tools.py"]
+    ]
+  },
+  "Data_Tool_Pack/src/utils/number_tools.py": {
+    "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "number_tools.py"],
+    "ls_deployment_dests": [
+      ["Project_Template", "src", "utils", "number_tools.py"],
+      ["Assistant", "src", "utils", "number_tools.py"],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "top-variances",
+        "src",
+        "utils",
+        "number_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "file-upload",
+        "src",
+        "utils",
+        "number_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "gor",
+        "src",
+        "utils",
+        "number_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "breakout",
+        "src",
+        "utils",
+        "number_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "debit-testing",
+        "src",
+        "utils",
+        "number_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "factor-invoices",
+        "src",
+        "utils",
+        "number_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "tedd",
+        "src",
+        "utils",
+        "number_tools.py"
+      ],
+      ["na-finops", "src", "utils", "number_tools.py"],
+      ["na-faba", "src", "utils", "number_tools.py"]
+    ]
+  },
+  "Data_Tool_Pack/src/utils/pandas_tools.py": {
+    "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "pandas_tools.py"],
+    "ls_deployment_dests": [
+      ["Project_Template", "src", "utils", "pandas_tools.py"],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "top-variances",
+        "src",
+        "utils",
+        "pandas_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "file-upload",
+        "src",
+        "utils",
+        "pandas_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "gor",
+        "src",
+        "utils",
+        "pandas_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "breakout",
+        "src",
+        "utils",
+        "pandas_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "debit-testing",
+        "src",
+        "utils",
+        "pandas_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "factor-invoices",
+        "src",
+        "utils",
+        "pandas_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "tedd",
+        "src",
+        "utils",
+        "pandas_tools.py"
+      ],
+      ["na-finops", "src", "utils", "pandas_tools.py"],
+      ["na-faba", "src", "utils", "pandas_tools.py"],
+      ["CrownCentral", "src", "utils", "pandas_tools.py"],
+      ["Assistant", "src", "utils", "pandas_tools.py"],
+      ["Our_Cash", "src", "utils", "pandas_tools.py"]
+    ]
+  },
+  "Data_Tool_Pack/src/utils/pdf_tools.py": {
+    "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "pdf_tools.py"],
+    "ls_deployment_dests": [
+      ["Project_Template", "src", "utils", "pdf_tools.py"],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "top-variances",
+        "src",
+        "utils",
+        "pdf_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "file-upload",
+        "src",
+        "utils",
+        "pdf_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "breakout",
+        "src",
+        "utils",
+        "pdf_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "debit-testing",
+        "src",
+        "utils",
+        "pdf_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "factor-invoices",
+        "src",
+        "utils",
+        "pdf_tools.py"
+      ],
+      ["na-finops", "src", "utils", "pdf_tools.py"],
+      ["na-faba", "src", "utils", "pdf_tools.py"]
+    ]
+  },
+  "Data_Tool_Pack/src/utils/python_import_mapper.py": {
+    "ls_src_path": [
+      "Data_Tool_Pack_Py",
+      "src",
+      "utils",
+      "python_import_mapper.py"
+    ],
+    "ls_deployment_dests": [
+      ["Project_Template", "src", "utils", "python_import_mapper.py"],
+      ["na-finops", "src", "utils", "python_import_mapper.py"],
+      ["na-faba", "src", "utils", "python_import_mapper.py"],
+      ["CrownCentral", "src", "utils", "python_import_mapper.py"]
+    ]
+  },
+  "na-finops/src/utils/s3_connector.py": {
+    "ls_src_path": ["na-finops", "src", "utils", "s3_connector.py"],
+    "ls_deployment_dests": [
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "top-variances",
+        "src",
+        "utils",
+        "s3_connector.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "file-upload",
+        "src",
+        "utils",
+        "s3_connector.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "gor",
+        "src",
+        "utils",
+        "s3_connector.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "breakout",
+        "src",
+        "utils",
+        "s3_connector.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "debit-testing",
+        "src",
+        "utils",
+        "s3_connector.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "factor-invoices",
+        "src",
+        "utils",
+        "s3_connector.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "tedd",
+        "src",
+        "utils",
+        "s3_connector.py"
+      ],
+      ["na-faba", "src", "utils", "s3_connector.py"]
+    ]
+  },
+  "Data_Tool_Pack/src/utils/slack_tools.py": {
+    "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "slack_tools.py"],
+    "ls_deployment_dests": [
+      ["Project_Template", "src", "utils", "slack_tools.py"],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "top-variances",
+        "src",
+        "utils",
+        "slack_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "file-upload",
+        "src",
+        "utils",
+        "slack_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "breakout",
+        "src",
+        "utils",
+        "slack_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "debit-testing",
+        "src",
+        "utils",
+        "slack_tools.py"
+      ],
+      ["na-finops", "src", "utils", "slack_tools.py"],
+      ["na-faba", "src", "utils", "slack_tools.py"]
+    ]
+  },
+  "na-finops/src/utils/snowflake_tools.py": {
+    "ls_src_path": ["na-finops", "src", "utils", "snowflake_tools.py"],
+    "ls_deployment_dests": [
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "top-variances",
+        "src",
+        "utils",
+        "snowflake_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "file-upload",
+        "src",
+        "utils",
+        "snowflake_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "gor",
+        "src",
+        "utils",
+        "snowflake_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "breakout",
+        "src",
+        "utils",
+        "snowflake_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "debit-testing",
+        "src",
+        "utils",
+        "snowflake_tools.py"
+      ],
+      ["na-faba", "src", "utils", "snowflake_tools.py"]
+    ]
+  },
+  "na-finops/src/utils/rds_tools.py": {
+    "ls_src_path": ["na-finops", "src", "utils", "rds_tools.py"],
+    "ls_deployment_dests": [
+      ["na-fin-data-streamlit", "apps", "gor", "src", "utils", "rds_tools.py"],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "breakout",
+        "src",
+        "utils",
+        "rds_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "factor-invoices",
+        "src",
+        "utils",
+        "rds_tools.py"
+      ],
+      ["na-faba", "src", "utils", "rds_tools.py"]
+    ]
+  },
+  "Data_Tool_Pack/src/utils/url_encoding.py": {
+    "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "url_encoding.py"],
+    "ls_deployment_dests": [
+      ["Project_Template", "src", "utils", "url_encoding.py"],
+      ["na-finops", "src", "utils", "url_encoding.py"],
+      ["na-faba", "src", "utils", "url_encoding.py"],
+      ["CrownCentral", "src", "utils", "url_encoding.py"]
+    ]
+  },
+  "Data_Tool_Pack/src/utils/vault_tools.py": {
+    "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "vault_tools.py"],
+    "ls_deployment_dests": [
+      ["Project_Template", "src", "utils", "vault_tools.py"],
+      ["na-finops", "src", "utils", "vault_tools.py"],
+      ["na-faba", "src", "utils", "vault_tools.py"]
+    ]
+  },
+  "Data_Tool_Pack/src/utils/vpn_tools.py": {
+    "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "vpn_tools.py"],
+    "ls_deployment_dests": [
+      ["Project_Template", "src", "utils", "vpn_tools.py"],
+      ["na-faba", "src", "utils", "vpn_tools.py"],
+      ["CrownCentral", "src", "utils", "vpn_tools.py"]
+    ]
+  },
+  "na-finops/src/config.py": {
+    "ls_src_path": ["na-finops", "src", "config.py"],
+    "ls_deployment_dests": [
+      ["na-fin-data-streamlit", "apps", "top-variances", "src", "config.py"],
+      ["na-fin-data-streamlit", "apps", "breakout", "src", "config.py"]
+    ]
+  },
+  "na-finops/src/streamlit_cache_manager.py": {
+    "ls_src_path": ["na-finops", "src", "streamlit_cache_manager.py"],
+    "ls_deployment_dests": [
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "top-variances",
+        "src",
+        "streamlit_cache_manager.py"
+      ]
+    ]
+  },
+  "na-finops/src/__init__.py": {
+    "ls_src_path": ["na-finops", "src", "__init__.py"],
+    "ls_deployment_dests": [
+      ["na-fin-data-streamlit", "apps", "top-variances", "src", "__init__.py"],
+      ["na-fin-data-streamlit", "apps", "breakout", "src", "__init__.py"],
+      ["na-fin-data-streamlit", "apps", "debit-testing", "src", "__init__.py"],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "factor-invoices",
+        "src",
+        "__init__.py"
+      ],
+      ["na-fin-data-streamlit", "apps", "tedd", "src", "__init__.py"]
+    ]
+  },
+  "na-finops/src/utils/__init__.py": {
+    "ls_src_path": ["na-finops", "src", "utils", "__init__.py"],
+    "ls_deployment_dests": [
+      ["na-fin-data-streamlit", "apps", "top-variances", "src", "__init__.py"],
+      ["na-fin-data-streamlit", "apps", "breakout", "src", "__init__.py"],
+      ["na-fin-data-streamlit", "apps", "debit-testing", "src", "__init__.py"],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "factor-invoices",
+        "src",
+        "__init__.py"
+      ],
+      ["na-fin-data-streamlit", "apps", "tedd", "src", "__init__.py"]
+    ]
+  },
+  "na-finops/src/utils/sheet_ids.yaml": {
+    "ls_src_path": ["na-finops", "src", "utils", "sheet_ids.yaml"],
+    "ls_deployment_dests": [
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "top-variances",
+        "src",
+        "utils",
+        "sheet_ids.yaml"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "file-upload",
+        "src",
+        "utils",
+        "sheet_ids.yaml"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "breakout",
+        "src",
+        "utils",
+        "sheet_ids.yaml"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "debit-testing",
+        "src",
+        "utils",
+        "sheet_ids.yaml"
+      ]
+    ]
+  },
+  "Data_Tool_Pack/tests/config_tests.py": {
+    "ls_src_path": ["Data_Tool_Pack_Py", "tests", "config_tests.py"],
+    "ls_deployment_dests": [
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "top-variances",
+        "tests",
+        "config_tests.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "debit-testing",
+        "tests",
+        "config_tests.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "factor-invoices",
+        "tests",
+        "config_tests.py"
+      ],
+      ["na-fin-data-streamlit", "apps", "tedd", "tests", "config_tests.py"],
+      ["na-finops", "tests", "config_tests.py"]
+    ]
+  },
+  "Data_Tool_Pack/tests/test_tools.py": {
+    "ls_src_path": ["Data_Tool_Pack_Py", "tests", "test_tools.py"],
+    "ls_deployment_dests": [
+      ["na-fin-data-streamlit", "apps", "breakout", "tests", "test_tools.py"],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "debit-testing",
+        "tests",
+        "test_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "factor-invoices",
+        "tests",
+        "test_tools.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "file-upload",
+        "tests",
+        "test_tools.py"
+      ],
+      ["na-fin-data-streamlit", "apps", "gor", "tests", "test_tools.py"],
+      ["na-fin-data-streamlit", "apps", "tedd", "tests", "test_tools.py"],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "top-variances",
+        "tests",
+        "test_tools.py"
+      ],
+      ["na-faba", "tests", "test_tools.py"]
+    ]
+  },
+  "Data_Tool_Pack/tests/__init__.py": {
+    "ls_src_path": ["Data_Tool_Pack_Py", "tests", "__init__.py"],
+    "ls_deployment_dests": [
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "top-variances",
+        "tests",
+        "__init__.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "debit-testing",
+        "tests",
+        "__init__.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "factor-invoices",
+        "tests",
+        "__init__.py"
+      ],
+      ["na-fin-data-streamlit", "apps", "tedd", "tests", "__init__.py"],
+      ["na-finops", "tests", "__init__.py"]
+    ]
+  },
+  "na-finops/tests/test_s3_connections.py": {
+    "ls_src_path": ["na-finops", "tests", "test_s3_connections.py"],
+    "ls_deployment_dests": [
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "breakout",
+        "tests",
+        "test_s3_connections.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "debit-testing",
+        "tests",
+        "test_s3_connections.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "factor-invoices",
+        "tests",
+        "test_s3_connections.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "file-upload",
+        "tests",
+        "test_s3_connections.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "gor",
+        "tests",
+        "test_s3_connections.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "tedd",
+        "tests",
+        "test_s3_connections.py"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "top-variances",
+        "tests",
+        "test_s3_connections.py"
+      ],
+      ["na-faba", "tests", "test_s3_connections.py"]
+    ]
+  },
+  "na-finops/schemas/employee_reporting.json": {
+    "ls_src_path": ["na-finops", "schemas", "employee_reporting.json"],
+    "ls_deployment_dests": [
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "debit-testing",
+        "schemas",
+        "employee_reporting.json"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "tedd",
+        "schemas",
+        "employee_reporting.json"
+      ]
+    ]
+  },
+  "na-finops/schemas/employee_reporting.yml": {
+    "ls_src_path": ["na-finops", "schemas", "employee_reporting.yml"],
+    "ls_deployment_dests": [
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "debit-testing",
+        "schemas",
+        "employee_reporting.yml"
+      ],
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "tedd",
+        "schemas",
+        "employee_reporting.yml"
+      ]
+    ]
+  },
+  "na-finops/src/brand_tools.py": {
+    "ls_src_path": ["na-finops", "src", "brand_tools.py"],
+    "ls_deployment_dests": [
+      ["na-fin-data-streamlit", "apps", "breakout", "src", "brand_tools.py"]
+    ]
+  },
+  "na-finops/src/breakout_gcr_pl_mapping.py": {
+    "ls_src_path": ["na-finops", "src", "breakout_gcr_pl_mapping.py"],
+    "ls_deployment_dests": [
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "breakout",
+        "src",
+        "breakout_gcr_pl_mapping.py"
+      ]
+    ]
+  },
+  "na-finops/src/revenue.py": {
+    "ls_src_path": ["na-finops", "src", "revenue.py"],
+    "ls_deployment_dests": [
+      ["na-fin-data-streamlit", "apps", "breakout", "src", "revenue.py"]
+    ]
+  },
+  "na-finops/src/dc_tools.py": {
+    "ls_src_path": ["na-finops", "src", "dc_tools.py"],
+    "ls_deployment_dests": [
+      ["na-fin-data-streamlit", "apps", "tedd", "src", "dc_tools.py"]
+    ]
+  },
+  "na-finops/src/te_reporting.py": {
+    "ls_src_path": ["na-finops", "src", "te_reporting.py"],
+    "ls_deployment_dests": [
+      ["na-fin-data-streamlit", "apps", "tedd", "src", "te_reporting.py"]
+    ]
+  },
+  "na-finops/src/super_users.txt": {
+    "ls_src_path": ["na-finops", "src", "super_users.txt"],
+    "ls_deployment_dests": [
+      ["na-fin-data-streamlit", "apps", "tedd", "src", "super_users.txt"]
+    ]
+  },
+  "na-finops/src/employee_mapping.py": {
+    "ls_src_path": ["na-finops", "src", "employee_mapping.py"],
+    "ls_deployment_dests": [
+      ["na-fin-data-streamlit", "apps", "tedd", "src", "employee_mapping.py"]
+    ]
+  },
+  "na-finops/src/utils/limesync_validation.py": {
+    "ls_src_path": ["na-finops", "src", "utils", "limesync_validation.py"],
+    "ls_deployment_dests": [
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "tedd",
+        "src",
+        "utils",
+        "limesync_validation.py"
+      ]
+    ]
+  },
+  "hellofresh_credentials/na_finops.env": {
+    "ls_src_path": ["hellofresh_credentials", "na_finops.env"],
+    "ls_deployment_dests": [
+      ["na-fin-data-streamlit", "apps", "file-upload", ".env"],
+      ["na-fin-data-streamlit", "apps", "gor", ".env"],
+      ["na-fin-data-streamlit", "apps", "breakout", ".env"],
+      ["na-fin-data-streamlit", "apps", "debit-testing", ".env"],
+      ["na-fin-data-streamlit", "apps", "factor-invoices", ".env"],
+      ["na-fin-data-streamlit", "apps", "tedd", ".env"],
+      ["na-fin-data-streamlit", "apps", "top-variances", ".env"],
+      ["na-finops", ".env"],
+      ["na-faba", ".env"]
+    ]
+  },
+  "hellofresh_credentials/snowflake_db_finops-debit.env.dev": {
+    "ls_src_path": [
+      "hellofresh_credentials",
+      "snowflake_db_finops-debit.env.dev"
+    ],
+    "ls_deployment_dests": [["snowflake-db-finops-debit", ".env.dev"]]
+  },
+  "na-finops/docs/setup_git_access_hellofresh.md": {
+    "ls_src_path": ["na-finops", "docs", "setup_git_access_hellofresh.md"],
+    "ls_deployment_dests": [
+      ["na-faba", "docs", "setup_git_access_hellofresh.md"]
+    ]
+  },
+  "na-finops/docs/setup_linux_workstation_hellofresh.md": {
+    "ls_src_path": [
+      "na-finops",
+      "docs",
+      "setup_linux_workstation_hellofresh.md"
+    ],
+    "ls_deployment_dests": [
+      ["na-faba", "docs", "setup_linux_workstation_hellofresh.md"]
+    ]
+  },
+  "na-finops/docs/setup_windows_workstation_hellofresh.md": {
+    "ls_src_path": [
+      "na-finops",
+      "docs",
+      "setup_windows_workstation_hellofresh.md"
+    ],
+    "ls_deployment_dests": [
+      ["na-faba", "docs", "setup_windows_workstation_hellofresh.md"]
+    ]
+  },
+  "na-finops/docs/setup_mac_workstation_hellofresh.md": {
+    "ls_src_path": ["na-finops", "docs", "setup_mac_workstation_hellofresh.md"],
+    "ls_deployment_dests": [
+      ["na-faba", "docs", "setup_mac_workstation_hellofresh.md"]
+    ]
+  },
+  "na-finops/docs/kubectl.md": {
+    "ls_src_path": ["na-finops", "docs", "kubectl.md"],
+    "ls_deployment_dests": [["na-faba", "docs", "kubectl.md"]]
+  },
+  "na-finops/docs/s3.md": {
+    "ls_src_path": ["na-finops", "docs", "s3.md"],
+    "ls_deployment_dests": [["na-faba", "docs", "s3.md"]]
+  },
+  "dotfiles/docs/github-cli.md": {
+    "ls_src_path": ["dotfiles", "docs", "github-cli.md"],
+    "ls_deployment_dests": [
+      ["na-finops", "docs", "github-cli.md"],
+      ["na-faba", "docs", "github-cli.md"]
+    ]
+  },
+  "dotfiles/docs/mkdocs.md": {
+    "ls_src_path": ["dotfiles", "docs", "mkdocs.md"],
+    "ls_deployment_dests": [["na-finops", "docs", "mkdocs.md"]]
+  },
+  "dotfiles/docs/searching_replacing.md": {
+    "ls_src_path": ["dotfiles", "docs", "searching_replacing.md"],
+    "ls_deployment_dests": [["na-finops", "docs", "searching_replacing.md"]]
+  },
+  "dotfiles/app_lists/linux_apps_wsl.txt": {
+    "ls_src_path": ["dotfiles", "app_lists", "linux_apps_wsl.txt"],
+    "ls_deployment_dests": [["na-faba", "app_lists", "linux_apps_wsl.txt"]]
+  },
+  "dotfiles/scripts/apply_settings.ps1": {
+    "ls_src_path": ["dotfiles", "scripts", "apply_settings.ps1"],
+    "ls_deployment_dests": [["na-faba", "scripts", "apply_settings.ps1"]]
+  },
+  "dotfiles/scripts/install_linux_apps_wsl.sh": {
+    "ls_src_path": ["dotfiles", "scripts", "install_linux_apps_wsl.sh"],
+    "ls_deployment_dests": [["na-faba", "scripts", "install_linux_apps_wsl.sh"]]
+  },
+  "dotfiles/scripts/my_updater.sh": {
+    "ls_src_path": ["dotfiles", "scripts", "my_updater.sh"],
+    "ls_deployment_dests": [["na-faba", "scripts", "my_updater.sh"]]
+  },
+  "dotfiles/application_configs/bash/.zshrc": {
+    "ls_src_path": ["dotfiles", "application_configs", "bash", ".zshrc"],
+    "ls_deployment_dests": [["na-faba", "application_configs", ".zshrc"]]
+  }
+}

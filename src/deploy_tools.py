@@ -7,14 +7,14 @@ import os
 import shutil
 import time
 
-from config import data_dir
+from config import file_dir
 from utils.config_utils import great_grandparent_dir
 from utils.display_tools import pprint_dict, print_logger  # noqa: F401
 
 # %%
 # Variables #
 
-with open(os.path.join(data_dir, "dict_file_deployments_detailed.json"), "r") as f:
+with open(os.path.join(file_dir, "dict_file_deployments_detailed.json"), "r") as f:
     dict_file_deployments_detailed = json.load(f)
 
 
