@@ -7,8 +7,8 @@ import os
 import sys
 
 import pytz
-from tabulate import tabulate
 from dotenv import load_dotenv
+from tabulate import tabulate
 
 # append grandparent
 if __name__ == "__main__":
