@@ -804,7 +804,10 @@
   },
   "dotfiles/docs/setup_go.md": {
     "ls_src_path": ["dotfiles", "docs", "setup_go.md"],
-    "ls_deployment_dests": [["Data_Tool_Pack_GO", "docs", "setup_go.md"]]
+    "ls_deployment_dests": [
+      ["Data_Tool_Pack_GO", "docs", "setup_go.md"],
+      ["na-finops", "docs", "setup_go.md"]
+    ]
   },
   "dotfiles/docs/setup_rust.md": {
     "ls_src_path": ["dotfiles", "docs", "setup_rust.md"],
