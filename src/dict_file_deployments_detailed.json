@@ -1868,28 +1868,6 @@
     ],
     "ls_deployment_dests": [["na-finops", "src", "gl_queries.py"]]
   },
-  "hellofresh_credentials/na_finops.env": {
-    "ls_src_path": ["hellofresh_credentials", "na_finops.env"],
-    "ls_deployment_dests": [
-      ["na-fin-data-streamlit", "apps", "file-upload", ".env"],
-      ["na-fin-data-streamlit", "apps", "gor", ".env"],
-      ["na-fin-data-streamlit", "apps", "breakout", ".env"],
-      ["na-fin-data-streamlit", "apps", "debit-testing", ".env"],
-      ["na-fin-data-streamlit", "apps", "factor-invoices", ".env"],
-      ["na-fin-data-streamlit", "apps", "ledger-fresh-hq", ".env"],
-      ["na-fin-data-streamlit", "apps", "tedd", ".env"],
-      ["na-fin-data-streamlit", "apps", "top-variances", ".env"],
-      ["na-finops", ".env"],
-      ["na-faba", ".env"]
-    ]
-  },
-  "hellofresh_credentials/snowflake_db_finops-debit.env.dev": {
-    "ls_src_path": [
-      "hellofresh_credentials",
-      "snowflake_db_finops-debit.env.dev"
-    ],
-    "ls_deployment_dests": [["snowflake-db-finops-debit", ".env.dev"]]
-  },
   "na-finops/docs/setup_git_access_hellofresh.md": {
     "ls_src_path": ["na-finops", "docs", "setup_git_access_hellofresh.md"],
     "ls_deployment_dests": [
