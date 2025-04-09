@@ -9,7 +9,10 @@
   },
   "Data_Tool_Pack_Py/src/utils/s3_tools.py": {
     "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "s3_tools.py"],
-    "ls_deployment_dests": [["Terminal_To_Do", "src", "utils", "s3_tools.py"]]
+    "ls_deployment_dests": [
+      ["Terminal_To_Do", "src", "utils", "s3_tools.py"],
+      ["dotfiles", "src", "utils", "s3_tools.py"]
+    ]
   },
   "Data_Tool_Pack_Py/tests/test_utils/test_s3_tools.py": {
     "ls_src_path": [
@@ -19,7 +22,8 @@
       "test_s3_tools.py"
     ],
     "ls_deployment_dests": [
-      ["Terminal_To_Do", "tests", "test_utils", "test_s3_tools.py"]
+      ["Terminal_To_Do", "tests", "test_utils", "test_s3_tools.py"],
+      ["dotfiles", "tests", "test_utils", "test_s3_tools.py"]
     ]
   },
   "Data_Tool_Pack_Py/src/utils/config_utils.py": {
