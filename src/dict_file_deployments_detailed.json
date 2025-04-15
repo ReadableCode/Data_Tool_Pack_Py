@@ -691,6 +691,7 @@
     "ls_src_path": ["personal_credentials", "personal.env"],
     "ls_deployment_dests": [
       ["dotfiles", ".env"],
+      ["Docker", ".env"],
       ["Data_Tool_Pack_Py", ".env"],
       ["Data_Tool_Pack_GO", ".env"],
       ["Data_Tool_Pack_RS", ".env"],
