@@ -704,7 +704,8 @@
       ["OSINT", ".env"],
       ["Sync_Plex", ".env"],
       ["Terminal_To_Do", ".env"],
-      ["Book-Bot", ".env"]
+      ["Book-Bot", ".env"],
+      ["spark_testing", ".env"]
     ]
   },
   "dotfiles/scripts/aws_credential_extractor_kube.sh": {
