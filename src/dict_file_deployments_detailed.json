@@ -788,6 +788,10 @@
       ["na-faba", "docs", "setup_docker.md"]
     ]
   },
+  "dotfiles/docs/setup_pandoc.md": {
+    "ls_src_path": ["dotfiles", "docs", "setup_pandoc.md"],
+    "ls_deployment_dests": [["na-finops", "docs", "setup_pandoc.md"]]
+  },
   "dotfiles/docs/setup_git.md": {
     "ls_src_path": ["dotfiles", "docs", "setup_git.md"],
     "ls_deployment_dests": [
