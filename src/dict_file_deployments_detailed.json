@@ -26,6 +26,34 @@
       ["dotfiles", "tests", "test_utils", "test_s3_tools.py"]
     ]
   },
+  "Data_Tool_Pack_Py/src/config.py": {
+    "ls_src_path": ["Data_Tool_Pack_Py", "src", "config.py"],
+    "ls_deployment_dests": [
+      ["dotfiles", "src", "config.py"],
+      ["Project_Template", "src", "config.py"],
+      ["na-fin-data-streamlit", "apps", "file-upload", "src", "config.py"],
+      ["na-fin-data-streamlit", "apps", "gor", "src", "config.py"],
+      ["na-fin-data-streamlit", "apps", "breakout", "src", "config.py"],
+      ["na-fin-data-streamlit", "apps", "debit-testing", "src", "config.py"],
+      ["na-fin-data-streamlit", "apps", "factor-invoices", "src", "config.py"],
+      ["na-fin-data-streamlit", "apps", "ledger-fresh-hq", "src", "config.py"],
+      ["na-fin-data-streamlit", "apps", "tedd", "src", "config.py"],
+      ["na-finops", "src", "config.py"],
+      ["na-faba", "src", "config.py"],
+      ["Cash_Flow_Commander", "src", "config.py"],
+      ["CrownCentral", "src", "config.py"],
+      ["Scan_Sorter", "src", "config.py"],
+      ["Assistant", "src", "config.py"],
+      ["Our_Cash", "src", "config.py"],
+      ["Gmail_Extractor", "src", "config.py"],
+      ["OSINT", "src", "config.py"],
+      ["Sync_Plex", "src", "config.py"],
+      ["Terminal_To_Do", "src", "config.py"],
+      ["Health_Data_Parser", "src", "config.py"],
+      ["server_configs", "src", "config.py"],
+      ["Book-Bot", "src", "config.py"]
+    ]
+  },
   "Data_Tool_Pack_Py/src/utils/config_utils.py": {
     "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "config_utils.py"],
     "ls_deployment_dests": [
@@ -99,6 +127,7 @@
       ["Sync_Plex", "src", "utils", "config_utils.py"],
       ["Terminal_To_Do", "src", "utils", "config_utils.py"],
       ["Health_Data_Parser", "src", "utils", "config_utils.py"],
+      ["server_configs", "src", "utils", "config_utils.py"],
       ["Book-Bot", "src", "utils", "config_utils.py"]
     ]
   },
@@ -392,7 +421,8 @@
       ["Sync_Plex", "src", "utils", "display_tools.py"],
       ["Terminal_To_Do", "src", "utils", "display_tools.py"],
       ["Health_Data_Parser", "src", "utils", "display_tools.py"],
-      ["Book-Bot", "src", "utils", "display_tools.py"]
+      ["Book-Bot", "src", "utils", "display_tools.py"],
+      ["server_configs", "src", "utils", "display_tools.py"]
     ]
   },
   "Data_Tool_Pack_Py/src/utils/gmail_tools.py": {
@@ -705,7 +735,8 @@
       ["Sync_Plex", ".env"],
       ["Terminal_To_Do", ".env"],
       ["Book-Bot", ".env"],
-      ["spark_testing", ".env"]
+      ["spark_testing", ".env"],
+      ["server_configs", ".env"]
     ]
   },
   "dotfiles/scripts/aws_credential_extractor_kube.sh": {
@@ -846,7 +877,7 @@
       ["na-faba", "scripts", "sheets.ahk"]
     ]
   },
-  "Data_Tool_Pack/src/utils/bodega_impala_tools.py": {
+  "Data_Tool_Pack_Py/src/utils/bodega_impala_tools.py": {
     "ls_src_path": [
       "Data_Tool_Pack_Py",
       "src",
@@ -859,7 +890,7 @@
       ["na-faba", "src", "utils", "bodega_impala_tools.py"]
     ]
   },
-  "Data_Tool_Pack/src/utils/CDP_impala_tools.py": {
+  "Data_Tool_Pack_Py/src/utils/CDP_impala_tools.py": {
     "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "CDP_impala_tools.py"],
     "ls_deployment_dests": [
       ["Project_Template", "src", "utils", "CDP_impala_tools.py"],
@@ -953,7 +984,7 @@
       ]
     ]
   },
-  "Data_Tool_Pack/src/utils/doc_tools.py": {
+  "Data_Tool_Pack_Py/src/utils/doc_tools.py": {
     "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "doc_tools.py"],
     "ls_deployment_dests": [
       ["Project_Template", "src", "utils", "doc_tools.py"],
@@ -968,7 +999,7 @@
     "ls_src_path": ["na-finops", "src", "utils", "domo_tools.py"],
     "ls_deployment_dests": [["na-faba", "src", "utils", "domo_tools.py"]]
   },
-  "Data_Tool_Pack/src/utils/google_doc_tools.py": {
+  "Data_Tool_Pack_Py/src/utils/google_doc_tools.py": {
     "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "google_doc_tools.py"],
     "ls_deployment_dests": [
       ["Project_Template", "src", "utils", "google_doc_tools.py"],
@@ -979,7 +1010,7 @@
       ["Our_Cash", "src", "utils", "google_doc_tools.py"]
     ]
   },
-  "Data_Tool_Pack/src/utils/ImpalaJDBC41.jar": {
+  "Data_Tool_Pack_Py/src/utils/ImpalaJDBC41.jar": {
     "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "ImpalaJDBC41.jar"],
     "ls_deployment_dests": [
       ["Project_Template", "src", "utils", "ImpalaJDBC41.jar"],
@@ -987,7 +1018,7 @@
       ["na-faba", "src", "utils", "ImpalaJDBC41.jar"]
     ]
   },
-  "Data_Tool_Pack/src/utils/location_tools.py": {
+  "Data_Tool_Pack_Py/src/utils/location_tools.py": {
     "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "location_tools.py"],
     "ls_deployment_dests": [
       ["Project_Template", "src", "utils", "location_tools.py"],
@@ -1012,13 +1043,13 @@
       ["CrownCentral", "src", "utils", "location_tools.py"]
     ]
   },
-  "Data_Tool_Pack/src/utils/looker_tools.py": {
+  "Data_Tool_Pack_Py/src/utils/looker_tools.py": {
     "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "looker_tools.py"],
     "ls_deployment_dests": [
       ["Project_Template", "src", "utils", "looker_tools.py"]
     ]
   },
-  "Data_Tool_Pack/src/utils/math_tools.py": {
+  "Data_Tool_Pack_Py/src/utils/math_tools.py": {
     "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "math_tools.py"],
     "ls_deployment_dests": [
       ["Project_Template", "src", "utils", "math_tools.py"],
@@ -1029,7 +1060,7 @@
       ["Our_Cash", "src", "utils", "math_tools.py"]
     ]
   },
-  "Data_Tool_Pack/src/utils/number_tools.py": {
+  "Data_Tool_Pack_Py/src/utils/number_tools.py": {
     "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "number_tools.py"],
     "ls_deployment_dests": [
       ["Project_Template", "src", "utils", "number_tools.py"],
@@ -1102,7 +1133,7 @@
       ["na-faba", "src", "utils", "number_tools.py"]
     ]
   },
-  "Data_Tool_Pack/src/utils/pandas_tools.py": {
+  "Data_Tool_Pack_Py/src/utils/pandas_tools.py": {
     "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "pandas_tools.py"],
     "ls_deployment_dests": [
       ["Project_Template", "src", "utils", "pandas_tools.py"],
@@ -1177,7 +1208,7 @@
       ["Our_Cash", "src", "utils", "pandas_tools.py"]
     ]
   },
-  "Data_Tool_Pack/src/utils/pdf_tools.py": {
+  "Data_Tool_Pack_Py/src/utils/pdf_tools.py": {
     "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "pdf_tools.py"],
     "ls_deployment_dests": [
       ["Project_Template", "src", "utils", "pdf_tools.py"],
@@ -1233,7 +1264,7 @@
       ["na-faba", "src", "utils", "pdf_tools.py"]
     ]
   },
-  "Data_Tool_Pack/src/utils/python_import_mapper.py": {
+  "Data_Tool_Pack_Py/src/utils/python_import_mapper.py": {
     "ls_src_path": [
       "Data_Tool_Pack_Py",
       "src",
@@ -1317,7 +1348,7 @@
       ["na-faba", "src", "utils", "s3_connector.py"]
     ]
   },
-  "Data_Tool_Pack/src/utils/slack_tools.py": {
+  "Data_Tool_Pack_Py/src/utils/slack_tools.py": {
     "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "slack_tools.py"],
     "ls_deployment_dests": [
       ["Project_Template", "src", "utils", "slack_tools.py"],
@@ -1442,7 +1473,7 @@
       ["na-faba", "src", "utils", "rds_tools.py"]
     ]
   },
-  "Data_Tool_Pack/src/utils/url_encoding.py": {
+  "Data_Tool_Pack_Py/src/utils/url_encoding.py": {
     "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "url_encoding.py"],
     "ls_deployment_dests": [
       ["Project_Template", "src", "utils", "url_encoding.py"],
@@ -1451,7 +1482,7 @@
       ["CrownCentral", "src", "utils", "url_encoding.py"]
     ]
   },
-  "Data_Tool_Pack/src/utils/vault_tools.py": {
+  "Data_Tool_Pack_Py/src/utils/vault_tools.py": {
     "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "vault_tools.py"],
     "ls_deployment_dests": [
       ["Project_Template", "src", "utils", "vault_tools.py"],
@@ -1459,7 +1490,7 @@
       ["na-faba", "src", "utils", "vault_tools.py"]
     ]
   },
-  "Data_Tool_Pack/src/utils/vpn_tools.py": {
+  "Data_Tool_Pack_Py/src/utils/vpn_tools.py": {
     "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "vpn_tools.py"],
     "ls_deployment_dests": [
       ["Project_Template", "src", "utils", "vpn_tools.py"],
@@ -1603,7 +1634,7 @@
       ]
     ]
   },
-  "Data_Tool_Pack/tests/config_tests.py": {
+  "Data_Tool_Pack_Py/tests/config_tests.py": {
     "ls_src_path": ["Data_Tool_Pack_Py", "tests", "config_tests.py"],
     "ls_deployment_dests": [
       [
@@ -1639,7 +1670,7 @@
       ["na-faba", "tests", "config_tests.py"]
     ]
   },
-  "Data_Tool_Pack/tests/test_tools.py": {
+  "Data_Tool_Pack_Py/tests/test_tools.py": {
     "ls_src_path": ["Data_Tool_Pack_Py", "tests", "test_tools.py"],
     "ls_deployment_dests": [
       ["na-fin-data-streamlit", "apps", "breakout", "tests", "test_tools.py"],
@@ -1683,7 +1714,7 @@
       ["na-faba", "tests", "test_tools.py"]
     ]
   },
-  "Data_Tool_Pack/tests/__init__.py": {
+  "Data_Tool_Pack_Py/tests/__init__.py": {
     "ls_src_path": ["Data_Tool_Pack_Py", "tests", "__init__.py"],
     "ls_deployment_dests": [
       [

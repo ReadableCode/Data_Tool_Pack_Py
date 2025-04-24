@@ -3,40 +3,30 @@
 
 import os
 import sys
+from os.path import expanduser
 
+home_dir = expanduser("~")
 file_dir = os.path.dirname(os.path.realpath(__file__))
 parent_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 grandparent_dir = os.path.dirname(parent_dir)
 great_grandparent_dir = os.path.dirname(grandparent_dir)
 
 data_dir = os.path.join(parent_dir, "data")
-trigger_dir = os.path.join(parent_dir, "triggers")
+templates_dir = os.path.join(parent_dir, "templates")
 log_dir = os.path.join(parent_dir, "logs")
 src_dir = os.path.join(parent_dir, "src")
 src_utils_dir = os.path.join(src_dir, "utils")
 drive_download_cache_dir = os.path.join(data_dir, "drive_download_cache")
 s3_download_cache = os.path.join(data_dir, "s3_download_cache")
 
-odl_dir = os.path.join(data_dir, "odls")
-highjump_comparison_dir = os.path.join(data_dir, "highjump_comparison")
-report_dir = os.path.join(parent_dir, "reports")
-email_attachment_dir = os.path.join(data_dir, "email_attachments")
-temp_upload_dir = os.path.join(data_dir, "temp_upload")
-
-
 directories = [
     data_dir,
-    trigger_dir,
+    templates_dir,
     log_dir,
     src_dir,
     src_utils_dir,
     drive_download_cache_dir,
     s3_download_cache,
-    odl_dir,
-    highjump_comparison_dir,
-    report_dir,
-    email_attachment_dir,
-    temp_upload_dir,
 ]
 for directory in directories:
     if not os.path.exists(directory):
@@ -50,6 +40,7 @@ sys.path.append(src_dir)
 sys.path.append(src_utils_dir)
 
 if __name__ == "__main__":
+    print(f"home_dir: {home_dir}")
     print(f"file_dir: {file_dir}")
     print(f"parent_dir: {parent_dir}")
     print(f"grandparent_dir: {grandparent_dir}")
