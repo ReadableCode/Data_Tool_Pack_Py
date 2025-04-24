@@ -9,13 +9,32 @@ import time
 
 from config import file_dir
 from utils.config_utils import great_grandparent_dir
-from utils.display_tools import pprint_dict, print_logger  # noqa: F401
+from utils.display_tools import pprint_dict, print_logger, pprint_ls  # noqa: F401
 
 # %%
 # Variables #
 
 with open(os.path.join(file_dir, "dict_file_deployments_detailed.json"), "r") as f:
     dict_file_deployments_detailed = json.load(f)
+
+
+# sort the dict
+sorted_dict = {}
+for key in sorted(dict_file_deployments_detailed.keys()):
+    ls_sorted =  dict_file_deployments_detailed[key]["ls_deployment_dests"]
+    ls_sorted.sort(key=lambda x: x[0])
+    sorted_dict[key] = {}
+    sorted_dict[key]["ls_src_path"] = dict_file_deployments_detailed[key]["ls_src_path"]
+    sorted_dict[key]["ls_deployment_dests"] = ls_sorted
+
+# write back to file
+with open(
+    os.path.join(file_dir, "dict_file_deployments_detailed.json"), "w"
+) as f:
+    json.dump(sorted_dict, f, indent=4)
+
+# set dict to new sorted dict
+dict_file_deployments_detailed = sorted_dict
 
 
 # %%
@@ -190,7 +209,6 @@ if __name__ == "__main__":
         ls_src_path = src_file_deployment_config["ls_src_path"]
         src_path = os.path.join(great_grandparent_dir, *ls_src_path)
         src_project = ls_src_path[0]
-        src_project_type = "work" if src_project in ls_work_projects else "personal"
         ls_dest_path_lists = src_file_deployment_config["ls_deployment_dests"]
         for dest_path_list in ls_dest_path_lists:
             dest_project = dest_path_list[0]
