@@ -22,7 +22,7 @@ with open(os.path.join(file_dir, "dict_file_deployments_detailed.json"), "r") as
 sorted_dict = {}
 for key in sorted(dict_file_deployments_detailed.keys()):
     ls_sorted =  dict_file_deployments_detailed[key]["ls_deployment_dests"]
-    ls_sorted.sort(key=lambda x: x[0])
+    ls_sorted.sort(key=lambda x: "/".join(x))
     sorted_dict[key] = {}
     sorted_dict[key]["ls_src_path"] = dict_file_deployments_detailed[key]["ls_src_path"]
     sorted_dict[key]["ls_deployment_dests"] = ls_sorted
