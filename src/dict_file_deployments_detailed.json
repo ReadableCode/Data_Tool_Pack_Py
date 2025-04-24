@@ -1,4 +1,16 @@
 {
+  "Data_Tool_Pack_Py/notebooks/config_notebooks.py": {
+    "ls_src_path": ["Data_Tool_Pack_Py", "notebooks", "config_notebooks.py"],
+    "ls_deployment_dests": [
+      ["Assistant", "notebooks", "config_notebooks.py"],
+      ["Cash_Flow_Commander", "notebooks", "config_notebooks.py"],
+      ["Data_Tool_Pack", "notebooks", "config_notebooks.py"],
+      ["OSINT", "notebooks", "config_notebooks.py"],
+      ["Our_Cash", "notebooks", "config_notebooks.py"],
+      ["Project_Template", "notebooks", "config_notebooks.py"],
+      ["Scan_Sorter", "notebooks", "config_notebooks.py"]
+    ]
+  },
   "Data_Tool_Pack_Py/src/config.py": {
     "ls_src_path": ["Data_Tool_Pack_Py", "src", "config.py"],
     "ls_deployment_dests": [
