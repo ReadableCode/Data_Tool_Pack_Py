@@ -940,7 +940,6 @@
     ],
     "ls_deployment_dests": [
       ["CrownCentral", "src", "utils", "python_import_mapper.py"],
-
       ["Project_Template", "src", "utils", "python_import_mapper.py"],
       ["na-faba", "src", "utils", "python_import_mapper.py"],
       ["na-finops", "src", "utils", "python_import_mapper.py"]
