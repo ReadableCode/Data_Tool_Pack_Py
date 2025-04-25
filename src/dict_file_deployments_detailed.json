@@ -1370,6 +1370,153 @@
       ]
     ]
   },
+  "na-finops/docs/Top_Variances.md": {
+    "ls_src_path": ["na-finops", "docs", "Top_Variances.md"],
+    "ls_deployment_dests": [
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "top-variances",
+        "docs",
+        "Top_Variances.md"
+      ]
+    ]
+  },
+  "na-finops/docs/img/concur_relationships.png": {
+    "ls_src_path": ["na-finops", "docs", "img", "concur_relationships.png"],
+    "ls_deployment_dests": [
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "top-variances",
+        "docs",
+        "img",
+        "concur_relationships.png"
+      ]
+    ]
+  },
+  "na-finops/docs/img/top_variances.png": {
+    "ls_src_path": ["na-finops", "docs", "img", "top_variances.png"],
+    "ls_deployment_dests": [
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "top-variances",
+        "docs",
+        "img",
+        "top_variances.png"
+      ]
+    ]
+  },
+  "na-finops/docs/img/top_variances_charts_0.png": {
+    "ls_src_path": ["na-finops", "docs", "img", "top_variances_charts_0.png"],
+    "ls_deployment_dests": [
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "top-variances",
+        "docs",
+        "img",
+        "top_variances_charts_0.png"
+      ]
+    ]
+  },
+  "na-finops/docs/img/top_variances_charts_1.png": {
+    "ls_src_path": ["na-finops", "docs", "img", "top_variances_charts_1.png"],
+    "ls_deployment_dests": [
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "top-variances",
+        "docs",
+        "img",
+        "top_variances_charts_1.png"
+      ]
+    ]
+  },
+  "na-finops/docs/img/top_variances_charts_2.png": {
+    "ls_src_path": ["na-finops", "docs", "img", "top_variances_charts_2.png"],
+    "ls_deployment_dests": [
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "top-variances",
+        "docs",
+        "img",
+        "top_variances_charts_2.png"
+      ]
+    ]
+  },
+  "na-finops/docs/img/top_variances_data_flow.png": {
+    "ls_src_path": ["na-finops", "docs", "img", "top_variances_data_flow.png"],
+    "ls_deployment_dests": [
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "top-variances",
+        "docs",
+        "img",
+        "top_variances_data_flow.png"
+      ]
+    ]
+  },
+  "na-finops/docs/img/top_variances_donations.png": {
+    "ls_src_path": ["na-finops", "docs", "img", "top_variances_donations.png"],
+    "ls_deployment_dests": [
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "top-variances",
+        "docs",
+        "img",
+        "top_variances_donations.png"
+      ]
+    ]
+  },
+  "na-finops/docs/img/top_variances_home.png": {
+    "ls_src_path": ["na-finops", "docs", "img", "top_variances_home.png"],
+    "ls_deployment_dests": [
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "top-variances",
+        "docs",
+        "img",
+        "top_variances_home.png"
+      ]
+    ]
+  },
+  "na-finops/docs/img/top_variances_process_workflow.png": {
+    "ls_src_path": [
+      "na-finops",
+      "docs",
+      "img",
+      "top_variances_process_workflow.png"
+    ],
+    "ls_deployment_dests": [
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "top-variances",
+        "docs",
+        "img",
+        "top_variances_process_workflow.png"
+      ]
+    ]
+  },
+  "na-finops/docs/img/top_variances_thresholds.png": {
+    "ls_src_path": ["na-finops", "docs", "img", "top_variances_thresholds.png"],
+    "ls_deployment_dests": [
+      [
+        "na-fin-data-streamlit",
+        "apps",
+        "top-variances",
+        "docs",
+        "img",
+        "top_variances_thresholds.png"
+      ]
+    ]
+  },
   "na-finops/docs/kubectl.md": {
     "ls_src_path": ["na-finops", "docs", "kubectl.md"],
     "ls_deployment_dests": [["na-faba", "docs", "kubectl.md"]]
