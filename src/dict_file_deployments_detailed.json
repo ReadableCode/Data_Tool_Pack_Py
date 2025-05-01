@@ -4,7 +4,6 @@
     "ls_deployment_dests": [
       ["Assistant", "notebooks", "config_notebooks.py"],
       ["Cash_Flow_Commander", "notebooks", "config_notebooks.py"],
-      ["Data_Tool_Pack", "notebooks", "config_notebooks.py"],
       ["OSINT", "notebooks", "config_notebooks.py"],
       ["Our_Cash", "notebooks", "config_notebooks.py"],
       ["Project_Template", "notebooks", "config_notebooks.py"],
@@ -15,7 +14,6 @@
     "ls_src_path": ["Data_Tool_Pack_Py", "scripts", "config_scripts.py"],
     "ls_deployment_dests": [
       ["Cash_Flow_Commander", "scripts", "config_scripts.py"],
-      ["Data_Tool_Pack", "scripts", "config_scripts.py"],
       ["OSINT", "scripts", "config_scripts.py"],
       ["Project_Template", "scripts", "config_scripts.py"],
       ["dotfiles", "scripts", "config_scripts.py"]
@@ -26,6 +24,7 @@
     "ls_deployment_dests": [
       ["Assistant", "src", "config.py"],
       ["Book-Bot", "src", "config.py"],
+      ["Car_Picker", "src", "config.py"],
       ["Cash_Flow_Commander", "src", "config.py"],
       ["CrownCentral", "src", "config.py"],
       ["Gmail_Extractor", "src", "config.py"],
@@ -60,6 +59,7 @@
     "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "__init__.py"],
     "ls_deployment_dests": [
       ["Assistant", "src", "utils", "__init__.py"],
+      ["Car_Picker", "src", "utils", "__init__.py"],
       ["Cash_Flow_Commander", "src", "utils", "__init__.py"],
       ["CrownCentral", "src", "utils", "__init__.py"],
       ["Gmail_Extractor", "src", "utils", "__init__.py"],
@@ -149,6 +149,7 @@
     "ls_deployment_dests": [
       ["Assistant", "src", "utils", "config_utils.py"],
       ["Book-Bot", "src", "utils", "config_utils.py"],
+      ["Car_Picker", "src", "utils", "config_utils.py"],
       ["Cash_Flow_Commander", "src", "utils", "config_utils.py"],
       ["CrownCentral", "src", "utils", "config_utils.py"],
       ["Gmail_Extractor", "src", "utils", "config_utils.py"],
@@ -378,6 +379,7 @@
     "ls_deployment_dests": [
       ["Assistant", "src", "utils", "display_tools.py"],
       ["Book-Bot", "src", "utils", "display_tools.py"],
+      ["Car_Picker", "src", "utils", "display_tools.py"],
       ["Cash_Flow_Commander", "src", "utils", "display_tools.py"],
       ["CrownCentral", "src", "utils", "display_tools.py"],
       ["Gmail_Extractor", "src", "utils", "display_tools.py"],
@@ -563,6 +565,7 @@
     "ls_src_path": ["Data_Tool_Pack_Py", "src", "utils", "google_tools.py"],
     "ls_deployment_dests": [
       ["Assistant", "src", "utils", "google_tools.py"],
+      ["Car_Picker", "src", "utils", "google_tools.py"],
       ["Cash_Flow_Commander", "src", "utils", "google_tools.py"],
       ["CrownCentral", "src", "utils", "google_tools.py"],
       ["OSINT", "src", "utils", "google_tools.py"],
@@ -2147,6 +2150,7 @@
     "ls_deployment_dests": [
       ["Assistant", ".env"],
       ["Book-Bot", ".env"],
+      ["Car_Picker", ".env"],
       ["Cash_Flow_Commander", ".env"],
       ["Data_Tool_Pack_GO", ".env"],
       ["Data_Tool_Pack_Py", ".env"],
