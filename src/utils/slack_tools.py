@@ -132,6 +132,59 @@ def send_slack_message_with_bot_token(bot_name, text, channel, file_path=None):
             )
 
 
+def send_slack_message_with_bot_token_multifile(bot_name, text, channel, file_path=[]):
+    """
+    Send a message to a Slack channel using Slack API for both text and file uploads.
+
+    Args:
+    bot_name (str): The name of the slack bot to use.
+    text (str): The message text to send.
+    channel (str): The Slack channel ID to send the message to.
+    file_path (list, optional): A list of file paths to upload as attachments. Defaults to [].
+    """
+
+    configs = get_slack_configs(bot_name)
+    bot_token = configs["bot_token"]
+
+    # Send the text message using the chat.postMessage API
+    payload = {
+        "token": bot_token,
+        "channel": channel,
+        "text": text,
+    }
+
+    response = requests.post(
+        "https://slack.com/api/chat.postMessage",
+        data=payload,
+    )
+
+    if not response.json()["ok"]:
+        error_message = (
+            f"Request to Slack returned an error {response.status_code}, "
+            f"the response is:\n{response.text}"
+        )
+        raise ValueError(error_message)
+
+    # Upload the file using the Slack API if a file_path is provided
+    if file_path:
+        for file in file_path:
+            # Upload the file to Slack
+            files = {"file": open(file, "rb")}
+            data = {"channels": channel}
+            response = requests.post(
+                "https://slack.com/api/files.upload",
+                headers={"Authorization": f"Bearer {bot_token}"},
+                data=data,
+                files=files,
+            )
+
+            if not response.json()["ok"]:
+                raise ValueError(
+                    "Request to Slack returned an error "
+                    + f"{response.status_code}, the response is:\n{response.text}"
+                )
+
+
 # %%
 # Slack Thread Extraction #
 
