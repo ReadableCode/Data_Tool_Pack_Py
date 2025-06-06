@@ -1951,6 +1951,28 @@
             ]
         ]
     },
+    "Data_Tool_Pack_Py/src/utils/postgres_tools.py": {
+        "ls_src_path": [
+            "Data_Tool_Pack_Py",
+            "src",
+            "utils",
+            "postgres_tools.py"
+        ],
+        "ls_deployment_dests": [
+            [
+                "Cash_Flow_Commander",
+                "src",
+                "utils",
+                "postgres_tools.py"
+            ],
+            [
+                "dotfiles",
+                "src",
+                "utils",
+                "postgres_tools.py"
+            ]
+        ]
+    },
     "Data_Tool_Pack_Py/src/utils/python_import_mapper.py": {
         "ls_src_path": [
             "Data_Tool_Pack_Py",

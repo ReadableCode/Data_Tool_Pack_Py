@@ -9,7 +9,7 @@ import time
 
 from config import file_dir
 from utils.config_utils import great_grandparent_dir
-from utils.display_tools import pprint_dict, print_logger, pprint_ls  # noqa: F401
+from utils.display_tools import pprint_dict, pprint_ls, print_logger  # noqa: F401
 
 # %%
 # Variables #
@@ -21,16 +21,14 @@ with open(os.path.join(file_dir, "dict_file_deployments_detailed.json"), "r") as
 # sort the dict
 sorted_dict = {}
 for key in sorted(dict_file_deployments_detailed.keys()):
-    ls_sorted =  dict_file_deployments_detailed[key]["ls_deployment_dests"]
+    ls_sorted = dict_file_deployments_detailed[key]["ls_deployment_dests"]
     ls_sorted.sort(key=lambda x: "/".join(x))
     sorted_dict[key] = {}
     sorted_dict[key]["ls_src_path"] = dict_file_deployments_detailed[key]["ls_src_path"]
     sorted_dict[key]["ls_deployment_dests"] = ls_sorted
 
 # write back to file
-with open(
-    os.path.join(file_dir, "dict_file_deployments_detailed.json"), "w"
-) as f:
+with open(os.path.join(file_dir, "dict_file_deployments_detailed.json"), "w") as f:
     json.dump(sorted_dict, f, indent=4)
 
 # set dict to new sorted dict
