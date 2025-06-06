@@ -6,8 +6,10 @@ import socket
 import sys
 
 import pandas as pd
+import psycopg2
 from dotenv import load_dotenv
 from psycopg2 import pool, sql
+from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 
 # append grandparent
 if __name__ == "__main__":
@@ -30,45 +32,86 @@ if os.path.exists(dotenv_path):
 POSTGRES_URL = os.getenv("POSTGRES_URL")
 POSTGRES_USER = os.getenv("POSTGRES_USER")
 POSTGRES_PASSWORD = os.getenv("POSTGRES_PASSWORD")
-POSTGRES_DB = os.getenv("POSTGRES_DB")
 POSTGRES_PORT = os.getenv("POSTGRES_PORT")
+
 
 # %%
 # Connect To Postgres #
 
 
-# Initialize the connection pool (adjust minconn and maxconn as needed)
-POSTGRES_POOL = pool.SimpleConnectionPool(
-    minconn=1,
-    maxconn=20,  # Limit connections to avoid resource waste
-    host=POSTGRES_URL,
-    user=POSTGRES_USER,
-    password=POSTGRES_PASSWORD,
-    dbname=POSTGRES_DB,
-    port=POSTGRES_PORT,
-)
+def get_pool(postgres_db):
+    # Initialize the connection pool (adjust minconn and maxconn as needed)
+    postgres_pool = pool.SimpleConnectionPool(
+        minconn=1,
+        maxconn=20,  # Limit connections to avoid resource waste
+        host=POSTGRES_URL,
+        user=POSTGRES_USER,
+        password=POSTGRES_PASSWORD,
+        dbname=postgres_db,
+        port=POSTGRES_PORT,
+    )
+
+    return postgres_pool
 
 
-def get_connection():
+def get_connection(postgres_pool):
     """Get a connection from the pool."""
-    return POSTGRES_POOL.getconn()
+    return postgres_pool.getconn()
 
 
-def release_connection(conn):
+def release_connection(postgres_pool, conn):
     """Release a connection back to the pool."""
-    POSTGRES_POOL.putconn(conn)
+    postgres_pool.putconn(conn)
 
 
 # %%
 # Functions #
 
 
-def query_postgres(query):
+def ensure_database_exists(dbname):
+    conn = psycopg2.connect(
+        host=POSTGRES_URL,
+        port=POSTGRES_PORT,
+        user=POSTGRES_USER,
+        password=POSTGRES_PASSWORD,
+        dbname="postgres",  # connect to a guaranteed database
+    )
+    conn.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
+    cur = conn.cursor()
+    cur.execute("SELECT 1 FROM pg_database WHERE datname = %s;", (dbname,))
+    exists = cur.fetchone()
+    if not exists:
+        print(f"Creating database: {dbname}")
+        cur.execute(f'CREATE DATABASE "{dbname}";')
+    else:
+        print(f"Database already exists: {dbname}")
+    cur.close()
+    conn.close()
+
+
+def list_all_databases():
+    conn = psycopg2.connect(
+        host=POSTGRES_URL,
+        port=POSTGRES_PORT,
+        user=POSTGRES_USER,
+        password=POSTGRES_PASSWORD,
+        dbname="postgres",  # connect to the default database
+    )
+    try:
+        cur = conn.cursor()
+        cur.execute("SELECT datname FROM pg_database WHERE datistemplate = false;")
+        return [row[0] for row in cur.fetchall()]
+    finally:
+        cur.close()
+        conn.close()
+
+
+def query_postgres(postgres_pool, query):
     """Executes a given SQL query and returns a Pandas DataFrame."""
     pg_conn = None
     pg_cursor = None
     try:
-        pg_conn = get_connection()
+        pg_conn = get_connection(postgres_pool)
         pg_cursor = pg_conn.cursor()
 
         pg_cursor.execute(query)
@@ -88,8 +131,8 @@ def query_postgres(query):
             pg_cursor.close()
 
 
-def ensure_postgres_heartbeat_table():
-    pg_conn = get_connection()
+def ensure_postgres_heartbeat_table(postgres_pool):
+    pg_conn = get_connection(postgres_pool)
     pg_cursor = pg_conn.cursor()
 
     # Create test table
@@ -115,15 +158,15 @@ def ensure_postgres_heartbeat_table():
 # Queries #
 
 
-def test_ensure_postgres_heartbeat_table():
+def test_ensure_postgres_heartbeat_table(postgres_pool):
     # Ensure the table exists
-    ensure_postgres_heartbeat_table()
+    ensure_postgres_heartbeat_table(postgres_pool)
 
     # Query to check if the heartbeat table exists
     query = """
     SELECT to_regclass('public.heartbeat');
     """
-    result = query_postgres(query)
+    result = query_postgres(postgres_pool, query)
 
     print(result)
 
@@ -132,16 +175,15 @@ def test_ensure_postgres_heartbeat_table():
     print("Test 1 passed: Heartbeat table exists.")
 
 
-def test_insert_heartbeat():
+def test_insert_heartbeat(postgres_pool):
     # Get the hostname of the machine
     hostname = socket.gethostname()
 
     # Open a connection and cursor
-    pg_conn = get_connection()
+    pg_conn = get_connection(postgres_pool)
     try:
         with pg_conn.cursor() as pg_cursor:
             # Insert a heartbeat entry with SQL, including the hostname
-            service_name = "test_service"
             status = "active"
 
             query_insert = sql.SQL(
@@ -171,24 +213,26 @@ def test_insert_heartbeat():
         assert result_check[2] == status, "Status does not match"
         print("Test 2 passed: Heartbeat entry inserted and found.")
     finally:
-        release_connection(pg_conn)
+        release_connection(postgres_pool, pg_conn)
 
 
 # %%
 # Tests #
 
-test_ensure_postgres_heartbeat_table()
 
-# query the heartbeat table
-query = """
-SELECT * FROM heartbeat;
+if __name__ == "__main__":
+    postgres_pool = get_pool("postgres")
+    test_ensure_postgres_heartbeat_table(postgres_pool)
 
-"""
+    # query the heartbeat table
+    query = """
+    SELECT * FROM heartbeat;
+    """
 
-result = query_postgres(query)
-pprint_df(result)
+    result = query_postgres(postgres_pool, query)
+    pprint_df(result)
 
-test_insert_heartbeat()
+    test_insert_heartbeat(postgres_pool)
 
 
 # %%
