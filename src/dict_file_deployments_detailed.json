@@ -3067,15 +3067,15 @@
     },
     "na-fin-data-streamlit/apps/ledger-fresh-hq/src/gl_queries.py": {
         "ls_src_path": [
-            "na-fin-data-streamlit",
-            "apps",
-            "ledger-fresh-hq",
+            "na-finops",
             "src",
             "gl_queries.py"
         ],
         "ls_deployment_dests": [
             [
-                "na-finops",
+                "na-fin-data-streamlit",
+                "apps",
+                "ledger-fresh-hq",
                 "src",
                 "gl_queries.py"
             ]
