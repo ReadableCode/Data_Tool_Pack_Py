@@ -12,11 +12,6 @@
                 "config_notebooks.py"
             ],
             [
-                "Cash_Flow_Commander",
-                "notebooks",
-                "config_notebooks.py"
-            ],
-            [
                 "OSINT",
                 "notebooks",
                 "config_notebooks.py"
@@ -45,11 +40,6 @@
             "config_scripts.py"
         ],
         "ls_deployment_dests": [
-            [
-                "Cash_Flow_Commander",
-                "scripts",
-                "config_scripts.py"
-            ],
             [
                 "OSINT",
                 "scripts",
@@ -3024,11 +3014,6 @@
             "rotate_logs.py"
         ],
         "ls_deployment_dests": [
-            [
-                "Cash_Flow_Commander",
-                "scripts",
-                "rotate_logs.py"
-            ],
             [
                 "Data_Tool_Pack_Py",
                 "scripts",
