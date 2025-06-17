@@ -46,10 +46,13 @@ def deploy_file_with_diff_and_conf(src_file, dest_file, dry_run=True):
     are logged.
 
     The function performs the following actions:
-    1. Checks if the destination directory exists; if not, it skips further processing.
-    2. If the destination file doesn't exist, it either logs the action (in dry-run mode) or copies the source file to the destination.
-    3. If the destination file exists, compares the content with the source file and logs the differences.
-    4. In `dry_run` mode, it stops after displaying the differences. Otherwise, it prompts the user to choose whether to trust the source or destination file:
+    1. Checks if the root destination directory exists; if not, it skips the deployment.
+    2. Creates subdirectories if needed, but only if the root directory exists.
+    3. If the destination file doesn't exist, it either logs the action (in dry-run mode) or copies the
+       source file to the destination.
+    4. If the destination file exists, compares the content with the source file and logs the differences.
+    5. In `dry_run` mode, it stops after displaying the differences. Otherwise, it prompts the user to
+       choose whether to trust the source or destination file:
        - If the source is chosen, the function backs up the destination file before overwriting it.
        - If the destination is chosen, the function copies it back to the source location.
 
@@ -63,27 +66,41 @@ def deploy_file_with_diff_and_conf(src_file, dest_file, dry_run=True):
 
     Note:
         - This function relies on `print_logger()` for logging and `shutil` for file operations.
-        - It creates a timestamped backup of the destination file in an 'archive' folder if the source file is chosen to overwrite.
+        - It creates a timestamped backup of the destination file in an 'archive' folder if the source
+          file is chosen to overwrite.
 
     Example:
         synchronize_file_with_confirmation("/path/to/source/file.txt", "/path/to/dest/file.txt", dry_run=False)
     """
-    if not os.path.exists(os.path.dirname(dest_file)):
-        # create it
+    dest_dir = os.path.dirname(dest_file)
+
+    # Get the root directory (first level after great_grandparent_dir)
+    dest_relative_path = os.path.relpath(dest_dir, great_grandparent_dir)
+    root_dest_project = dest_relative_path.split(os.sep)[0]
+    root_dest_dir = os.path.join(great_grandparent_dir, root_dest_project)
+
+    # Check if root directory exists, if not skip this deployment
+    if not os.path.exists(root_dest_dir):
         print_logger(
-            f"{' '*4}Destination directory {os.path.dirname(dest_file)} does not exist."
+            f"{' '*4}Root destination directory {root_dest_dir} does not exist. Skipping deployment."
         )
+        return
+
+    # Create subdirectories if they don't exist (but root exists)
+    if not os.path.exists(dest_dir):
+        print_logger(f"{' '*4}Destination subdirectory {dest_dir} does not exist.")
         if dry_run:
             print_logger(
-                f"{' '*4}Would create directory {os.path.dirname(dest_file)} and copy {src_file} to {dest_file}"
+                f"{' '*4}Would create subdirectory {dest_dir} and copy {src_file} to {dest_file}"
             )
             return
         else:
             print_logger(
-                f"{' '*4}Creating directory {os.path.dirname(dest_file)} and copying {src_file} to {dest_file}"
+                f"{' '*4}Creating subdirectory {dest_dir} and copying {src_file} to {dest_file}"
             )
-            os.makedirs(os.path.dirname(dest_file), exist_ok=True)
+            os.makedirs(dest_dir, exist_ok=True)
             shutil.copy(src_file, dest_file)
+            return
 
     if not os.path.exists(dest_file):
         print_logger(f"{' '*4}Destination file {dest_file} does not exist.")
@@ -142,7 +159,8 @@ def deploy_file_with_diff_and_conf(src_file, dest_file, dry_run=True):
             f"{' '*8}Would ask to copy or ingest src:{src_file}, dest:{dest_file} like this:"
         )
         print_logger(
-            f"{' '*8}Would you like to trust the file at:\n{' '*38}{dest_file} (d)\n{' '*38}or the file at\n{' '*38}{src_file} (s)?"
+            f"{' '*8}Would you like to trust the file at:\n{' '*38}{dest_file} (d)\n"
+            f"{' '*38}or the file at\n{' '*38}{src_file} (s)?"
         )
     else:
         # Use a simple text prompt to ask the user
