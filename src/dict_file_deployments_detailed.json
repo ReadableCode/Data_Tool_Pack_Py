@@ -4348,6 +4348,18 @@
             ]
         ]
     },
+    "personal_credentials/fourteen_foods.env": {
+        "ls_src_path": [
+            "personal_credentials",
+            "fourteen_foods.env"
+        ],
+        "ls_deployment_dests": [
+            [
+                "Fourteen_Foods",
+                ".env"
+            ]
+        ]
+    },
     "personal_credentials/personal.env": {
         "ls_src_path": [
             "personal_credentials",
