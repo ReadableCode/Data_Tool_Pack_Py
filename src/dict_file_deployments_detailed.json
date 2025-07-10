@@ -328,7 +328,7 @@
             [
                 "na-fin-data-streamlit",
                 "apps",
-                "price_engine",
+                "price-engine",
                 "src",
                 "utils",
                 "__init__.py"
@@ -604,7 +604,7 @@
             [
                 "na-fin-data-streamlit",
                 "apps",
-                "price_engine",
+                "price-engine",
                 "src",
                 "utils",
                 "date_tools.py"
@@ -718,7 +718,7 @@
             [
                 "na-fin-data-streamlit",
                 "apps",
-                "price_engine",
+                "price-engine",
                 "src",
                 "utils",
                 "df_days.csv"
@@ -832,7 +832,7 @@
             [
                 "na-fin-data-streamlit",
                 "apps",
-                "price_engine",
+                "price-engine",
                 "src",
                 "utils",
                 "df_scm_weeks.csv"
@@ -946,7 +946,7 @@
             [
                 "na-fin-data-streamlit",
                 "apps",
-                "price_engine",
+                "price-engine",
                 "src",
                 "utils",
                 "df_weeks.csv"
@@ -1124,7 +1124,7 @@
             [
                 "na-fin-data-streamlit",
                 "apps",
-                "price_engine",
+                "price-engine",
                 "src",
                 "utils",
                 "display_tools.py"
@@ -1520,7 +1520,7 @@
             [
                 "na-fin-data-streamlit",
                 "apps",
-                "price_engine",
+                "price-engine",
                 "src",
                 "utils",
                 "google_tools.py"
@@ -1900,7 +1900,7 @@
             [
                 "na-fin-data-streamlit",
                 "apps",
-                "price_engine",
+                "price-engine",
                 "src",
                 "utils",
                 "pandas_tools.py"
@@ -2130,7 +2130,7 @@
             [
                 "na-fin-data-streamlit",
                 "apps",
-                "price_engine",
+                "price-engine",
                 "src",
                 "utils",
                 "slack_tools.py"
@@ -3527,7 +3527,7 @@
             [
                 "na-fin-data-streamlit",
                 "apps",
-                "price_engine",
+                "price-engine",
                 "src",
                 "__init__.py"
             ],
@@ -3603,7 +3603,7 @@
             [
                 "na-fin-data-streamlit",
                 "apps",
-                "price_engine",
+                "price-engine",
                 "src",
                 "config.py"
             ],
@@ -3652,6 +3652,22 @@
                 "tedd",
                 "src",
                 "employee_mapping.py"
+            ]
+        ]
+    },
+    "na-finops/src/global_data_sources.py": {
+        "ls_src_path": [
+            "na-finops",
+            "src",
+            "global_data_sources.py"
+        ],
+        "ls_deployment_dests": [
+            [
+                "na-fin-data-streamlit",
+                "apps",
+                "price-engine",
+                "src",
+                "global_data_sources.py"
             ]
         ]
     },
@@ -3774,7 +3790,7 @@
             [
                 "na-fin-data-streamlit",
                 "apps",
-                "price_engine",
+                "price-engine",
                 "src",
                 "__init__.py"
             ],
@@ -3859,7 +3875,7 @@
             [
                 "na-fin-data-streamlit",
                 "apps",
-                "price_engine",
+                "price-engine",
                 "src",
                 "utils",
                 "config_utils.py"
@@ -3931,7 +3947,7 @@
             [
                 "na-fin-data-streamlit",
                 "apps",
-                "price_engine",
+                "price-engine",
                 "src",
                 "utils",
                 "databricks_photon_tools.py"
@@ -4101,7 +4117,7 @@
             [
                 "na-fin-data-streamlit",
                 "apps",
-                "price_engine",
+                "price-engine",
                 "src",
                 "utils",
                 "s3_connector.py"
@@ -4191,7 +4207,7 @@
             [
                 "na-fin-data-streamlit",
                 "apps",
-                "price_engine",
+                "price-engine",
                 "src",
                 "utils",
                 "sheet_ids.yaml"
@@ -4263,7 +4279,7 @@
             [
                 "na-fin-data-streamlit",
                 "apps",
-                "price_engine",
+                "price-engine",
                 "src",
                 "utils",
                 "snowflake_tools.py"
