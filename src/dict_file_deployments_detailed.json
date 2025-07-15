@@ -1790,6 +1790,14 @@
             [
                 "na-fin-data-streamlit",
                 "apps",
+                "price-engine",
+                "src",
+                "utils",
+                "number_tools.py"
+            ],
+            [
+                "na-fin-data-streamlit",
+                "apps",
                 "tedd",
                 "src",
                 "utils",
@@ -3486,6 +3494,38 @@
                 "tedd",
                 "schemas",
                 "employee_mapping.yml"
+            ]
+        ]
+    },
+    "na-finops/schemas/price_engine_notes.json": {
+        "ls_src_path": [
+            "na-finops",
+            "schemas",
+            "price_engine_notes.json"
+        ],
+        "ls_deployment_dests": [
+            [
+                "na-fin-data-streamlit",
+                "apps",
+                "price-engine",
+                "schemas",
+                "price_engine_notes.json"
+            ]
+        ]
+    },
+    "na-finops/schemas/price_engine_notes.yml": {
+        "ls_src_path": [
+            "na-finops",
+            "schemas",
+            "price_engine_notes.yml"
+        ],
+        "ls_deployment_dests": [
+            [
+                "na-fin-data-streamlit",
+                "apps",
+                "price-engine",
+                "schemas",
+                "price_engine_notes.yml"
             ]
         ]
     },
