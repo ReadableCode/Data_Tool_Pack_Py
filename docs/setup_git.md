@@ -233,6 +233,24 @@ git clone root@192.168.xx.xx:/mnt/user/GitHub/test_clone_local
 git config receive.denyCurrentBranch updateInstead
 ```
 
+## Using Separate Git Directories
+
+* Useful for putting code into a synced directory but keeping .git folder out of synced directory
+
+* If you want to use a separate Git directory (e.g., for a private repository), you can set it up as follows:
+
+  * cd to location where worktree will be
+
+  ```bash
+  git init --separate-git-dir path/to/folder/for/.git/contents
+  ```
+
+* Clone existing repository into the separate Git directory:
+
+  ```bash
+  git clone --separate-git-dir path/to/folder/for/.git/contents <repo-url>
+  ```
+
 ## Resolve Common Problems
 
 ### Git diff and Git status don't show the updated files as changed
@@ -243,7 +261,17 @@ git config receive.denyCurrentBranch updateInstead
   git status -vvv
   ```
 
-* Use `git add --renormalize .` to fix the issue if the difference is due to line endings:
+* Use input method of crlf and `git add --renormalize .` to fix the issue if the difference is due to line endings:
+
+  - # TODO URGENT: fix verbage to represent how this fixes the issue better
+
+  - To tell git to ignore line ending differences and use lf always:
+
+  ```bash
+  git config core.autocrlf input
+  ```
+
+  - Then set all the files correct
 
   ```bash
   git add --renormalize .
