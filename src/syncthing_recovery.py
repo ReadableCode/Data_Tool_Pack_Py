@@ -163,8 +163,8 @@ def clean_datestamped_versions_if_non_datestamped_exists(
 # Set dry_run to False to actually copy files
 dry_run = True
 
-file_path_backup_dir = "F:\\HelloFresh\\ProjectsSTVersions\\HF_Finance\\reports"
-file_path_recovery = "F:\\HelloFresh\\GDrive\\Google_Items\\reports"
+file_path_backup_dir = "F:\\ProjectsSTVersions\\reports"
+file_path_recovery = "F:\\GDrive\\Google_Items\\reports"
 
 # copy_non_existant_files_from_backup_with_datestamp(
 #     file_path_backup_dir, file_path_recovery, dry_run=dry_run

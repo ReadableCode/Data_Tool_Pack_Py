@@ -34,7 +34,7 @@ def check_vpn_connected():
 
 def connect_vpn():
     home = os.path.expanduser("~")
-    config_path = os.path.join(home, "hellofresh.ovpn")
+    config_path = os.path.join(home, "yourfile.ovpn")
     auth_path = os.path.join(home, "vpnauth.conf")
 
     print_logger(f"Connecting to VPN using openvpn3 with config: {config_path}")
@@ -47,7 +47,7 @@ def connect_vpn():
 
     print_logger(f"Connecting to VPN using openvpn with config: {config_path}")
     try:
-        # openvpn --config /root/hellofresh.ovpn
+        # openvpn --config /root/yourfile.ovpn
         subprocess.run(
             ["openvpn", "--config", config_path, "--auth-user-pass", auth_path]
         )

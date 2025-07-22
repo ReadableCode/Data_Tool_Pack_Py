@@ -179,12 +179,6 @@ if __name__ == "__main__":
     ]
 
     df_results = get_systems_test_results(systems, cpu_max_prime=20000)
-
-
-# %%
-# Running Imports #
-
-if __name__ == "__main__":
     pprint_df(df_results)
     graph_results(df_results)
 

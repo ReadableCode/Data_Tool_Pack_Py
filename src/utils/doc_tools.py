@@ -59,19 +59,6 @@ def get_google_drive_folder_link(folder_id):
     return f"https://drive.google.com/drive/folders/{folder_id}"
 
 
-def get_domo_link(domo_table_id):
-    if (domo_table_id == "") or (domo_table_id is None):
-        return ""
-    return f"https://hellofresh.domo.com/datasources/{domo_table_id}/details/data/table"
-
-
-def convert_to_domo_link(domo_table_id):
-    domo_link = get_domo_link(domo_table_id)
-    if domo_link == "":
-        return ""
-    return f'=hyperlink("{domo_link}","Link")'
-
-
 def get_link_from_resource_type(
     resource_type,
     resource_path="",
@@ -81,8 +68,6 @@ def get_link_from_resource_type(
         link = get_sheet_link(resource_id)
     elif resource_type == "google_drive_folder":
         link = get_google_drive_folder_link(resource_id)
-    elif resource_type == "domo_table":
-        link = get_domo_link(resource_id)
     elif resource_type == "git":
         link = get_git_link(resource_path)
     else:

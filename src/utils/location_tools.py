@@ -161,7 +161,6 @@ def get_nearest_location(lat, lon, dict_locs):
             Example format:
             {
             "8 Vreeland Ave, Totowa, NJ": {
-                "property_type": "HelloFresh Properties",
                 "is_dc": "TRUE",
                 "city": "Totowa",
                 "state": "NJ",
@@ -172,7 +171,6 @@ def get_nearest_location(lat, lon, dict_locs):
                 "longitude": -74.23811747
             },
             "60 Lister Ave, Newark, NJ": {
-                "property_type": "HelloFresh Properties",
                 ...
             }
 
