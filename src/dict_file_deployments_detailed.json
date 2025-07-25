@@ -4043,6 +4043,14 @@
             [
                 "na-fin-data-streamlit",
                 "apps",
+                "price-engine",
+                "src",
+                "utils",
+                "limesync_validation.py"
+            ],
+            [
+                "na-fin-data-streamlit",
+                "apps",
                 "tedd",
                 "src",
                 "utils",
