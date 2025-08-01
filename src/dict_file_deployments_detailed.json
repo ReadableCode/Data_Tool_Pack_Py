@@ -3717,6 +3717,22 @@
             ]
         ]
     },
+    "na-finops/src/global_upload_template.py": {
+        "ls_src_path": [
+            "na-finops",
+            "src",
+            "global_upload_template.py"
+        ],
+        "ls_deployment_dests": [
+            [
+                "na-fin-data-streamlit",
+                "apps",
+                "gor",
+                "src",
+                "global_upload_template.py"
+            ]
+        ]
+    },
     "na-finops/src/location_table_generator.py": {
         "ls_src_path": [
             "na-finops",
