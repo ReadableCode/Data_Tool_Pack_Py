@@ -3152,6 +3152,246 @@
             ]
         ]
     },
+    "na-fin-data-streamlit/apps/price-engine/queries/dc_codes.sql": {
+        "ls_src_path": [
+            "na-fin-data-streamlit",
+            "apps",
+            "price-engine",
+            "queries",
+            "dc_codes.sql"
+        ],
+        "ls_deployment_dests": [
+            [
+                "na-finops",
+                "queries",
+                "dc_codes.sql"
+            ]
+        ]
+    },
+    "na-fin-data-streamlit/apps/price-engine/queries/faq_invoice_prices_last_3_weeks_detail.sql": {
+        "ls_src_path": [
+            "na-fin-data-streamlit",
+            "apps",
+            "price-engine",
+            "queries",
+            "faq_invoice_prices_last_3_weeks_detail.sql"
+        ],
+        "ls_deployment_dests": [
+            [
+                "na-finops",
+                "queries",
+                "faq_invoice_prices_last_3_weeks_detail.sql"
+            ]
+        ]
+    },
+    "na-fin-data-streamlit/apps/price-engine/queries/faq_po_prices_last_3_weeks_detail.sql": {
+        "ls_src_path": [
+            "na-fin-data-streamlit",
+            "apps",
+            "price-engine",
+            "queries",
+            "faq_po_prices_last_3_weeks_detail.sql"
+        ],
+        "ls_deployment_dests": [
+            [
+                "na-finops",
+                "queries",
+                "faq_po_prices_last_3_weeks_detail.sql"
+            ]
+        ]
+    },
+    "na-fin-data-streamlit/apps/price-engine/queries/invoice_prices.sql": {
+        "ls_src_path": [
+            "na-fin-data-streamlit",
+            "apps",
+            "price-engine",
+            "queries",
+            "invoice_prices.sql"
+        ],
+        "ls_deployment_dests": [
+            [
+                "na-finops",
+                "queries",
+                "invoice_prices.sql"
+            ]
+        ]
+    },
+    "na-fin-data-streamlit/apps/price-engine/queries/invoice_prices_avg_price_weeks.sql": {
+        "ls_src_path": [
+            "na-fin-data-streamlit",
+            "apps",
+            "price-engine",
+            "queries",
+            "invoice_prices_avg_price_weeks.sql"
+        ],
+        "ls_deployment_dests": [
+            [
+                "na-finops",
+                "queries",
+                "invoice_prices_avg_price_weeks.sql"
+            ]
+        ]
+    },
+    "na-fin-data-streamlit/apps/price-engine/queries/oracle_receipts.sql": {
+        "ls_src_path": [
+            "na-fin-data-streamlit",
+            "apps",
+            "price-engine",
+            "queries",
+            "oracle_receipts.sql"
+        ],
+        "ls_deployment_dests": [
+            [
+                "na-finops",
+                "queries",
+                "oracle_receipts.sql"
+            ]
+        ]
+    },
+    "na-fin-data-streamlit/apps/price-engine/queries/po_prices.sql": {
+        "ls_src_path": [
+            "na-fin-data-streamlit",
+            "apps",
+            "price-engine",
+            "queries",
+            "po_prices.sql"
+        ],
+        "ls_deployment_dests": [
+            [
+                "na-finops",
+                "queries",
+                "po_prices.sql"
+            ]
+        ]
+    },
+    "na-fin-data-streamlit/apps/price-engine/queries/po_prices_avg_price_weeks.sql": {
+        "ls_src_path": [
+            "na-fin-data-streamlit",
+            "apps",
+            "price-engine",
+            "queries",
+            "po_prices_avg_price_weeks.sql"
+        ],
+        "ls_deployment_dests": [
+            [
+                "na-finops",
+                "queries",
+                "po_prices_avg_price_weeks.sql"
+            ]
+        ]
+    },
+    "na-fin-data-streamlit/apps/price-engine/queries/prices.sql": {
+        "ls_src_path": [
+            "na-fin-data-streamlit",
+            "apps",
+            "price-engine",
+            "queries",
+            "prices.sql"
+        ],
+        "ls_deployment_dests": [
+            [
+                "na-finops",
+                "queries",
+                "prices.sql"
+            ]
+        ]
+    },
+    "na-fin-data-streamlit/apps/price-engine/queries/sku_mapping.sql": {
+        "ls_src_path": [
+            "na-fin-data-streamlit",
+            "apps",
+            "price-engine",
+            "queries",
+            "sku_mapping.sql"
+        ],
+        "ls_deployment_dests": [
+            [
+                "na-finops",
+                "queries",
+                "sku_mapping.sql"
+            ]
+        ]
+    },
+    "na-fin-data-streamlit/apps/price-engine/queries/static_intl.sql": {
+        "ls_src_path": [
+            "na-fin-data-streamlit",
+            "apps",
+            "price-engine",
+            "queries",
+            "static_intl.sql"
+        ],
+        "ls_deployment_dests": [
+            [
+                "na-finops",
+                "queries",
+                "static_intl.sql"
+            ]
+        ]
+    },
+    "na-fin-data-streamlit/apps/price-engine/queries/static_us.sql": {
+        "ls_src_path": [
+            "na-fin-data-streamlit",
+            "apps",
+            "price-engine",
+            "queries",
+            "static_us.sql"
+        ],
+        "ls_deployment_dests": [
+            [
+                "na-finops",
+                "queries",
+                "static_us.sql"
+            ]
+        ]
+    },
+    "na-fin-data-streamlit/apps/price-engine/queries/wms_balances.sql": {
+        "ls_src_path": [
+            "na-fin-data-streamlit",
+            "apps",
+            "price-engine",
+            "queries",
+            "wms_balances.sql"
+        ],
+        "ls_deployment_dests": [
+            [
+                "na-finops",
+                "queries",
+                "wms_balances.sql"
+            ]
+        ]
+    },
+    "na-fin-data-streamlit/apps/price-engine/queries/wms_receipts_adjustments.sql": {
+        "ls_src_path": [
+            "na-fin-data-streamlit",
+            "apps",
+            "price-engine",
+            "queries",
+            "wms_receipts_adjustments.sql"
+        ],
+        "ls_deployment_dests": [
+            [
+                "na-finops",
+                "queries",
+                "wms_receipts_adjustments.sql"
+            ]
+        ]
+    },
+    "na-fin-data-streamlit/apps/price-engine/queries/wms_receipts_po_enriched.sql": {
+        "ls_src_path": [
+            "na-fin-data-streamlit",
+            "apps",
+            "price-engine",
+            "queries",
+            "wms_receipts_po_enriched.sql"
+        ],
+        "ls_deployment_dests": [
+            [
+                "na-finops",
+                "queries",
+                "wms_receipts_po_enriched.sql"
+            ]
+        ]
+    },
     "na-fin-data-streamlit/apps/tedd/src/streamlit_utils.py": {
         "ls_src_path": [
             "na-fin-data-streamlit",
