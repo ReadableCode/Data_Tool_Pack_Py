@@ -3424,6 +3424,22 @@
             ]
         ]
     },
+    "na-fin-data_streamlit/apps/price-engine/schemas/global_static_po_invoice_pricing.json": {
+        "ls_src_path": [
+            "na-fin-data-streamlit",
+            "apps",
+            "price-engine",
+            "schemas",
+            "global_static_po_invoice_pricing.json"
+        ],
+        "ls_deployment_dests": [
+            [
+                "na-finops",
+                "schemas",
+                "global_static_po_invoice_pricing.json"
+            ]
+        ]
+    },
     "na-finops/docs/Top_Variances.md": {
         "ls_src_path": [
             "na-finops",
