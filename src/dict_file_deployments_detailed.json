@@ -3136,6 +3136,70 @@
             ]
         ]
     },
+    "hellofresh_credentials/na_finops.env": {
+        "ls_src_path": [
+            "hellofresh_credentials",
+            "na_finops.env"
+        ],
+        "ls_deployment_dests": [
+            [
+                "na-faba",
+                ".env"
+            ],
+            [
+                "na-fin-data-streamlit",
+                "apps",
+                "breakout",
+                ".env"
+            ],
+            [
+                "na-fin-data-streamlit",
+                "apps",
+                "debit-testing",
+                ".env"
+            ],
+            [
+                "na-fin-data-streamlit",
+                "apps",
+                "factor-invoices",
+                ".env"
+            ],
+            [
+                "na-fin-data-streamlit",
+                "apps",
+                "file-upload",
+                ".env"
+            ],
+            [
+                "na-fin-data-streamlit",
+                "apps",
+                "gor",
+                ".env"
+            ],
+            [
+                "na-fin-data-streamlit",
+                "apps",
+                "ledger-fresh-hq",
+                ".env"
+            ],
+            [
+                "na-fin-data-streamlit",
+                "apps",
+                "price-engine",
+                ".env"
+            ],
+            [
+                "na-fin-data-streamlit",
+                "apps",
+                "top-variances",
+                ".env"
+            ],
+            [
+                "na-finops",
+                ".env"
+            ]
+        ]
+    },
     "na-fin-data-streamlit/apps/ledger-fresh-hq/src/gl_queries.py": {
         "ls_src_path": [
             "na-finops",
