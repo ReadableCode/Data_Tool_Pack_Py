@@ -4037,6 +4037,22 @@
             ]
         ]
     },
+    "na-finops/src/global_theoretical.py": {
+        "ls_src_path": [
+            "na-finops",
+            "src",
+            "global_theoretical.py"
+        ],
+        "ls_deployment_dests": [
+            [
+                "na-fin-data-streamlit",
+                "apps",
+                "price-engine",
+                "src",
+                "global_theoretical.py"
+            ]
+        ]
+    },
     "na-finops/src/global_upload_template.py": {
         "ls_src_path": [
             "na-finops",
