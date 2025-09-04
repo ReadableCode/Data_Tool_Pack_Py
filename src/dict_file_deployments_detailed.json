@@ -4085,6 +4085,22 @@
             ]
         ]
     },
+    "na-finops/src/odl_finance.py": {
+        "ls_src_path": [
+            "na-finops",
+            "src",
+            "odl_finance.py"
+        ],
+        "ls_deployment_dests": [
+            [
+                "na-fin-data-streamlit",
+                "apps",
+                "price-engine",
+                "src",
+                "odl_finance.py"
+            ]
+        ]
+    },
     "na-finops/src/revenue.py": {
         "ls_src_path": [
             "na-finops",
