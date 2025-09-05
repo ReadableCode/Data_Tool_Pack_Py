@@ -4021,11 +4021,11 @@
             ]
         ]
     },
-    "na-finops/src/global_data_sources.py": {
+    "na-finops/src/global_data_sources_st.py": {
         "ls_src_path": [
             "na-finops",
             "src",
-            "global_data_sources.py"
+            "global_data_sources_st.py"
         ],
         "ls_deployment_dests": [
             [
@@ -4033,23 +4033,7 @@
                 "apps",
                 "price-engine",
                 "src",
-                "global_data_sources.py"
-            ]
-        ]
-    },
-    "na-finops/src/global_theoretical.py": {
-        "ls_src_path": [
-            "na-finops",
-            "src",
-            "global_theoretical.py"
-        ],
-        "ls_deployment_dests": [
-            [
-                "na-fin-data-streamlit",
-                "apps",
-                "price-engine",
-                "src",
-                "global_theoretical.py"
+                "global_data_sources_st.py"
             ]
         ]
     },
@@ -4082,22 +4066,6 @@
                 "tedd",
                 "src",
                 "location_table_generator.py"
-            ]
-        ]
-    },
-    "na-finops/src/odl_finance.py": {
-        "ls_src_path": [
-            "na-finops",
-            "src",
-            "odl_finance.py"
-        ],
-        "ls_deployment_dests": [
-            [
-                "na-fin-data-streamlit",
-                "apps",
-                "price-engine",
-                "src",
-                "odl_finance.py"
             ]
         ]
     },
