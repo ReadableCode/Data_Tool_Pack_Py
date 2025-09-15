@@ -4021,22 +4021,6 @@
             ]
         ]
     },
-    "na-finops/src/global_data_sources_st.py": {
-        "ls_src_path": [
-            "na-finops",
-            "src",
-            "global_data_sources_st.py"
-        ],
-        "ls_deployment_dests": [
-            [
-                "na-fin-data-streamlit",
-                "apps",
-                "price-engine",
-                "src",
-                "global_data_sources_st.py"
-            ]
-        ]
-    },
     "na-finops/src/global_upload_template.py": {
         "ls_src_path": [
             "na-finops",
