@@ -222,6 +222,8 @@ def print_schema_yaml_datasets_format(dict_schema):
             type_to_print = "boolean"
         elif value["col_type"] == "int64":
             type_to_print = "int"
+        elif value["col_type"] == "datetime64[ns]":
+            type_to_print = "timestamp"
         else:
             type_to_print = value["col_type"]
 
@@ -248,6 +250,8 @@ def print_schema_yaml_limesync_format(dict_schema, save_path=None):
             type_to_print = "boolean"
         elif value["col_type"] == "int64":
             type_to_print = "int"
+        elif value["col_type"] == "datetime64[ns]":
+            type_to_print = "timestamp"
         else:
             type_to_print = value["col_type"]
         print(f"    {key}: {type_to_print}")
@@ -262,6 +266,8 @@ def print_schema_yaml_limesync_format(dict_schema, save_path=None):
                     type_to_print = "boolean"
                 elif value["col_type"] == "int64":
                     type_to_print = "int"
+                elif value["col_type"] == "datetime64[ns]":
+                    type_to_print = "timestamp"
                 else:
                     type_to_print = value["col_type"]
                 f.write(f"    {key}: {type_to_print}\n")
