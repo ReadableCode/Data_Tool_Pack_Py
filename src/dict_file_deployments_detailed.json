@@ -1719,6 +1719,22 @@
             ]
         ]
     },
+    "Data_Tool_Pack_Py/src/utils/ntfy_tools.py": {
+        "ls_src_path": [
+            "Data_Tool_Pack_Py",
+            "src",
+            "utils",
+            "ntfy_tools.py"
+        ],
+        "ls_deployment_dests": [
+            [
+                "Assistant",
+                "src",
+                "utils",
+                "ntfy_tools.py"
+            ]
+        ]
+    },
     "Data_Tool_Pack_Py/src/utils/number_tools.py": {
         "ls_src_path": [
             "Data_Tool_Pack_Py",
