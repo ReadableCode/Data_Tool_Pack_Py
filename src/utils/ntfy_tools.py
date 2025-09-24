@@ -27,19 +27,19 @@ NTFY_USERNAME = os.getenv("NTFY_USERNAME")
 NTFY_PASSWORD = os.getenv("NTFY_PASSWORD")
 
 # print both
-print("Ntfy Configuration:")
-print(f"NTFY_URL: {NTFY_URL}")
-print(f"NTFY_USERNAME: {NTFY_USERNAME}")
-print(f"NTFY_PASSWORD: {NTFY_PASSWORD}")
+# print("Ntfy Configuration:")
+# print(f"NTFY_URL: {NTFY_URL}")
+# print(f"NTFY_USERNAME: {NTFY_USERNAME}")
+# print(f"NTFY_PASSWORD: {NTFY_PASSWORD}")
 
 # %%
 # Google Credentials #
 
 
-print("Sample curl command:")
-print(
-    f"curl -u {NTFY_USERNAME}:'{NTFY_PASSWORD}' -X POST -d \"message=Your notification message\" {NTFY_URL}/house_power"
-)
+# print("Sample curl command:")
+# print(
+#     f"curl -u {NTFY_USERNAME}:'{NTFY_PASSWORD}' -X POST -d \"message=Your notification message\" {NTFY_URL}/house_power"
+# )
 
 # %%
 # Functions #
