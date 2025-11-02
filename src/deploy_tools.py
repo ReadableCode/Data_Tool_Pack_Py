@@ -211,7 +211,7 @@ if __name__ == "__main__":
         "na-faba",
         "snowflake-db-finops-debit",
     ]
-    if os.path.exists(os.path.join(great_grandparent_dir, "Our_Cash")):
+    if os.path.exists(os.path.join(great_grandparent_dir, "Cash_Flow_Commander")):
         ls_project_types_to_run = ["personal"]
     else:
         ls_project_types_to_run = ["work"]
