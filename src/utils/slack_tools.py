@@ -53,6 +53,83 @@ def get_slack_configs(slackbot_name):
 # Send Messages #
 
 
+def upload_file_to_slack(bot_token, channel, file_path):
+    """
+    Upload a file to Slack using the new files.getUploadURLExternal and
+    files.completeUploadExternal APIs.
+
+    Args:
+    bot_token (str): The Slack bot token.
+    channel (str): The Slack channel ID to send the file to.
+    file_path (str): The path to the file to upload.
+
+    Returns:
+    dict: The response from the files.completeUploadExternal API.
+
+    Raises:
+    ValueError: If any step of the upload process fails.
+    """
+    import os
+
+    # Get file info
+    file_name = os.path.basename(file_path)
+    file_size = os.path.getsize(file_path)
+
+    # Step 1: Get upload URL
+    get_url_response = requests.post(
+        "https://slack.com/api/files.getUploadURLExternal",
+        headers={
+            "Authorization": f"Bearer {bot_token}",
+            "Content-Type": "application/x-www-form-urlencoded",
+        },
+        data={
+            "filename": file_name,
+            "length": file_size,
+        },
+    )
+
+    if not get_url_response.json().get("ok"):
+        raise ValueError(f"Failed to get upload URL: {get_url_response.text}")
+
+    upload_url = get_url_response.json()["upload_url"]
+    file_id = get_url_response.json()["file_id"]
+
+    # Step 2: Upload file to the URL
+    with open(file_path, "rb") as file_content:
+        upload_response = requests.post(
+            upload_url,
+            data=file_content.read(),
+        )
+
+    if upload_response.status_code not in [200, 201]:
+        raise ValueError(
+            f"Failed to upload file: {upload_response.status_code}, {upload_response.text}"
+        )
+
+    # Step 3: Complete the upload
+    complete_response = requests.post(
+        "https://slack.com/api/files.completeUploadExternal",
+        headers={
+            "Authorization": f"Bearer {bot_token}",
+            "Content-Type": "application/json",
+        },
+        json={
+            "files": [
+                {
+                    "id": file_id,
+                    "title": file_name,
+                }
+            ],
+            "channel_id": channel,
+        },
+    )
+
+    if not complete_response.json().get("ok"):
+        raise ValueError(f"Failed to complete upload: {complete_response.text}")
+
+    return complete_response.json()
+
+
 def send_slack_message(bot_name, text):
     """
     Send a message to a Slack channel using a webhook.
@@ -115,21 +192,8 @@ def send_slack_message_with_bot_token(bot_name, text, channel, file_path=None):
 
     # Upload the file using the Slack API if a file_path is provided
     if file_path:
-        # Upload the file to Slack
-        files = {"file": open(file_path, "rb")}
-        data = {"channels": channel}
-        response = requests.post(
-            "https://slack.com/api/files.upload",
-            headers={"Authorization": f"Bearer {bot_token}"},
-            data=data,
-            files=files,
-        )
-
-        if not response.json()["ok"]:
-            raise ValueError(
-                "Request to Slack returned an error "
-                + f"{response.status_code}, the response is:\n{response.text}"
-            )
+        # Upload the file to Slack using the new non-deprecated API
+        upload_file_to_slack(bot_token, channel, file_path)
 
 
 def send_slack_message_with_bot_token_multifile(bot_name, text, channel, file_path=[]):
@@ -168,21 +232,8 @@ def send_slack_message_with_bot_token_multifile(bot_name, text, channel, file_pa
     # Upload the file using the Slack API if a file_path is provided
     if file_path:
         for file in file_path:
-            # Upload the file to Slack
-            files = {"file": open(file, "rb")}
-            data = {"channels": channel}
-            response = requests.post(
-                "https://slack.com/api/files.upload",
-                headers={"Authorization": f"Bearer {bot_token}"},
-                data=data,
-                files=files,
-            )
-
-            if not response.json()["ok"]:
-                raise ValueError(
-                    "Request to Slack returned an error "
-                    + f"{response.status_code}, the response is:\n{response.text}"
-                )
+            # Upload the file to Slack using the new non-deprecated API
+            upload_file_to_slack(bot_token, channel, file)
 
 
 # %%
