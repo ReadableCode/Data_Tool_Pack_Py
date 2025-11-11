@@ -2664,21 +2664,6 @@
             ]
         ]
     },
-    "dotfiles/application_configs/bash/.zshrc": {
-        "ls_src_path": [
-            "dotfiles",
-            "application_configs",
-            "bash",
-            ".zshrc"
-        ],
-        "ls_deployment_dests": [
-            [
-                "na-faba",
-                "application_configs",
-                ".zshrc"
-            ]
-        ]
-    },
     "dotfiles/docs/github-cli.md": {
         "ls_src_path": [
             "dotfiles",
