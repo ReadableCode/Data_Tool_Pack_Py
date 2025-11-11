@@ -3267,15 +3267,15 @@
     },
     "na-fin-data-streamlit/apps/price-engine/queries/invoice_prices.sql": {
         "ls_src_path": [
-            "na-fin-data-streamlit",
-            "apps",
-            "price-engine",
+            "na-finops",
             "queries",
             "invoice_prices.sql"
         ],
         "ls_deployment_dests": [
             [
-                "na-finops",
+                "na-fin-data-streamlit",
+                "apps",
+                "price-engine",
                 "queries",
                 "invoice_prices.sql"
             ]
@@ -3283,15 +3283,15 @@
     },
     "na-fin-data-streamlit/apps/price-engine/queries/invoice_prices_avg_price_weeks.sql": {
         "ls_src_path": [
-            "na-fin-data-streamlit",
-            "apps",
-            "price-engine",
+            "na-finops",
             "queries",
             "invoice_prices_avg_price_weeks.sql"
         ],
         "ls_deployment_dests": [
             [
-                "na-finops",
+                "na-fin-data-streamlit",
+                "apps",
+                "price-engine",
                 "queries",
                 "invoice_prices_avg_price_weeks.sql"
             ]
@@ -3331,15 +3331,15 @@
     },
     "na-fin-data-streamlit/apps/price-engine/queries/po_prices_avg_price_weeks.sql": {
         "ls_src_path": [
-            "na-fin-data-streamlit",
-            "apps",
-            "price-engine",
+            "na-finops",
             "queries",
             "po_prices_avg_price_weeks.sql"
         ],
         "ls_deployment_dests": [
             [
-                "na-finops",
+                "na-fin-data-streamlit",
+                "apps",
+                "price-engine",
                 "queries",
                 "po_prices_avg_price_weeks.sql"
             ]
@@ -3379,15 +3379,15 @@
     },
     "na-fin-data-streamlit/apps/price-engine/queries/static_intl.sql": {
         "ls_src_path": [
-            "na-fin-data-streamlit",
-            "apps",
-            "price-engine",
+            "na-finops",
             "queries",
             "static_intl.sql"
         ],
         "ls_deployment_dests": [
             [
-                "na-finops",
+                "na-fin-data-streamlit",
+                "apps",
+                "price-engine",
                 "queries",
                 "static_intl.sql"
             ]
@@ -3395,15 +3395,15 @@
     },
     "na-fin-data-streamlit/apps/price-engine/queries/static_us.sql": {
         "ls_src_path": [
-            "na-fin-data-streamlit",
-            "apps",
-            "price-engine",
+            "na-finops",
             "queries",
             "static_us.sql"
         ],
         "ls_deployment_dests": [
             [
-                "na-finops",
+                "na-fin-data-streamlit",
+                "apps",
+                "price-engine",
                 "queries",
                 "static_us.sql"
             ]
@@ -3491,15 +3491,15 @@
     },
     "na-fin-data_streamlit/apps/price-engine/schemas/global_static_po_invoice_pricing.json": {
         "ls_src_path": [
-            "na-fin-data-streamlit",
-            "apps",
-            "price-engine",
+            "na-finops",
             "schemas",
             "global_static_po_invoice_pricing.json"
         ],
         "ls_deployment_dests": [
             [
-                "na-finops",
+                "na-fin-data-streamlit",
+                "apps",
+                "price-engine",
                 "schemas",
                 "global_static_po_invoice_pricing.json"
             ]
