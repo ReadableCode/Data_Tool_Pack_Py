@@ -2567,12 +2567,6 @@
                 "tests",
                 "test_utils",
                 "test_gmail_tools.py"
-            ],
-            [
-                "na-finops",
-                "tests",
-                "test_utils",
-                "test_gmail_tools.py"
             ]
         ]
     },
