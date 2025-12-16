@@ -343,9 +343,20 @@ def apply_schema(df, dict_schema):
         col_type = dict_col["col_type"]
         if col_type in ["int", "float64", "double"]:
             df[col] = df[col].apply(force_to_number)
+            df[col] = df[col].astype(col_type)
         elif col_type == "string":
+            # First cast to string dtype to avoid categorical fillna issues,
+            # then sanitize, and ensure final dtype is string
+            try:
+                df[col] = df[col].astype("string")
+            except Exception:
+                # Fallback to object then to string
+                df[col] = df[col].astype(object).astype("string")
             df = sanitize_string_column(df, col)
-        df[col] = df[col].astype(col_type)
+            df[col] = df[col].astype("string")
+        else:
+            # Default: attempt to cast to declared type
+            df[col] = df[col].astype(col_type)
     return df[dict_schema.keys()]
 
 
