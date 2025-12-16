@@ -376,6 +376,24 @@ def get_start_end_week_exclusive_hj_snowflake(week):
 # Main Functions #
 
 
+def get_current_scm_week():
+    return dict_dashed_pad_desc_date[date.today().strftime("%Y-%m-%d")]
+
+
+def get_ls_weeks_available():
+    ls_available_weeks = week_range_to_week_list("2025-W01", get_current_scm_week())
+
+    return ls_available_weeks
+
+
+def get_ls_months_available():
+    ls_available_weeks = get_ls_weeks_available()
+    ls_months = get_full_months_in_week_range(
+        ls_available_weeks[0], ls_available_weeks[-1]
+    )
+    return ls_months
+
+
 def week_span_to_week_list(base_week, num_weeks_back, num_weeks_forward):
     """
     Returns a list of weeks from a specified base week, including a specified number of
