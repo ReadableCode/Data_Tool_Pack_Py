@@ -315,14 +315,65 @@ df_week_list = pd.DataFrame(all_weeks_list, columns=["Week"])
 
 
 # %%
-# Main Functions #
+# Week Functions #
 
 
 def get_start_end_dates_for_week(week):
+    """
+    Returns the start and end dates for a given week. The end date of one week IS NOT the start date of the next week.
+    Thursday Through Wednesday.
+    Args:
+        week (str): The week identifier in the format "YYYY-WWW".
+    Returns:
+        tuple: A tuple containing the start date and end date as strings in the format "YYYY-MM-DD".
+    """
     ls_dates_in_week = [
         date[0] for date in dict_dashed_pad_desc_date.items() if date[1] == week
     ]
     return ls_dates_in_week[0], ls_dates_in_week[-1]
+
+
+def get_start_end_week(week):
+    """
+    Returns the start and end dates for a given week, the end date of one week IS the start date of the next week.
+    Thursday Through Thursday.
+    Args:
+        week (str): The week identifier in the format "YYYY-WWW".
+    Returns:
+        tuple: A tuple containing the start date and end date as strings in the format "YYYY
+    """
+
+    start_date = df_scm_weeks[
+        df_scm_weeks["Week_SCM_Weekday"] == f"{week} - Thursday - 1"
+    ]["dashed_pad_desc"].values[0]
+    end_date = df_scm_weeks[
+        df_scm_weeks["Week_SCM_Weekday"] == f"{week} - Thursday - 2"
+    ]["dashed_pad_desc"].values[0]
+
+    return start_date, end_date
+
+
+def get_start_end_week_exclusive_hj_snowflake(week):
+    """
+    Returns the start and end dates for a given week.
+    Friday Through Thursday.
+    Args:
+        week (str): The week identifier in the format "YYYY-WWW".
+    Returns:
+        tuple: A tuple containing the start date and end date as strings in the format "YYYY-MM-DD".
+    """
+    start_date = df_scm_weeks[df_scm_weeks["Week_SCM_Weekday"] == f"{week} - Friday"][
+        "dashed_pad_desc"
+    ].values[0]
+    end_date = df_scm_weeks[
+        df_scm_weeks["Week_SCM_Weekday"] == f"{week} - Thursday - 2"
+    ]["dashed_pad_desc"].values[0]
+
+    return start_date, end_date
+
+
+# %%
+# Main Functions #
 
 
 def week_span_to_week_list(base_week, num_weeks_back, num_weeks_forward):
@@ -781,17 +832,6 @@ def get_yearweek_from_week(week):
     YearWeek = str(Year)[2:] + Week
 
     return YearWeek
-
-
-def get_start_end_week(week):
-    start_date = df_scm_weeks[
-        df_scm_weeks["Week_SCM_Weekday"] == f"{week} - Thursday - 1"
-    ]["dashed_pad_desc"].values[0]
-    end_date = df_scm_weeks[
-        df_scm_weeks["Week_SCM_Weekday"] == f"{week} - Thursday - 2"
-    ]["dashed_pad_desc"].values[0]
-
-    return start_date, end_date
 
 
 def get_start_end_week_exclusive(week):
