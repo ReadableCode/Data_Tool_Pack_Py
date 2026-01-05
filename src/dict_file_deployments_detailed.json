@@ -4018,15 +4018,15 @@
     },
     "na-finops/src/global_data_cache.py": {
         "ls_src_path": [
-            "na-finops",
+            "na-fin-data-streamlit",
+            "apps",
+            "price-engine",
             "src",
             "global_data_cache.py"
         ],
         "ls_deployment_dests": [
             [
-                "na-fin-data-streamlit",
-                "apps",
-                "price-engine",
+                "na-finops",
                 "src",
                 "global_data_cache.py"
             ]
