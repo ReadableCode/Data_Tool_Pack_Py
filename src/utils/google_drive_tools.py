@@ -11,6 +11,7 @@ import pandas as pd
 from dotenv import load_dotenv
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
+from googleapiclient.errors import HttpError
 from googleapiclient.http import MediaFileUpload, MediaIoBaseDownload
 
 # append grandparent
@@ -113,6 +114,44 @@ drive_service._http.timeout = 600
 
 
 # %%
+# Retry Helper #
+
+
+def execute_with_retry(api_request, max_retries=5):
+    """
+    Executes a Google Drive API request with retry logic and exponential backoff.
+
+    Args:
+        api_request: The API request object (before calling .execute())
+        max_retries: Maximum number of retry attempts (default: 5)
+
+    Returns:
+        The result of the API request execution
+
+    Raises:
+        HttpError or TimeoutError: If all retry attempts fail
+    """
+    base_delay = 1  # seconds
+
+    for attempt in range(max_retries):
+        try:
+            return api_request.execute()
+        except (HttpError, TimeoutError) as e:
+            if attempt == max_retries - 1:
+                print_logger(
+                    f"Max retries ({max_retries}) reached. Failed with error: {e}"
+                )
+                raise
+
+            delay = base_delay * (2**attempt)
+            print_logger(
+                f"API call failed (attempt {attempt + 1}/{max_retries}): {e}. "
+                f"Retrying in {delay} seconds..."
+            )
+            time.sleep(delay)
+
+
+# %%
 # Get Functions #
 
 
@@ -159,8 +198,8 @@ def get_drive_file_id_from_folder_id_path(folder_id, ls_file_path, is_folder=Fal
                 "mimeType='application/vnd.google-apps.folder'"
             )
 
-            results = (
-                drive_service.files().list(q=query, fields="files(id, name)").execute()
+            results = execute_with_retry(
+                drive_service.files().list(q=query, fields="files(id, name)")
             )
 
             # Iterate through the files on the current page
@@ -191,12 +230,9 @@ def get_drive_file_id_from_folder_id_path(folder_id, ls_file_path, is_folder=Fal
             f"name='{filename}' and '{curr_dir_id}' in parents and trashed=false "
             "and mimeType!='application/vnd.google-apps.folder'"
         )
-    results = (
-        drive_service.files()
-        .list(q=query, fields="files(id, name)")
-        .execute()
-        .get("files", [])
-    )
+    results = execute_with_retry(
+        drive_service.files().list(q=query, fields="files(id, name)")
+    ).get("files", [])
 
     if not results:
         raise ValueError(f"File not found: {filename}")
@@ -222,14 +258,12 @@ def get_file_list_from_folder_id(folder_id):
 
     while True:
         # Retrieve a list of files in the specified folder
-        results = (
-            drive_service.files()
-            .list(
+        results = execute_with_retry(
+            drive_service.files().list(
                 q=f"'{folder_id}' in parents and trashed=false",
                 fields="nextPageToken, files(id, name)",
                 pageToken=page_token,
             )
-            .execute()
         )
         files.extend(results.get("files", []))
         page_token = results.get("nextPageToken", None)
@@ -394,7 +428,9 @@ def get_drive_file_link(file_id):
 
 
 def rename_file(file_id, new_name):
-    drive_service.files().update(fileId=file_id, body={"name": new_name}).execute()
+    execute_with_retry(
+        drive_service.files().update(fileId=file_id, body={"name": new_name})
+    )
 
 
 # %%
@@ -414,7 +450,9 @@ def get_file_name(file_id):
     """
 
     # Retrieve file metadata including the name
-    file_metadata = drive_service.files().get(fileId=file_id, fields="name").execute()
+    file_metadata = execute_with_retry(
+        drive_service.files().get(fileId=file_id, fields="name")
+    )
 
     file_name = file_metadata.get("name", "Unknown")
     print(f"File/Folder Name: {file_name}")
@@ -434,8 +472,8 @@ def get_parents_of_item(file_id):
     """
 
     # Retrieve the file metadata
-    file_metadata = (
-        drive_service.files().get(fileId=file_id, fields="parents").execute()
+    file_metadata = execute_with_retry(
+        drive_service.files().get(fileId=file_id, fields="parents")
     )
 
     # Get the parent folder IDs
@@ -456,13 +494,11 @@ def check_file_capabilities(file_id):
         dict: A dictionary containing file capabilities and restrictions.
     """
 
-    file_metadata = (
-        drive_service.files()
-        .get(
+    file_metadata = execute_with_retry(
+        drive_service.files().get(
             fileId=file_id,
             fields="capabilities, viewersCanCopyContent, copyRequiresWriterPermission",
         )
-        .execute()
     )
     pprint_dict(file_metadata)
     return file_metadata
@@ -481,10 +517,10 @@ def get_file_owner_info(file_id):
     """
 
     # Use the files().get() method to retrieve the owner information
-    file_metadata = (
-        drive_service.files()
-        .get(fileId=file_id, fields="owners")  # This limits the response to owner info
-        .execute()
+    file_metadata = execute_with_retry(
+        drive_service.files().get(
+            fileId=file_id, fields="owners"
+        )  # This limits the response to owner info
     )
 
     # Get the owner's information
@@ -511,7 +547,7 @@ def list_permissions(file_id):
     Returns:
         list: A list of permission objects.
     """
-    permissions = drive_service.permissions().list(fileId=file_id).execute()
+    permissions = execute_with_retry(drive_service.permissions().list(fileId=file_id))
     file_permissions = permissions.get("permissions", [])
 
     pprint_dict(file_permissions)
@@ -540,14 +576,12 @@ def share_folder_with_email(folder_id, email_address, role="reader"):
     permission = {"type": "user", "role": role, "emailAddress": email_address}
 
     # Add the new permission without altering existing permissions
-    return (
-        drive_service.permissions()
-        .create(
+    return execute_with_retry(
+        drive_service.permissions().create(
             fileId=folder_id,  # Treat folder like a file in Google Drive
             body=permission,
             fields="id",
         )
-        .execute()
     )
 
 
@@ -575,7 +609,9 @@ def create_folder_in_drive(drive_service, parent_id, folder_name):
         "parents": [parent_id],
         "mimeType": "application/vnd.google-apps.folder",
     }
-    folder = drive_service.files().create(body=folder_metadata, fields="id").execute()
+    folder = execute_with_retry(
+        drive_service.files().create(body=folder_metadata, fields="id")
+    )
     parent_id = folder["id"]
     return parent_id
 
@@ -611,14 +647,12 @@ def upload_file_to_drive(initial_folder_id, file_path, ls_folder_path=[]):
 
         while True:
             # Retrieve a list of files in the specified folder
-            results = (
-                drive_service.files()
-                .list(
+            results = execute_with_retry(
+                drive_service.files().list(
                     q=f"'{parent_id}' in parents and trashed=false",
                     fields="nextPageToken, files(id, name)",
                     pageToken=page_token,
                 )
-                .execute()
             )
             for file in results.get("files", []):
                 if file.get("name") == folder_name:
@@ -644,22 +678,22 @@ def upload_file_to_drive(initial_folder_id, file_path, ls_folder_path=[]):
 
     # Check if a file with the same name exists in the folder
     file_name = os.path.basename(file_path)
-    existing_files = (
-        drive_service.files()
-        .list(
+    existing_files = execute_with_retry(
+        drive_service.files().list(
             q=f"'{parent_id}' in parents and name='{file_name}' and trashed=false",
             fields="files(id)",
         )
-        .execute()
     )
 
     if existing_files.get("files"):
         # replace contents of existing file
         existing_file_id = existing_files["files"][0]["id"]
         media = MediaFileUpload(file_path, mimetype="application/octet-stream")
-        drive_service.files().update(
-            fileId=existing_file_id, media_body=media, fields="id"
-        ).execute(num_retries=10)
+        execute_with_retry(
+            drive_service.files().update(
+                fileId=existing_file_id, media_body=media, fields="id"
+            )
+        )
         print_logger(f"Replaced existing file with ID: {existing_file_id}")
         return existing_file_id
 
@@ -667,10 +701,10 @@ def upload_file_to_drive(initial_folder_id, file_path, ls_folder_path=[]):
         # Upload the new file to Google Drive within the specified folder
         file_metadata = {"name": file_name, "parents": [parent_id]}
         media = MediaFileUpload(file_path, mimetype="application/octet-stream")
-        uploaded_file = (
-            drive_service.files()
-            .create(body=file_metadata, media_body=media, fields="id")
-            .execute()
+        uploaded_file = execute_with_retry(
+            drive_service.files().create(
+                body=file_metadata, media_body=media, fields="id"
+            )
         )
         file_id = uploaded_file["id"]
 
@@ -912,7 +946,7 @@ def check_storage_space_service_account():
     check_storage_space_service_account()
     """
     # Get the about resource, which includes storage quota information
-    about = drive_service.about().get(fields="storageQuota").execute()
+    about = execute_with_retry(drive_service.about().get(fields="storageQuota"))
     print(f"Storage quota: {about['storageQuota']}")
     used_storage = int(about["storageQuota"]["usage"])
     total_storage = int(about["storageQuota"]["limit"])
@@ -940,15 +974,13 @@ def get_top_storage_use_files(num_files=20, parent_folder_id=None):
         query += f" and '{parent_folder_id}' in parents"
 
     # List files
-    results = (
-        drive_service.files()
-        .list(
+    results = execute_with_retry(
+        drive_service.files().list(
             q=query,
             pageSize=num_files,
             fields="nextPageToken, files(id, name, mimeType, size)",
             orderBy="quotaBytesUsed desc",  # Order by size, descending
         )
-        .execute()
     )
     items = results.get("files", [])
 
@@ -959,7 +991,9 @@ def get_top_storage_use_files(num_files=20, parent_folder_id=None):
         for item in items:
             # get parent folder id
             file_id = item["id"]
-            file = drive_service.files().get(fileId=file_id, fields="parents").execute()
+            file = execute_with_retry(
+                drive_service.files().get(fileId=file_id, fields="parents")
+            )
             parent_id = file.get("parents")[0] if "parents" in file else "No parent"
             file_size = item.get("size", 0)
             file_size_MB = int(file_size) / 1e6 if file_size else 0
@@ -988,10 +1022,10 @@ def list_files_with_same_name_in_different_locations(file_name):
     # Query to find files with the specific name
     query = f"name = '{file_name}' and trashed = false"
 
-    results = (
-        drive_service.files()
-        .list(q=query, fields="files(id, name, parents, size)", spaces="drive")
-        .execute()
+    results = execute_with_retry(
+        drive_service.files().list(
+            q=query, fields="files(id, name, parents, size)", spaces="drive"
+        )
     )
 
     pprint_dict(results)
@@ -1055,7 +1089,7 @@ def delete_file_by_id(file_id):
     """
 
     # Delete the file
-    drive_service.files().delete(fileId=file_id).execute()
+    execute_with_retry(drive_service.files().delete(fileId=file_id))
     print(f"File with ID {file_id} deleted")
 
 
