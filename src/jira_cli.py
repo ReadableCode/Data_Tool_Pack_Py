@@ -4,9 +4,11 @@
 import os
 
 import pandas as pd  # noqa: F401
-from config import grandparent_dir
-from jira import JIRA
+import requests
 from dotenv import load_dotenv
+from jira import JIRA
+
+from config import parent_dir
 from utils.display_tools import (  # noqa: F401
     pprint_df,
     pprint_dict,
@@ -18,7 +20,8 @@ from utils.display_tools import (  # noqa: F401
 # Variables #
 
 # source .env file
-dotenv_path = os.path.join(grandparent_dir, ".env")
+dotenv_path = os.path.join(parent_dir, ".env")
+print(f"Loading environment variables from: {dotenv_path}")
 if os.path.exists(dotenv_path):
     load_dotenv(dotenv_path)
 
@@ -26,6 +29,7 @@ JIRA_SERVER = os.getenv("JIRA_SERVER")
 JIRA_USER = os.getenv("JIRA_USER")
 JIRA_TOKEN = os.getenv("JIRA_TOKEN")
 JIRA_PROJECT = os.getenv("JIRA_PROJECT")
+
 assert (
     JIRA_SERVER is not None
     and JIRA_USER is not None
@@ -34,8 +38,12 @@ assert (
 ), "Missing one or more: JIRA_SERVER, JIRA_USER, JIRA_TOKEN"
 
 
-# Establish a connection using basic authentication
-jira = JIRA(server=JIRA_SERVER, basic_auth=(JIRA_USER, JIRA_TOKEN))
+# Establish a connection using basic authentication (API v3 required since v2 was removed)
+jira = JIRA(
+    server=JIRA_SERVER,
+    basic_auth=(JIRA_USER, JIRA_TOKEN),
+    options={"rest_api_version": "3"},
+)
 
 
 # %%
@@ -87,12 +95,19 @@ def get_issues(project: str, max_results: int = 20):
     :param max_results: Number of issues to retrieve
     :return: List of issue objects
     """
-    response = jira.search_issues(
-        f"project = {project}", maxResults=max_results, json_result=True
-    )
+    # Use the new /rest/api/3/search/jql endpoint (the old /search was removed)
+    url = f"{JIRA_SERVER}/rest/api/3/search/jql"
+    params = {
+        "jql": f"project = {project}",
+        "maxResults": max_results,
+        "fields": "*all",
+    }
+    resp = requests.get(url, params=params, auth=(JIRA_USER, JIRA_TOKEN))
+    resp.raise_for_status()
+    response = resp.json()
 
-    issues = response.get("issues", [])  # Extract actual issues list
-    issues_struct = {}
+    issues = response.get("issues", [])
+    issues_struct: dict[str, dict] = {}
 
     if issues:
         for issue in issues:
